@@ -4,48 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- ЗАМЕНИТЕ: заголовок вкладки — ваше имя и специализация -->
-  <title>Имя Фамилия — AI/ML &amp; Software Engineer</title>
-  <meta name="description" content="Портфолио инженера в области AI/ML и разработки ПО. Опыт, проекты и компетенции." />
+  <title>Артём Хатеев — Fullstack & AI/ML инженер</title>
+  <meta name="description" content="Портфолио Артёма Хатеева: разработка сайтов и приложений, а также решения на базе AI/ML." />
 
-  <!-- ЗАМЕНИТЕ: favicon можно оставить как есть или нарисовать свой -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- Шрифты Google: Manrope (заголовки/текст) + JetBrains Mono (код/акценты) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
-  <!-- Ссылка для доступности: быстрый переход к контенту -->
-  <a class="skip-link" href="#main">К основному содержимому</a>
+<!-- data-title-key / data-desc-key — ключи для <title> и meta на разных языках -->
+<body data-page="home" data-title-key="title.home" data-desc-key="desc.home">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
 
-  <!-- ============================================================
-       ШАПКА / НАВИГАЦИЯ (sticky)
-  ============================================================ -->
+  <!-- ======================= ШАПКА ======================= -->
   <header class="site-header" id="top">
     <div class="container nav-inner">
-      <!-- ЗАМЕНИТЕ: инициалы или логотип -->
-      <a class="brand" href="#top" aria-label="На главную">
-        <span class="brand-mark" aria-hidden="true">ИФ</span>
-        <span class="brand-text">Имя&nbsp;Фамилия</span>
+      <a class="brand" href="index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
       </a>
 
       <nav class="nav" aria-label="Основная навигация">
         <ul class="nav-list" id="nav-list">
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#experience">Опыт</a></li>
-          <li><a href="#projects">Проекты</a></li>
-          <li><a href="#skills">Навыки</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Главная</a></li>
+          <li><a href="web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
+        <!-- Переключатель языка -->
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
         <!-- Переключатель темы -->
         <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
                 aria-label="Переключить тему" title="Переключить тему">
           <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
@@ -58,12 +59,10 @@
           </svg>
         </button>
 
-        <!-- CTA в шапке -->
-        <a class="btn btn-primary btn-sm cta-header" href="#contact">Связаться</a>
+        <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
 
-        <!-- Кнопка мобильного меню (гамбургер) -->
         <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
-                aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
+                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
@@ -74,11 +73,8 @@
 
   <main id="main">
 
-    <!-- ============================================================
-         HERO
-    ============================================================ -->
+    <!-- ======================= HERO ======================= -->
     <section class="hero" id="hero">
-      <!-- Декоративный анимированный градиентный «блоб» + сетка (чистый CSS) -->
       <div class="hero-bg" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -89,41 +85,31 @@
       <div class="container hero-inner">
         <p class="hero-eyebrow reveal">
           <span class="status-dot" aria-hidden="true"></span>
-          <!-- ЗАМЕНИТЕ: ваш статус доступности -->
-          Открыт для проектов и сотрудничества
+          <span data-i18n="hero.badge">Открыт для проектов и сотрудничества</span>
         </p>
 
-        <!-- ЗАМЕНИТЕ: имя -->
-        <h1 class="hero-title reveal">
-          Имя&nbsp;Фамилия
-        </h1>
+        <h1 class="hero-title reveal" data-i18n="name">Артём&nbsp;Хатеев</h1>
 
-        <!-- ЗАМЕНИТЕ: ценностное предложение в одну строку -->
-        <p class="hero-lead reveal">
-          Проектирую и обучаю ML-системы и собираю надёжные бэкенды —
-          от прототипа на TPU до продакшена под нагрузкой.
+        <p class="hero-lead reveal" data-i18n="hero.lead">
+          Создаю сайты, приложения и AI-решения — от идеи до продакшена.
         </p>
-
-        <!-- ЗАМЕНИТЕ: короткий подзаголовок -->
-        <p class="hero-sub reveal">
-          AI/ML &amp; Software Engineer. Помогаю командам внедрять LLM и
-          строить сервисы, которые не падают в три часа ночи.
+        <p class="hero-sub reveal" data-i18n="hero.sub">
+          Fullstack &amp; AI/ML инженер. Помогаю командам запускать продукты и внедрять машинное обучение.
         </p>
 
         <div class="hero-cta reveal">
-          <a class="btn btn-primary" href="#contact">Обсудить проект</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="cta.discuss">Обсудить проект</a>
           <!-- ЗАМЕНИТЕ: ссылка на PDF-резюме (положите файл в репозиторий) -->
           <a class="btn btn-ghost" href="#" download>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Скачать резюме
+            <span data-i18n="cta.resume">Скачать резюме</span>
           </a>
         </div>
 
-        <!-- Социальные ссылки -->
+        <!-- ЗАМЕНИТЕ: ссылки на ваши профили -->
         <ul class="hero-social reveal" aria-label="Социальные сети">
-          <!-- ЗАМЕНИТЕ: ссылки на ваши профили -->
           <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86l-.01 2.75c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
           </a></li>
@@ -138,343 +124,158 @@
           </a></li>
         </ul>
 
-        <!-- Быстрые статистики -->
+        <!-- ЗАМЕНИТЕ: ваши цифры -->
         <dl class="hero-stats reveal" aria-label="Ключевые показатели">
-          <!-- ЗАМЕНИТЕ: ваши цифры -->
           <div class="stat">
             <dt class="stat-num" data-count="5" data-suffix="+">0</dt>
-            <dd class="stat-label">лет опыта</dd>
+            <dd class="stat-label" data-i18n="stat.years">лет опыта</dd>
           </div>
           <div class="stat">
-            <dt class="stat-num" data-count="20" data-suffix="+">0</dt>
-            <dd class="stat-label">проектов</dd>
+            <dt class="stat-num" data-count="25" data-suffix="+">0</dt>
+            <dd class="stat-label" data-i18n="stat.projects">проектов</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-num" data-count="15" data-suffix="+">0</dt>
+            <dd class="stat-label" data-i18n="stat.tech">технологий</dd>
           </div>
           <div class="stat">
             <dt class="stat-num" data-count="10" data-suffix="+">0</dt>
-            <dd class="stat-label">технологий</dd>
-          </div>
-          <div class="stat">
-            <dt class="stat-num" data-count="4" data-suffix="">0</dt>
-            <dd class="stat-label">довольных команды</dd>
+            <dd class="stat-label" data-i18n="stat.clients">довольных клиентов</dd>
           </div>
         </dl>
       </div>
     </section>
 
-    <!-- ============================================================
-         ОБО МНЕ
-    ============================================================ -->
-    <section class="section" id="about">
+    <!-- =================== НАПРАВЛЕНИЯ =================== -->
+    <section class="section" id="directions">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker">01 — О себе</span>
-          <h2 class="section-title">Кто я и чем полезен</h2>
+          <span class="section-kicker" data-i18n="home.k.choose">01 — Направления</span>
+          <h2 class="section-title" data-i18n="home.choose.title">Чем я занимаюсь</h2>
+          <p class="section-desc" data-i18n="home.choose.desc">Два направления, в которых я работаю. Выберите, что ближе к вашей задаче.</p>
+        </header>
+
+        <div class="spec-grid">
+          <a class="spec-card reveal" href="web.html">
+            <span class="spec-ico" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 8h18M7 21h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="spec-card-title" data-i18n="card.web.title">Сайты и приложения</h3>
+            <p class="spec-card-desc" data-i18n="card.web.desc">Frontend, backend и мобильная разработка — быстрые и надёжные продукты.</p>
+            <span class="spec-more" data-i18n="card.more">Подробнее →</span>
+          </a>
+
+          <a class="spec-card reveal" href="ai.html">
+            <span class="spec-ico" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="5" y="8" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M12 8V4M8 4h8M9 13v2M15 13v2M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="spec-card-title" data-i18n="card.ai.title">AI/ML</h3>
+            <p class="spec-card-desc" data-i18n="card.ai.desc">LLM, обучение и инференс моделей, данные и MLOps.</p>
+            <span class="spec-more" data-i18n="card.more">Подробнее →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ОБО МНЕ ======================= -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker" data-i18n="home.k.about">02 — О себе</span>
+          <h2 class="section-title" data-i18n="about.title">Кто я и чем полезен</h2>
         </header>
 
         <div class="about-grid">
           <div class="about-photo reveal">
-            <!-- ЗАМЕНИТЕ: ваше фото (положите файл, например assets/img/photo.jpg,
-                 и замените содержимое блока на <img src="..." alt="Имя Фамилия">) -->
+            <!-- ЗАМЕНИТЕ: ваше фото. Замените блок photo-placeholder на
+                 <img src="assets/img/photo.jpg" alt="Artem Khateev"> -->
             <div class="photo-ring">
               <div class="photo-placeholder" role="img" aria-label="Фото профиля — замените на своё">
-                <span>Ваше<br>фото</span>
+                <span data-i18n="about.photo">Ваше фото</span>
               </div>
             </div>
-            <ul class="about-badges" aria-label="Текущий статус">
-              <li>Удалённо / по всему миру</li>
-              <li>RU · EN</li>
+            <ul class="about-badges" aria-label="Статус">
+              <li data-i18n="about.badge1">Удалённо / по всему миру</li>
+              <li data-i18n="about.badge2">RU · EN · SV</li>
             </ul>
           </div>
 
           <div class="about-text reveal">
-            <!-- ЗАМЕНИТЕ: 2–3 абзаца о себе -->
-            <p>
-              Привет! Я инженер на стыке машинного обучения и разработки ПО.
-              Последние годы занимаюсь обучением и инференсом больших языковых
-              моделей, оптимизацией под аппаратные ускорители и построением
-              сервисов, которые доводят модели до реальных пользователей.
-            </p>
-            <p>
-              Люблю задачи, где нужно одновременно думать про метрики качества и
-              про SLA в продакшене: от подбора архитектуры и данных до деплоя,
-              мониторинга и стоимости инференса. Пишу чистый код, оставляю понятную
-              документацию и умею объяснять сложное простым языком.
-            </p>
-            <p>
-              Сейчас беру freelance- и контрактные проекты. Готов подключиться как
-              на короткую консультацию, так и на полный цикл разработки.
-            </p>
+            <p data-i18n="about.p1">Привет! Я инженер-универсал: строю веб- и мобильные приложения и внедряю решения на базе машинного обучения. Соединяю продуктовое мышление с инженерной надёжностью.</p>
+            <p data-i18n="about.p2">Одинаково уверенно работаю и с фронтендом и бэкендом, и с ML-моделями — от прототипа до продакшена под нагрузкой. Пишу чистый код и оставляю понятную документацию.</p>
+            <p data-i18n="about.p3">Сейчас открыт для freelance- и контрактных проектов. Готов подключиться как на короткую консультацию, так и на полный цикл разработки.</p>
 
-            <h3 class="about-offer-title">Чем могу помочь</h3>
+            <h3 class="about-offer-title" data-i18n="about.offer.title">Чем могу помочь</h3>
             <ul class="offer-list">
-              <!-- ЗАМЕНИТЕ: ваши специализации -->
-              <li>
-                <span class="offer-ico" aria-hidden="true">◆</span>
-                Внедрение LLM: RAG, дообучение, промпт-инжиниринг, оценка качества
-              </li>
-              <li>
-                <span class="offer-ico" aria-hidden="true">◆</span>
-                Оптимизация инференса под GPU/TPU, снижение стоимости и латентности
-              </li>
-              <li>
-                <span class="offer-ico" aria-hidden="true">◆</span>
-                Backend-сервисы и API вокруг ML-моделей, очереди и масштабирование
-              </li>
-              <li>
-                <span class="offer-ico" aria-hidden="true">◆</span>
-                MLOps: пайплайны данных, воспроизводимость, мониторинг моделей
-              </li>
+              <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.1">Веб- и мобильные приложения: от идеи до продакшена</span></li>
+              <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.2">Внедрение AI/ML: LLM, RAG, дообучение, инференс</span></li>
+              <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.3">Надёжные бэкенды и API под нагрузкой</span></li>
+              <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.4">MLOps и DevOps: CI/CD, мониторинг, инфраструктура</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         ОПЫТ (TIMELINE)
-    ============================================================ -->
-    <section class="section section-alt" id="experience">
+    <!-- ======================= НАВЫКИ (кратко) ======================= -->
+    <section class="section" id="skills">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker">02 — Опыт</span>
-          <h2 class="section-title">Карьерный путь</h2>
+          <span class="section-kicker" data-i18n="home.k.skills">03 — Навыки</span>
+          <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
+          <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
         </header>
 
-        <ol class="timeline">
-          <!-- ЗАМЕНИТЕ: каждая запись — роль, компания, период, достижения -->
-          <li class="timeline-item reveal">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3 class="timeline-role">Senior ML Engineer</h3>
-                <span class="timeline-period">2023 — наст. время</span>
-              </div>
-              <p class="timeline-company">Название компании · Город / Удалённо</p>
-              <ul class="timeline-points">
-                <li>Запустил дообучение LLM семейства Qwen под доменные задачи, +18% к точности на внутреннем бенчмарке.</li>
-                <li>Перенёс инференс на TPU-ускорители, сократив стоимость на запрос в 3 раза.</li>
-                <li>Выстроил пайплайн оценки качества и регрессионных тестов для моделей.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="timeline-item reveal">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3 class="timeline-role">Backend / ML Engineer</h3>
-                <span class="timeline-period">2020 — 2023</span>
-              </div>
-              <p class="timeline-company">Название компании · Город / Удалённо</p>
-              <ul class="timeline-points">
-                <li>Разработал сервисы на Kotlin и Python для обслуживания ML-моделей под высокой нагрузкой.</li>
-                <li>Спроектировал систему очередей и кеширования, снизив p99-латентность на 40%.</li>
-                <li>Наставлял двух junior-разработчиков, внедрил код-ревью и CI.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="timeline-item reveal">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3 class="timeline-role">Software Engineer</h3>
-                <span class="timeline-period">2018 — 2020</span>
-              </div>
-              <p class="timeline-company">Название компании · Город</p>
-              <ul class="timeline-points">
-                <li>Участвовал в разработке продукта с нуля, отвечал за ключевые модули backend.</li>
-                <li>Покрыл критичный код тестами, уменьшив число инцидентов в проде.</li>
-                <li>Автоматизировал рутинные процессы деплоя и релизов.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         ПРОЕКТЫ (GRID)
-    ============================================================ -->
-    <section class="section" id="projects">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-kicker">03 — Проекты</span>
-          <h2 class="section-title">Избранные работы</h2>
-          <p class="section-desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
-        </header>
-
-        <div class="projects-grid">
-          <!-- ЗАМЕНИТЕ: карточка проекта (повторите структуру для каждого) -->
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-a" aria-hidden="true">
-              <span class="project-thumb-label">Проект 01</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">LLM-ассистент для поддержки</h3>
-              <p class="project-desc">
-                RAG-система поверх базы знаний: отвечает на запросы клиентов,
-                снижает нагрузку на поддержку и держит контекст диалога.
-              </p>
-              <ul class="tag-chips" aria-label="Технологии">
-                <li>Python</li><li>LLM</li><li>RAG</li><li>FastAPI</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener">Код ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-b" aria-hidden="true">
-              <span class="project-thumb-label">Проект 02</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Пайплайн инференса на TPU</h3>
-              <p class="project-desc">
-                Высокопроизводительный сервинг моделей с батчингом запросов,
-                автоскейлингом и подробным мониторингом стоимости.
-              </p>
-              <ul class="tag-chips" aria-label="Технологии">
-                <li>JAX</li><li>TPU</li><li>Kotlin</li><li>Docker</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener">Код ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-c" aria-hidden="true">
-              <span class="project-thumb-label">Проект 03</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Платформа для разметки данных</h3>
-              <p class="project-desc">
-                Внутренний инструмент для сбора и валидации датасетов: ускорил
-                подготовку данных для обучения в несколько раз.
-              </p>
-              <ul class="tag-chips" aria-label="Технологии">
-                <li>TypeScript</li><li>PostgreSQL</li><li>React</li><li>Python</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" target="_blank" rel="noopener">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener">Код ↗</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         НАВЫКИ / КОМПЕТЕНЦИИ
-    ============================================================ -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-kicker">04 — Навыки</span>
-          <h2 class="section-title">Компетенции</h2>
-          <p class="section-desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
-        </header>
-
+        <!-- ЗАМЕНИТЕ: группы и чипы. Названия технологий не переводятся. -->
         <div class="skills-grid">
-          <!-- ЗАМЕНИТЕ: группы навыков и чипы -->
           <div class="skill-group reveal">
-            <h3 class="skill-group-title">Языки</h3>
-            <ul class="tag-chips tag-chips-lg">
-              <li>Python</li><li>Kotlin</li><li>TypeScript</li><li>SQL</li><li>Bash</li>
-            </ul>
+            <h3 class="skill-group-title" data-i18n="cat.languages">Языки</h3>
+            <ul class="tag-chips tag-chips-lg"><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Kotlin</li><li>SQL</li></ul>
           </div>
-
           <div class="skill-group reveal">
-            <h3 class="skill-group-title">ML / AI</h3>
-            <ul class="tag-chips tag-chips-lg">
-              <li>PyTorch</li><li>JAX</li><li>LLM / RAG</li><li>Fine-tuning</li><li>Transformers</li>
-            </ul>
+            <h3 class="skill-group-title" data-i18n="cat.frontend">Frontend</h3>
+            <ul class="tag-chips tag-chips-lg"><li>React</li><li>Next.js</li><li>Vue</li><li>CSS</li><li>Tailwind</li></ul>
           </div>
-
           <div class="skill-group reveal">
-            <h3 class="skill-group-title">Backend</h3>
-            <ul class="tag-chips tag-chips-lg">
-              <li>FastAPI</li><li>gRPC</li><li>PostgreSQL</li><li>Redis</li><li>Kafka</li>
-            </ul>
+            <h3 class="skill-group-title" data-i18n="cat.ml">ML / AI</h3>
+            <ul class="tag-chips tag-chips-lg"><li>PyTorch</li><li>LLM / RAG</li><li>Transformers</li><li>JAX</li></ul>
           </div>
-
           <div class="skill-group reveal">
-            <h3 class="skill-group-title">Инструменты</h3>
-            <ul class="tag-chips tag-chips-lg">
-              <li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>TPU / GPU</li><li>Git</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Несколько ключевых навыков с уровнем (шкалы) -->
-        <div class="skill-bars reveal">
-          <!-- ЗАМЕНИТЕ: навыки и проценты; data-level задаёт заполнение -->
-          <div class="skill-bar">
-            <div class="skill-bar-top">
-              <span class="skill-bar-name">Машинное обучение</span>
-              <span class="skill-bar-val">90%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top">
-              <span class="skill-bar-name">Backend-разработка</span>
-              <span class="skill-bar-val">85%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top">
-              <span class="skill-bar-name">MLOps / инфраструктура</span>
-              <span class="skill-bar-val">75%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" data-level="75"></div></div>
+            <h3 class="skill-group-title" data-i18n="cat.tools">Инструменты</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>Git</li><li>TPU / GPU</li></ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         ОТЗЫВЫ
-    ============================================================ -->
-    <section class="section" id="testimonials">
+    <!-- ======================= ОТЗЫВЫ ======================= -->
+    <section class="section section-alt" id="testimonials">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker">05 — Отзывы</span>
-          <h2 class="section-title">Что обо мне говорят</h2>
+          <span class="section-kicker" data-i18n="home.k.testi">04 — Отзывы</span>
+          <h2 class="section-title" data-i18n="testi.title">Что обо мне говорят</h2>
         </header>
 
         <div class="testimonials-grid">
-          <!-- ЗАМЕНИТЕ: реальные отзывы клиентов/коллег -->
+          <!-- ЗАМЕНИТЕ: реальные отзывы (тексты — в assets/js/i18n.js) -->
           <figure class="testimonial-card reveal">
-            <blockquote>
-              «Разобрался в нашей задаче быстрее, чем мы успели её объяснить.
-              Модель заработала в проде за две недели, а не за квартал.»
-            </blockquote>
+            <blockquote data-i18n="testi1.quote">«Разобрался в задаче быстрее, чем мы успели её объяснить. Результат был в проде уже через две недели.»</blockquote>
             <figcaption>
-              <span class="t-avatar" aria-hidden="true">А</span>
+              <span class="t-avatar" aria-hidden="true">A</span>
               <span>
-                <strong>Имя клиента</strong>
-                <small>CTO, Название компании</small>
+                <strong data-i18n="testi1.name">Имя клиента</strong>
+                <small data-i18n="testi1.role">CTO, Название компании</small>
               </span>
             </figcaption>
           </figure>
 
           <figure class="testimonial-card reveal">
-            <blockquote>
-              «Чистый код, понятная документация и честные оценки сроков.
-              С таким подрядчиком спокойно.»
-            </blockquote>
+            <blockquote data-i18n="testi2.quote">«Чистый код, понятная документация и честные сроки. С таким подрядчиком спокойно.»</blockquote>
             <figcaption>
-              <span class="t-avatar" aria-hidden="true">М</span>
+              <span class="t-avatar" aria-hidden="true">M</span>
               <span>
-                <strong>Имя клиента</strong>
-                <small>Product Lead, Название компании</small>
+                <strong data-i18n="testi2.name">Имя клиента</strong>
+                <small data-i18n="testi2.role">Product Lead, Название компании</small>
               </span>
             </figcaption>
           </figure>
@@ -482,75 +283,54 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         КОНТАКТЫ
-    ============================================================ -->
-    <section class="section section-alt" id="contact">
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section" id="contact">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker">06 — Контакты</span>
-          <h2 class="section-title">Давайте работать вместе</h2>
-          <p class="section-desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
+          <span class="section-kicker" data-i18n="home.k.contact">05 — Контакты</span>
+          <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
         </header>
 
         <div class="contact-grid">
-          <!-- Форма.
-               ВАЖНО: статический сайт не умеет отправлять письма сам.
-               Подключите бэкенд или сервис форм, например Formspree:
-               1) Зарегистрируйтесь на https://formspree.io
-               2) Замените action ниже на свой endpoint, например:
-                  action="https://formspree.io/f/ВАШ_ID" method="POST"
-               3) Удалите JS-обработчик демо-отправки в assets/js/script.js,
-                  если хотите реальную отправку.
-               Альтернативы: Netlify Forms, Getform, собственный backend. -->
+          <!-- Форма. Статический сайт не отправляет письма сам.
+               Подключите Formspree (https://formspree.io):
+               замените action="#" на "https://formspree.io/f/ВАШ_ID" и удалите
+               JS-обработчик демо-отправки в assets/js/script.js. -->
           <form class="contact-form reveal" id="contact-form" action="#" method="POST" novalidate>
             <div class="field">
-              <label for="name">Имя</label>
+              <label for="name" data-i18n="form.name.label">Имя</label>
               <input type="text" id="name" name="name" autocomplete="name"
-                     placeholder="Как к вам обращаться" required />
+                     data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться" required />
             </div>
             <div class="field">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="form.email.label">Email</label>
               <input type="email" id="email" name="email" autocomplete="email"
-                     placeholder="you@example.com" required />
+                     data-i18n-ph="form.email.ph" placeholder="you@example.com" required />
             </div>
             <div class="field">
-              <label for="message">Сообщение</label>
+              <label for="message" data-i18n="form.message.label">Сообщение</label>
               <textarea id="message" name="message" rows="5"
-                        placeholder="Опишите задачу, сроки и бюджет" required></textarea>
+                        data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Отправить сообщение</button>
-            <p class="form-note" id="form-status" role="status" aria-live="polite">
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Отправить сообщение</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">
               Форма демонстрационная — подключите Formspree или свой backend (см. комментарий в HTML).
             </p>
           </form>
 
-          <!-- Прямые контакты -->
           <aside class="contact-direct reveal" aria-label="Прямые контакты">
-            <h3>Или напишите напрямую</h3>
+            <h3 data-i18n="contact.direct.title">Или напишите напрямую</h3>
             <ul class="contact-links">
               <!-- ЗАМЕНИТЕ: ваши контакты -->
-              <li>
-                <span class="c-ico" aria-hidden="true">✉</span>
-                <a href="mailto:you@example.com">you@example.com</a>
-              </li>
-              <li>
-                <span class="c-ico" aria-hidden="true">✈</span>
-                <a href="https://t.me/" target="_blank" rel="noopener">@username (Telegram)</a>
-              </li>
-              <li>
-                <span class="c-ico" aria-hidden="true">⌥</span>
-                <a href="https://github.com/" target="_blank" rel="noopener">github.com/username</a>
-              </li>
-              <li>
-                <span class="c-ico" aria-hidden="true">in</span>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/username</a>
-              </li>
+              <li><span class="c-ico" aria-hidden="true">✉</span><a href="mailto:you@example.com">you@example.com</a></li>
+              <li><span class="c-ico" aria-hidden="true">✈</span><a href="https://t.me/" target="_blank" rel="noopener">@username (Telegram)</a></li>
+              <li><span class="c-ico" aria-hidden="true">⌥</span><a href="https://github.com/" target="_blank" rel="noopener">github.com/username</a></li>
+              <li><span class="c-ico" aria-hidden="true">in</span><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
             </ul>
             <div class="contact-availability">
               <span class="status-dot" aria-hidden="true"></span>
-              <!-- ЗАМЕНИТЕ: статус доступности -->
-              Сейчас беру новые проекты
+              <span data-i18n="contact.available">Сейчас беру новые проекты</span>
             </div>
           </aside>
         </div>
@@ -558,15 +338,12 @@
     </section>
   </main>
 
-  <!-- ============================================================
-       ПОДВАЛ
-  ============================================================ -->
+  <!-- ======================= ПОДВАЛ ======================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- ЗАМЕНИТЕ: имя и год обновляется автоматически -->
-      <p class="footer-copy">© <span id="year">2026</span> Имя Фамилия. Все права защищены.</p>
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
       <a class="back-to-top" href="#top">
-        Наверх
+        <span data-i18n="footer.top">Наверх</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -574,6 +351,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

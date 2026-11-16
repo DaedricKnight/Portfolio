@@ -150,46 +150,35 @@
   }
 
   /* ----------------------------------------------------------
-     5. АКТИВНЫЙ ПУНКТ МЕНЮ + ТЕНЬ ШАПКИ
+     5. ТЕНЬ ШАПКИ ПРИ ПРОКРУТКЕ
+     (Активная страница в меню отмечается статически через
+      aria-current="page" в HTML — см. каждую страницу.)
   ---------------------------------------------------------- */
   var header = document.querySelector(".site-header");
   window.addEventListener("scroll", function () {
     if (header) header.classList.toggle("scrolled", window.scrollY > 10);
   }, { passive: true });
 
-  var sections = document.querySelectorAll("main section[id]");
-  var navLinks = document.querySelectorAll(".nav-list a");
-
-  if ("IntersectionObserver" in window && sections.length) {
-    var navObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute("id");
-          navLinks.forEach(function (link) {
-            link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-          });
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach(function (s) { navObserver.observe(s); });
-  }
-
   /* ----------------------------------------------------------
      6. ДЕМО-ОБРАБОТЧИК ФОРМЫ
      Удалите этот блок, когда подключите Formspree / backend,
-     чтобы форма отправлялась по-настоящему (см. комментарий в index.html).
+     чтобы форма отправлялась по-настоящему (см. комментарий в HTML).
+     Тексты статусов берутся из словаря i18n (ключи form.invalid / form.sent).
   ---------------------------------------------------------- */
+  var tr = function (key, fallback) {
+    return (window.I18N && window.I18N.t) ? window.I18N.t(key) : fallback;
+  };
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
   if (form && status) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
-        status.textContent = "Пожалуйста, заполните все поля корректно.";
+        status.textContent = tr("form.invalid", "Пожалуйста, заполните все поля корректно.");
         form.reportValidity();
         return;
       }
-      status.textContent = "Спасибо! Это демо-форма — подключите backend, чтобы получать сообщения.";
+      status.textContent = tr("form.sent", "Спасибо! Это демо-форма — подключите backend, чтобы получать сообщения.");
       form.reset();
     });
   }

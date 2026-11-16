@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Сайты и приложения — Артём Хатеев</title>
+  <meta name="description" content="Разработка сайтов, веб- и мобильных приложений: опыт, проекты и навыки." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="web" data-title-key="title.web" data-desc-key="desc.web">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="web.html" aria-current="page" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ХЕДЕР СТРАНИЦЫ =================== -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="index.html">← <span data-i18n="nav.home">Главная</span></a>
+        <h1 data-i18n="card.web.title">Сайты и приложения</h1>
+        <p class="page-hero-lead" data-i18n="card.web.desc">Frontend, backend и мобильная разработка — быстрые и надёжные продукты.</p>
+      </div>
+    </section>
+
+    <!-- ======================= ОПЫТ ======================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker" data-i18n="pg.k.exp">01 — Опыт</span>
+          <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
+        </header>
+
+        <!-- ЗАМЕНИТЕ: тексты опыта — в assets/js/i18n.js (ключи web.exp*) -->
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp1.role">Senior Fullstack-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp1.period">2023 — наст. время</span>
+              </div>
+              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp1.b1">Запустил SPA на React и сервис на Node.js, ускорив загрузку на 45%.</li>
+                <li data-i18n="web.exp1.b2">Внедрил дизайн-систему и покрытие тестами, снизив число багов в релизах.</li>
+                <li data-i18n="web.exp1.b3">Настроил CI/CD и мониторинг, сократив время деплоя в несколько раз.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp2.role">Backend-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp2.period">2020 — 2023</span>
+              </div>
+              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp2.b1">Проектировал REST- и gRPC-API для высоконагруженных сервисов.</li>
+                <li data-i18n="web.exp2.b2">Оптимизировал запросы к БД и кеширование, снизив p99-латентность на 40%.</li>
+                <li data-i18n="web.exp2.b3">Наставлял junior-разработчиков, внедрил код-ревью.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp3.role">Frontend-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp3.period">2018 — 2020</span>
+              </div>
+              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp3.b1">Разрабатывал адаптивные интерфейсы на TypeScript и React.</li>
+                <li data-i18n="web.exp3.b2">Улучшил доступность и производительность, подняв оценки Lighthouse.</li>
+                <li data-i18n="web.exp3.b3">Автоматизировал сборку и релизы.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= ПРОЕКТЫ ======================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker" data-i18n="pg.k.proj">02 — Проекты</span>
+          <h2 class="section-title" data-i18n="proj.title">Избранные работы</h2>
+          <p class="section-desc" data-i18n="proj.desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
+        </header>
+
+        <!-- ЗАМЕНИТЕ: проекты — тексты в assets/js/i18n.js (ключи web.proj*) -->
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label1">Проект 01</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj1.title">Интернет-магазин</h3>
+              <p class="project-desc" data-i18n="web.proj1.desc">Быстрый магазин с корзиной, оплатой и админкой. Адаптивный, с хорошим SEO.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Stripe</li></ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label2">Проект 02</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj2.title">SaaS-дашборд</h3>
+              <p class="project-desc" data-i18n="web.proj2.desc">Панель аналитики с графиками, ролями и обновлениями в реальном времени.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>WebSocket</li></ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label3">Проект 03</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj3.title">Мобильное приложение</h3>
+              <p class="project-desc" data-i18n="web.proj3.desc">Кроссплатформенное приложение с офлайн-режимом и push-уведомлениями.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>React Native</li><li>Kotlin</li><li>SQLite</li><li>Firebase</li></ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
+                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= НАВЫКИ ======================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker" data-i18n="pg.k.skills">03 — Навыки</span>
+          <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
+          <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.languages">Языки</h3>
+            <ul class="tag-chips tag-chips-lg"><li>JavaScript</li><li>TypeScript</li><li>Kotlin</li><li>PHP</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.frontend">Frontend</h3>
+            <ul class="tag-chips tag-chips-lg"><li>React</li><li>Vue</li><li>Next.js</li><li>CSS</li><li>Tailwind</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.backend">Backend</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>REST / gRPC</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.mobile">Мобильные</h3>
+            <ul class="tag-chips tag-chips-lg"><li>React Native</li><li>Kotlin</li><li>Swift</li></ul>
+          </div>
+        </div>
+
+        <div class="skill-bars reveal">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar1">Frontend-разработка</span><span class="skill-bar-val">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar2">Backend-разработка</span><span class="skill-bar-val">85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar3">Мобильная разработка</span><span class="skill-bar-val">70%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="70"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker" data-i18n="pg.k.contact">04 — Контакты</span>
+          <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Подключение формы — см. комментарий в index.html -->
+          <form class="contact-form reveal" id="contact-form" action="#" method="POST" novalidate>
+            <div class="field">
+              <label for="name" data-i18n="form.name.label">Имя</label>
+              <input type="text" id="name" name="name" autocomplete="name"
+                     data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться" required />
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="form.email.label">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email"
+                     data-i18n-ph="form.email.ph" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="form.message.label">Сообщение</label>
+              <textarea id="message" name="message" rows="5"
+                        data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Отправить сообщение</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">
+              Форма демонстрационная — подключите Formspree или свой backend (см. комментарий в HTML).
+            </p>
+          </form>
+
+          <aside class="contact-direct reveal" aria-label="Прямые контакты">
+            <h3 data-i18n="contact.direct.title">Или напишите напрямую</h3>
+            <ul class="contact-links">
+              <li><span class="c-ico" aria-hidden="true">✉</span><a href="mailto:you@example.com">you@example.com</a></li>
+              <li><span class="c-ico" aria-hidden="true">✈</span><a href="https://t.me/" target="_blank" rel="noopener">@username (Telegram)</a></li>
+              <li><span class="c-ico" aria-hidden="true">⌥</span><a href="https://github.com/" target="_blank" rel="noopener">github.com/username</a></li>
+              <li><span class="c-ico" aria-hidden="true">in</span><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
+            </ul>
+            <div class="contact-availability">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="contact.available">Сейчас беру новые проекты</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

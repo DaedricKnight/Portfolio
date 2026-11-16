@@ -290,7 +290,37 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: color var(--t-fast), background var(--t-fast);
 }
 .nav-list a:hover,
-.nav-list a.active { color: var(--fg); background: var(--accent-soft); }
+.nav-list a.active,
+.nav-list a[aria-current="page"] { color: var(--fg); background: var(--accent-soft); }
+
+/* --- Переключатель языка --- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  gap: 2px;
+}
+.lang-switch button {
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--fg-muted);
+  background: transparent;
+  border: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: color var(--t-fast), background var(--t-fast);
+}
+.lang-switch button:hover { color: var(--fg); }
+.lang-switch button.active {
+  color: var(--accent-fg);
+  background: var(--grad);
+}
 
 .nav-actions { display: flex; align-items: center; gap: 0.6rem; }
 
@@ -450,6 +480,79 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: transparent;
 }
 .stat-label { margin: 0.4rem 0 0; font-size: var(--fs-sm); color: var(--fg-muted); }
+
+/* --- Компактный хедер страниц специализаций --- */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+}
+.page-hero .hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-inner { position: relative; z-index: 1; max-width: 720px; }
+.page-hero h1 {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0.6rem 0 1rem;
+}
+.page-hero-lead { color: var(--fg-muted); font-size: var(--fs-lg); max-width: 56ch; }
+.page-hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+/* --- Карточки направлений (главная) --- */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.spec-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+}
+.spec-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--grad);
+  opacity: 0;
+  transition: opacity var(--t-fast);
+  z-index: 0;
+  mix-blend-mode: normal;
+}
+.spec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+.spec-card > * { position: relative; z-index: 1; }
+.spec-ico {
+  display: grid;
+  place-items: center;
+  width: 56px; height: 56px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.spec-card-title { font-size: var(--fs-xl); font-weight: 700; }
+.spec-card-desc { color: var(--fg-muted); font-size: var(--fs-sm); flex: 1; }
+.spec-more { font-weight: 600; color: var(--accent); font-size: var(--fs-sm); }
+.spec-card:hover .spec-more { color: var(--accent-2); }
 
 /* --- Общие стили секций --- */
 .section { padding-block: var(--space-section); }

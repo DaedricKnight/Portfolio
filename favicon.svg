@@ -7,7 +7,7 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <!-- ЗАМЕНИТЕ: инициалы -->
+  <!-- ЗАМЕНИТЕ: инициалы (favicon статичен — язык не переключает) -->
   <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle"
-        font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="800" fill="#fff">ИФ</text>
+        font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="800" fill="#fff">АХ</text>
 </svg>
