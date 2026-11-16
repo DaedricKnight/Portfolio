@@ -154,43 +154,96 @@
           <p class="section-desc" data-i18n="proj.desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
         </header>
 
-        <!-- ЗАМЕНИТЕ: проекты — тексты в assets/js/i18n.js (ключи web.proj*) -->
+        <!-- Реальные проекты. Тексты (title/desc) — в assets/js/i18n.js (ключи web.proj*),
+             ссылки и чипы-технологии правятся здесь. Чипы — редактируемые заглушки. -->
         <div class="projects-grid">
+          <!-- Google Play: Reddit -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label1">Проект 01</span></div>
+            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">Reddit</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="web.proj1.title">Интернет-магазин</h3>
-              <p class="project-desc" data-i18n="web.proj1.desc">Быстрый магазин с корзиной, оплатой и админкой. Адаптивный, с хорошим SEO.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Stripe</li></ul>
+              <h3 class="project-title" data-i18n="web.proj1.title">Reddit</h3>
+              <p class="project-desc" data-i18n="web.proj1.desc">Мобильное приложение крупнейшей платформы сообществ и обсуждений.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>Feeds</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Google Play: iRobot Home -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label2">Проект 02</span></div>
+            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label">iRobot Home</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="web.proj2.title">SaaS-дашборд</h3>
-              <p class="project-desc" data-i18n="web.proj2.desc">Панель аналитики с графиками, ролями и обновлениями в реальном времени.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>WebSocket</li></ul>
+              <h3 class="project-title" data-i18n="web.proj2.title">iRobot Home</h3>
+              <p class="project-desc" data-i18n="web.proj2.desc">Управление роботами-пылесосами iRobot: уборка, расписание, карты.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>IoT</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.irobot.home" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Google Play: Wildberries -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label3">Проект 03</span></div>
+            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label">Wildberries</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="web.proj3.title">Мобильное приложение</h3>
-              <p class="project-desc" data-i18n="web.proj3.desc">Кроссплатформенное приложение с офлайн-режимом и push-уведомлениями.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>React Native</li><li>Kotlin</li><li>SQLite</li><li>Firebase</li></ul>
+              <h3 class="project-title" data-i18n="web.proj3.title">Wildberries</h3>
+              <p class="project-desc" data-i18n="web.proj3.desc">Приложение крупного маркетплейса: каталог, корзина, заказы, доставка.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>E-commerce</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.wildberries.ru" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Google Play: Guava Pay (MyGuava) -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-d" aria-hidden="true"><span class="project-thumb-label">Guava Pay</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj4.title">Guava Pay</h3>
+              <p class="project-desc" data-i18n="web.proj4.desc">Финтех-приложение: мультивалютные счета, карты, переводы и кэшбэк.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>Fintech</li></ul>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.guavapay.mobile" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: CopilotMoneyAndroid -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-e" aria-hidden="true"><span class="project-thumb-label">Copilot Money</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj5.title">Copilot Money (Android)</h3>
+              <p class="project-desc" data-i18n="web.proj5.desc">Приложение личных финансов: бюджет, транзакции, цели, Firebase-синхронизация.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/CopilotMoneyAndroid" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: MedVoice -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-f" aria-hidden="true"><span class="project-thumb-label">MedVoice</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj6.title">MedVoice</h3>
+              <p class="project-desc" data-i18n="web.proj6.desc">Прототип Android-планшета для ведения медкарт голосом, полностью офлайн.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Room</li><li>Offline</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: CarDiagnostics -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-g" aria-hidden="true"><span class="project-thumb-label">Car Diagnostics</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj7.title">Car Diagnostics</h3>
+              <p class="project-desc" data-i18n="web.proj7.desc">Диагностика для Android Automotive OS: параметры авто в реальном времени через VHAL.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Compose</li><li>Hilt</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/CarDiagnostics" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
               </div>
             </div>
           </article>

@@ -728,6 +728,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .thumb-a { background: linear-gradient(135deg, #7c6cff, #22d3ee); }
 .thumb-b { background: linear-gradient(135deg, #a855f7, #7c6cff); }
 .thumb-c { background: linear-gradient(135deg, #22d3ee, #6366f1); }
+.thumb-d { background: linear-gradient(135deg, #6366f1, #a855f7); }
+.thumb-e { background: linear-gradient(135deg, #0ea5c4, #7c6cff); }
+.thumb-f { background: linear-gradient(135deg, #8b5cf6, #22d3ee); }
+.thumb-g { background: linear-gradient(135deg, #7c6cff, #a855f7); }
 
 .project-body { display: flex; flex-direction: column; gap: 0.8rem; padding: 1.5rem; flex: 1; }
 .project-title { font-size: var(--fs-lg); font-weight: 700; }

@@ -154,43 +154,58 @@
           <p class="section-desc" data-i18n="proj.desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
         </header>
 
-        <!-- ЗАМЕНИТЕ: проекты — тексты в assets/js/i18n.js (ключи ai.proj*) -->
+        <!-- Реальные проекты. Тексты (title/desc) — в assets/js/i18n.js (ключи ai.proj*),
+             ссылки и чипы-технологии правятся здесь. Чипы — редактируемые заглушки. -->
         <div class="projects-grid">
+          <!-- GitHub: LocalEdgeAI -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label1">Проект 01</span></div>
+            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">LocalEdgeAI</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="ai.proj1.title">LLM-ассистент поддержки</h3>
-              <p class="project-desc" data-i18n="ai.proj1.desc">RAG-система поверх базы знаний: отвечает на запросы и держит контекст диалога.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>Python</li><li>LLM</li><li>RAG</li><li>FastAPI</li></ul>
+              <!-- ЗАМЕНИТЕ: уточните описание проекта (репозиторий был недоступен на момент сборки) -->
+              <h3 class="project-title" data-i18n="ai.proj1.title">LocalEdgeAI</h3>
+              <p class="project-desc" data-i18n="ai.proj1.desc">Локальный инференс ИИ на устройстве (edge): запуск моделей без облака.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>AI</li><li>Edge</li><li>On-device</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://github.com/DaedricKnight/LocalEdgeAI" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- GitHub: HinnerJag -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label2">Проект 02</span></div>
+            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label">HinnerJag</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="ai.proj2.title">Пайплайн инференса на TPU</h3>
-              <p class="project-desc" data-i18n="ai.proj2.desc">Высокопроизводительный сервинг моделей с батчингом и автоскейлингом.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>JAX</li><li>TPU</li><li>Kotlin</li><li>Docker</li></ul>
+              <h3 class="project-title" data-i18n="ai.proj2.title">HinnerJag</h3>
+              <p class="project-desc" data-i18n="ai.proj2.desc">Прототип для Android Automotive OS: успею ли я на паром — оценка времени в пути.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Car App</li><li>Västtrafik API</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://github.com/DaedricKnight/HinnerJag" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- GitHub: Hermi -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label" data-i18n="proj.label3">Проект 03</span></div>
+            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label">Hermi</span></div>
             <div class="project-body">
-              <h3 class="project-title" data-i18n="ai.proj3.title">Платформа разметки данных</h3>
-              <p class="project-desc" data-i18n="ai.proj3.desc">Инструмент для сбора и валидации датасетов — ускоряет подготовку данных.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>Python</li><li>PostgreSQL</li><li>Airflow</li><li>React</li></ul>
+              <h3 class="project-title" data-i18n="ai.proj3.title">Hermi</h3>
+              <p class="project-desc" data-i18n="ai.proj3.desc">Приватный офлайн-голосовой ассистент для Android Automotive OS, всё на устройстве.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>ONNX</li><li>BERT-Tiny</li><li>Vosk</li></ul>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.demo">Демо ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-i18n="proj.code">Код ↗</a>
+                <a href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: MedVoice (AI/ML-ракурс) -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-d" aria-hidden="true"><span class="project-thumb-label">MedVoice</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="ai.proj4.title">MedVoice</h3>
+              <p class="project-desc" data-i18n="ai.proj4.desc">Офлайн-конвейер ИИ для медицинской диктовки: VAD, whisper.cpp и BERT-Tiny на устройстве.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>whisper.cpp</li><li>ONNX</li><li>On-device</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
               </div>
             </div>
           </article>
