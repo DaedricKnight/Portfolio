@@ -752,7 +752,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .project-body { display: flex; flex-direction: column; gap: 0.8rem; padding: 1.5rem; flex: 1; }
 .project-title { font-size: var(--fs-lg); font-weight: 700; }
 .project-desc { color: var(--fg-muted); font-size: var(--fs-sm); flex: 1; }
-.project-links { display: flex; gap: 1.2rem; margin-top: 0.3rem; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.3rem; }
 .project-links a {
   font-size: var(--fs-sm);
   font-weight: 600;
@@ -965,6 +965,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .nav-list.open { transform: translateY(0); }
   .nav-list a { display: block; padding: 0.85rem 1rem; font-size: var(--fs-base); }
+}
+
+/* Узкие телефоны: шапка (имя + языки + тема + меню) должна помещаться в ширину */
+@media (max-width: 420px) {
+  .nav-inner { gap: 0.5rem; }
+  .nav-actions { gap: 0.4rem; }
+  .brand { min-width: 0; gap: 0.5rem; }
+  .brand-text { font-size: var(--fs-sm); }
+  .lang-switch button { padding: 0.35rem 0.45rem; }
 }
 
 @media (max-width: 460px) {
