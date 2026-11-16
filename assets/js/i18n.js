@@ -24,7 +24,7 @@
       "skip": "К основному содержимому",
 
       /* Заголовки вкладок и описания (по страницам) */
-      "title.home": "Артём Хатеев — Fullstack & AI/ML инженер",
+      "title.home": "Артём Хатеев — Software & AI/ML инженер",
       "title.web": "Сайты и приложения — Артём Хатеев",
       "title.ai": "AI/ML — Артём Хатеев",
       "desc.home": "Портфолио Артёма Хатеева: разработка сайтов и приложений, а также решения на базе AI/ML.",
@@ -44,7 +44,7 @@
       /* Hero (главная) */
       "hero.badge": "Открыт для проектов и сотрудничества",
       "hero.lead": "Создаю сайты, приложения и AI-решения — от идеи до продакшена.",
-      "hero.sub": "Fullstack & AI/ML инженер. Помогаю командам запускать продукты и внедрять машинное обучение.",
+      "hero.sub": "Software & AI/ML инженер. Помогаю командам запускать продукты и внедрять машинное обучение.",
       "cta.discuss": "Обсудить проект",
       "cta.resume": "Скачать резюме",
       "stat.years": "лет опыта",
@@ -139,7 +139,7 @@
       "footer.top": "Наверх",
 
       /* Специализация: Сайты и приложения */
-      "web.exp1.role": "Senior Fullstack-разработчик",
+      "web.exp1.role": "Senior Software-инженер",
       "web.exp1.period": "2023 — наст. время",
       "web.exp1.b1": "Запустил SPA на React и сервис на Node.js, ускорив загрузку на 45%.",
       "web.exp1.b2": "Внедрил дизайн-систему и покрытие тестами, снизив число багов в релизах.",
@@ -151,7 +151,7 @@
       "web.exp2.b3": "Наставлял junior-разработчиков, внедрил код-ревью.",
       "web.exp3.role": "Frontend-разработчик",
       "web.exp3.period": "2018 — 2020",
-      "web.exp3.b1": "Разрабатывал адаптивные интерфейсы на TypeScript и React.",
+      "web.exp3.b1": "Разрабатывал адаптивные интерфейсы на React.",
       "web.exp3.b2": "Улучшил доступность и производительность, подняв оценки Lighthouse.",
       "web.exp3.b3": "Автоматизировал сборку и релизы.",
       "web.proj1.title": "Reddit",
@@ -207,7 +207,7 @@
       "initials": "AK",
       "skip": "Skip to main content",
 
-      "title.home": "Artem Khateev — Fullstack & AI/ML Engineer",
+      "title.home": "Artem Khateev — Software & AI/ML Engineer",
       "title.web": "Websites & Apps — Artem Khateev",
       "title.ai": "AI/ML — Artem Khateev",
       "desc.home": "Portfolio of Artem Khateev: web and app development plus AI/ML solutions.",
@@ -225,7 +225,7 @@
 
       "hero.badge": "Open to projects and collaboration",
       "hero.lead": "I build websites, apps, and AI solutions — from idea to production.",
-      "hero.sub": "Fullstack & AI/ML engineer. I help teams launch products and adopt machine learning.",
+      "hero.sub": "Software & AI/ML engineer. I help teams launch products and adopt machine learning.",
       "cta.discuss": "Discuss a project",
       "cta.resume": "Download resume",
       "stat.years": "years of experience",
@@ -311,7 +311,7 @@
       "footer.rights": "All rights reserved.",
       "footer.top": "Back to top",
 
-      "web.exp1.role": "Senior Fullstack Developer",
+      "web.exp1.role": "Senior Software Engineer",
       "web.exp1.period": "2023 — present",
       "web.exp1.b1": "Launched a React SPA and a Node.js service, improving load time by 45%.",
       "web.exp1.b2": "Introduced a design system and test coverage, reducing bugs in releases.",
@@ -323,7 +323,7 @@
       "web.exp2.b3": "Mentored junior developers and introduced code review.",
       "web.exp3.role": "Frontend Developer",
       "web.exp3.period": "2018 — 2020",
-      "web.exp3.b1": "Built responsive interfaces with TypeScript and React.",
+      "web.exp3.b1": "Built responsive interfaces with React.",
       "web.exp3.b2": "Improved accessibility and performance, raising Lighthouse scores.",
       "web.exp3.b3": "Automated builds and releases.",
       "web.proj1.title": "Reddit",
@@ -378,7 +378,7 @@
       "initials": "AK",
       "skip": "Hoppa till huvudinnehållet",
 
-      "title.home": "Artem Khateev — Fullstack- & AI/ML-ingenjör",
+      "title.home": "Artem Khateev — Software- & AI/ML-ingenjör",
       "title.web": "Webbplatser & appar — Artem Khateev",
       "title.ai": "AI/ML — Artem Khateev",
       "desc.home": "Artem Khateevs portfolio: webb- och apputveckling samt AI/ML-lösningar.",
@@ -396,7 +396,7 @@
 
       "hero.badge": "Öppen för projekt och samarbete",
       "hero.lead": "Jag bygger webbplatser, appar och AI-lösningar — från idé till produktion.",
-      "hero.sub": "Fullstack- & AI/ML-ingenjör. Jag hjälper team att lansera produkter och införa maskininlärning.",
+      "hero.sub": "Software- & AI/ML-ingenjör. Jag hjälper team att lansera produkter och införa maskininlärning.",
       "cta.discuss": "Diskutera projekt",
       "cta.resume": "Ladda ner CV",
       "stat.years": "års erfarenhet",
@@ -482,7 +482,7 @@
       "footer.rights": "Alla rättigheter förbehållna.",
       "footer.top": "Till toppen",
 
-      "web.exp1.role": "Senior Fullstack-utvecklare",
+      "web.exp1.role": "Senior Software-ingenjör",
       "web.exp1.period": "2023 — nutid",
       "web.exp1.b1": "Lanserade en React-SPA och en Node.js-tjänst och förbättrade laddtiden med 45%.",
       "web.exp1.b2": "Införde ett designsystem och testtäckning och minskade buggar i releaser.",
@@ -494,7 +494,7 @@
       "web.exp2.b3": "Handledde junior-utvecklare och införde kodgranskning.",
       "web.exp3.role": "Frontend-utvecklare",
       "web.exp3.period": "2018 — 2020",
-      "web.exp3.b1": "Byggde responsiva gränssnitt med TypeScript och React.",
+      "web.exp3.b1": "Byggde responsiva gränssnitt med React.",
       "web.exp3.b2": "Förbättrade tillgänglighet och prestanda och höjde Lighthouse-poängen.",
       "web.exp3.b3": "Automatiserade bygg och releaser.",
       "web.proj1.title": "Reddit",
