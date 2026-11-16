@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <title>AI/ML — Артём Хатеев</title>
-  <meta name="description" content="AI/ML: большие языковые модели, обучение и инференс, данные и MLOps." />
+  <meta name="description" content="AI/ML: ИИ на устройстве, распознавание речи, классификация намерений и компьютерное зрение." />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=9" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -83,7 +83,7 @@
       <div class="container page-hero-inner">
         <a class="page-hero-back" href="index.html">← <span data-i18n="nav.home">Главная</span></a>
         <h1 data-i18n="card.ai.title">AI/ML</h1>
-        <p class="page-hero-lead" data-i18n="card.ai.desc">LLM, обучение и инференс моделей, данные и MLOps.</p>
+        <p class="page-hero-lead" data-i18n="card.ai.desc">ИИ на устройстве: голосовые пайплайны, классификация намерений, компьютерное зрение и нейросети.</p>
       </div>
     </section>
 
@@ -95,20 +95,23 @@
           <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
         </header>
 
-        <!-- ЗАМЕНИТЕ: тексты опыта — в assets/js/i18n.js (ключи ai.exp*) -->
+        <!-- Опыт собран только из реальных источников: собственные репозитории (даты по истории
+             коммитов на GitHub) и резюме. Метрики и достижения не придумывались. Тексты — в
+             assets/js/i18n.js (ключи ai.exp*). -->
         <ol class="timeline">
           <li class="timeline-item reveal">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="ai.exp1.role">Senior ML-инженер</h3>
-                <span class="timeline-period" data-i18n="ai.exp1.period">2023 — наст. время</span>
+                <h3 class="timeline-role" data-i18n="ai.exp1.role">Независимые AI-проекты</h3>
+                <span class="timeline-period" data-i18n="ai.exp1.period">2026 — наст. время</span>
               </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <p class="timeline-company" data-i18n="ai.exp1.org">Собственные проекты · GitHub</p>
               <ul class="timeline-points">
-                <li data-i18n="ai.exp1.b1">Дообучал LLM семейства Qwen под доменные задачи, +18% к точности.</li>
-                <li data-i18n="ai.exp1.b2">Перенёс инференс на TPU-ускорители, сократив стоимость запроса в 3 раза.</li>
-                <li data-i18n="ai.exp1.b3">Построил пайплайн оценки качества и регрессионных тестов моделей.</li>
+                <li data-i18n="ai.exp1.b1">Голосовые пайплайны на устройстве для Android и Android Automotive: Silero VAD, whisper.cpp и Vosk — полностью офлайн, без облака.</li>
+                <li data-i18n="ai.exp1.b2">Классификация намерений квантизованной моделью BERT-Tiny (INT8, ONNX Runtime) в MedVoice и Hermi.</li>
+                <li data-i18n="ai.exp1.b3">Приватные офлайн-ассистенты и локальный edge-инференс: Hermi, MedVoice, LocalEdgeAI, а также прототип HinnerJag для Android Automotive OS.</li>
+                <li data-i18n="ai.exp1.b4">Постоянно изучаю новые техники обучения нейронных сетей.</li>
               </ul>
             </div>
           </li>
@@ -117,34 +120,34 @@
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="ai.exp2.role">ML-инженер</h3>
-                <span class="timeline-period" data-i18n="ai.exp2.period">2020 — 2023</span>
+                <h3 class="timeline-role" data-i18n="ai.exp2.role">Android / ML-разработчик</h3>
+                <!-- ЗАМЕНИТЕ: компания и годы (в i18n.js: ai.exp2.period и ai.exp2.org) -->
+                <span class="timeline-period" data-i18n="ai.exp2.period">Годы</span>
               </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <p class="timeline-company" data-i18n="ai.exp2.org">Компания</p>
               <ul class="timeline-points">
-                <li data-i18n="ai.exp2.b1">Разрабатывал сервисы инференса на Python и Kotlin под высокой нагрузкой.</li>
-                <li data-i18n="ai.exp2.b2">Собрал RAG-систему поверх базы знаний, снизив нагрузку на поддержку.</li>
-                <li data-i18n="ai.exp2.b3">Внедрил MLflow и мониторинг моделей в продакшене.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="timeline-item reveal">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="ai.exp3.role">Data Scientist</h3>
-                <span class="timeline-period" data-i18n="ai.exp3.period">2018 — 2020</span>
-              </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
-              <ul class="timeline-points">
-                <li data-i18n="ai.exp3.b1">Строил модели классификации и прогнозирования на реальных данных.</li>
-                <li data-i18n="ai.exp3.b2">Готовил и размечал датасеты, автоматизировал обработку данных.</li>
-                <li data-i18n="ai.exp3.b3">Визуализировал результаты и защищал гипотезы перед бизнесом.</li>
+                <li data-i18n="ai.exp2.b1">Нейросеть для сегментации тела человека — двухмодульная система, которая может работать в режиме видео.</li>
+                <li data-i18n="ai.exp2.b2">Распознавание блюд в ресторане на базе Google Vision API; приложение, превращающее обычную камеру в VR; AR-функции.</li>
+                <li data-i18n="ai.exp2.b3">GPU-вычисления на шейдерах и OpenCL; собственная система кодирования видео на FFmpeg.</li>
+                <li data-i18n="ai.exp2.b4">Android-приложения с нуля на Java и Kotlin, в том числе Hyperkey — клавиатура-виджет для чатов с 300 000+ пользователей — и видео-селфи-приложение Emoji Challenge Camera.</li>
               </ul>
             </div>
           </li>
         </ol>
+
+        <!-- Сертификаты. LinkedIn был недоступен при сборке — названия не выдуманы.
+             ЗАМЕНИТЕ: впишите реальные сертификаты (название, организация, год). -->
+        <div class="cert-block reveal">
+          <h3 class="cert-title" data-i18n="cert.title">Сертификаты</h3>
+          <ul class="cert-list">
+            <!-- ЗАМЕНИТЕ: сертификат -->
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+            <!-- ЗАМЕНИТЕ: сертификат -->
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+            <!-- ЗАМЕНИТЕ: сертификат -->
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -154,7 +157,7 @@
         <header class="section-head reveal">
           <span class="section-kicker" data-i18n="pg.k.proj">02 — Проекты</span>
           <h2 class="section-title" data-i18n="proj.title">Избранные работы</h2>
-          <p class="section-desc" data-i18n="proj.desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
+          <p class="section-desc" data-i18n="proj.desc">Избранные проекты и приложения, над которыми я работал.</p>
         </header>
 
         <!-- Реальные проекты. Тексты (title/desc) — в assets/js/i18n.js (ключи ai.proj*),
@@ -225,40 +228,38 @@
           <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
         </header>
 
+        <!-- Навыки отражают реальные проекты и резюме. Названия технологий не переводятся. -->
         <div class="skills-grid">
           <div class="skill-group reveal">
             <h3 class="skill-group-title" data-i18n="cat.languages">Языки</h3>
-            <ul class="tag-chips tag-chips-lg"><li>Python</li><li>Kotlin</li><li>SQL</li><li>Bash</li></ul>
+            <ul class="tag-chips tag-chips-lg"><li>Kotlin</li><li>Java</li><li>Python</li><li>C++</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3 class="skill-group-title" data-i18n="cat.ml">ML / AI</h3>
-            <ul class="tag-chips tag-chips-lg"><li>PyTorch</li><li>JAX</li><li>Transformers</li><li>LLM / RAG</li><li>Fine-tuning</li></ul>
+            <h3 class="skill-group-title" data-i18n="cat.ondevice">ИИ на устройстве</h3>
+            <ul class="tag-chips tag-chips-lg"><li>ONNX Runtime</li><li>INT8 quantization</li><li>BERT-Tiny</li><li>Intent classification</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3 class="skill-group-title" data-i18n="cat.backend">Backend</h3>
-            <ul class="tag-chips tag-chips-lg"><li>FastAPI</li><li>gRPC</li><li>PostgreSQL</li><li>Redis</li></ul>
+            <h3 class="skill-group-title" data-i18n="cat.speech">Речь</h3>
+            <ul class="tag-chips tag-chips-lg"><li>whisper.cpp</li><li>Vosk</li><li>Silero VAD</li><li>TTS</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3 class="skill-group-title" data-i18n="cat.data">Данные</h3>
-            <ul class="tag-chips tag-chips-lg"><li>Pandas</li><li>Spark</li><li>Airflow</li><li>DVC</li></ul>
-          </div>
-          <div class="skill-group reveal">
-            <h3 class="skill-group-title" data-i18n="cat.tools">Инструменты</h3>
-            <ul class="tag-chips tag-chips-lg"><li>Docker</li><li>Kubernetes</li><li>MLflow</li><li>TPU / GPU</li><li>Git</li></ul>
+            <h3 class="skill-group-title" data-i18n="cat.cv">Компьютерное зрение</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Segmentation</li><li>Google Vision API</li><li>AR / VR</li><li>OpenCL</li><li>Shaders</li></ul>
           </div>
         </div>
 
+        <!-- ЗАМЕНИТЕ: проценты — ваша самооценка (data-level и подпись) -->
         <div class="skill-bars reveal">
           <div class="skill-bar">
-            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar1">Машинное обучение</span><span class="skill-bar-val">90%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar1">ИИ на устройстве</span><span class="skill-bar-val">90%</span></div>
             <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
           </div>
           <div class="skill-bar">
-            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar2">LLM / NLP</span><span class="skill-bar-val">85%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar2">Речь и NLP</span><span class="skill-bar-val">85%</span></div>
             <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
           </div>
           <div class="skill-bar">
-            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar3">MLOps / инфраструктура</span><span class="skill-bar-val">75%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar3">Компьютерное зрение</span><span class="skill-bar-val">75%</span></div>
             <div class="bar-track"><div class="bar-fill" data-level="75"></div></div>
           </div>
         </div>
@@ -328,7 +329,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=8"></script>
-  <script src="assets/js/script.js?v=8"></script>
+  <script src="assets/js/i18n.js?v=9"></script>
+  <script src="assets/js/script.js?v=9"></script>
 </body>
 </html>
