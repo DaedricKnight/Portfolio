@@ -46,7 +46,9 @@ portfolio/
 2. **Фото** — в `index.html` замените блок `photo-placeholder` на
    `<img src="assets/img/photo.jpg" alt="Artem Khateev">` (создайте папку `assets/img`).
 3. **Резюме** — положите PDF в репозиторий и укажите его в кнопке «Скачать резюме» (`cta.resume`).
-4. **Контакты** — email, Telegram, GitHub, LinkedIn в секции контактов (на любой странице — она общая).
+4. **Контакты** — уже указаны: email artemkhateev.ai@gmail.com, Telegram [@Artemidius](https://t.me/Artemidius),
+   GitHub [DaedricKnight](https://github.com/DaedricKnight). LinkedIn на сайте не указан — вместо ссылки строка
+   «LinkedIn — по запросу» (ключ `contact.linkedin`).
 5. **Опыт и проекты** — тексты в `i18n.js` (ключи `web.exp*`, `web.proj*`, `ai.exp*`, `ai.proj*`);
    названия технологий (чипы) — прямо в `web.html` / `ai.html`.
 6. **Навыки** — категории переводятся (`cat.*`), а чипы-технологии правятся в HTML.

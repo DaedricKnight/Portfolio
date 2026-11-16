@@ -894,6 +894,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-links li { display: flex; align-items: center; gap: 0.85rem; }
 .contact-links a { color: var(--fg-muted); font-size: var(--fs-sm); transition: color var(--t-fast); word-break: break-all; }
 .contact-links a:hover { color: var(--accent); }
+.contact-note { color: var(--fg-subtle); font-size: var(--fs-sm); }
 .c-ico {
   display: grid;
   place-items: center;

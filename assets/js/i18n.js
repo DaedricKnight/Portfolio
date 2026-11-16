@@ -131,6 +131,7 @@
       "form.sent": "Спасибо! Это демо-форма — подключите backend, чтобы получать сообщения.",
       "contact.direct.title": "Или напишите напрямую",
       "contact.available": "Сейчас беру новые проекты",
+      "contact.linkedin": "LinkedIn — по запросу",
 
       /* Подвал */
       "footer.rights": "Все права защищены.",
@@ -303,6 +304,7 @@
       "form.sent": "Thanks! This is a demo form — connect a backend to receive messages.",
       "contact.direct.title": "Or reach out directly",
       "contact.available": "Available for new projects",
+      "contact.linkedin": "LinkedIn — available on request",
 
       "footer.rights": "All rights reserved.",
       "footer.top": "Back to top",
@@ -472,6 +474,7 @@
       "form.sent": "Tack! Detta är ett demoformulär — anslut en backend för att ta emot meddelanden.",
       "contact.direct.title": "Eller hör av dig direkt",
       "contact.available": "Tillgänglig för nya projekt",
+      "contact.linkedin": "LinkedIn — på begäran",
 
       "footer.rights": "Alla rättigheter förbehållna.",
       "footer.top": "Till toppen",
