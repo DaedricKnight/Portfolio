@@ -103,6 +103,7 @@
       "proj.code": "Код ↗",
       "proj.store": "Google Play ↗",
       "proj.github": "GitHub ↗",
+      "proj.status.closed": "Проект закрыт",
 
       /* Отзывы (главная) */
       "home.k.testi": "04 — Отзывы",
@@ -160,7 +161,7 @@
       "web.proj3.title": "Wildberries",
       "web.proj3.desc": "Мобильное приложение крупного маркетплейса: каталог товаров, поиск, корзина, оформление заказов и отслеживание доставки.",
       "web.proj4.title": "Guava Pay",
-      "web.proj4.desc": "Финтех-приложение для платежей: мультивалютные счета, карты, переводы и кэшбэк с поддержкой Apple Pay и Google Pay.",
+      "web.proj4.desc": "Финтех-приложение для платежей, которое предлагало мультивалютные счета, карты, переводы и кэшбэк с поддержкой Apple Pay и Google Pay.",
       "web.proj5.title": "Copilot Money (Android)",
       "web.proj5.desc": "Приложение для личных финансов на Android: дашборд бюджета, лента транзакций, импорт CSV, цели накоплений и регулярные платежи. Синхронизация через Firebase.",
       "web.proj6.title": "MedVoice",
@@ -278,6 +279,7 @@
       "proj.code": "Code ↗",
       "proj.store": "Google Play ↗",
       "proj.github": "GitHub ↗",
+      "proj.status.closed": "Discontinued",
 
       "home.k.testi": "04 — Testimonials",
       "testi.title": "What people say",
@@ -331,7 +333,7 @@
       "web.proj3.title": "Wildberries",
       "web.proj3.desc": "Mobile app for a large online marketplace: product catalog, search, cart, checkout and delivery tracking.",
       "web.proj4.title": "Guava Pay",
-      "web.proj4.desc": "Fintech payments app: multi-currency accounts, cards, transfers and cashback with Apple Pay and Google Pay support.",
+      "web.proj4.desc": "Fintech payments app that offered multi-currency accounts, cards, transfers and cashback, with Apple Pay and Google Pay support.",
       "web.proj5.title": "Copilot Money (Android)",
       "web.proj5.desc": "Personal-finance Android app: budget dashboard, transaction feed, CSV import, savings goals and recurring bills. Sync via Firebase.",
       "web.proj6.title": "MedVoice",
@@ -448,6 +450,7 @@
       "proj.code": "Kod ↗",
       "proj.store": "Google Play ↗",
       "proj.github": "GitHub ↗",
+      "proj.status.closed": "Avvecklad",
 
       "home.k.testi": "04 — Omdömen",
       "testi.title": "Vad folk säger",
@@ -501,7 +504,7 @@
       "web.proj3.title": "Wildberries",
       "web.proj3.desc": "Mobilapp för en stor onlinemarknadsplats: produktkatalog, sökning, varukorg, kassa och leveransspårning.",
       "web.proj4.title": "Guava Pay",
-      "web.proj4.desc": "Fintech-betalapp: flervalutakonton, kort, överföringar och cashback med stöd för Apple Pay och Google Pay.",
+      "web.proj4.desc": "Fintech-betalapp som erbjöd flervalutakonton, kort, överföringar och cashback, med stöd för Apple Pay och Google Pay.",
       "web.proj5.title": "Copilot Money (Android)",
       "web.proj5.desc": "Android-app för privatekonomi: budgetöversikt, transaktionsflöde, CSV-import, sparmål och återkommande räkningar. Synk via Firebase.",
       "web.proj6.title": "MedVoice",

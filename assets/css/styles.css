@@ -761,6 +761,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .project-links a:hover { color: var(--accent-2); }
 
+/* Статус проекта (например, «Проект закрыт») — на месте строки ссылок.
+   Отличается от чипов технологий: пилюля, обычный шрифт, нейтральные цвета, точка. */
+.project-status { display: flex; margin-top: 0.3rem; }
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--fg-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.1rem 0.75rem;
+  line-height: 1.5; /* по высоте совпадает со строкой ссылок соседних карточек */
+}
+.status-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--fg-subtle); flex: none; }
+
 /* --- Навыки --- */
 .skills-grid {
   display: grid;
