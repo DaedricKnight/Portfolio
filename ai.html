@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=12" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=13" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -95,23 +95,22 @@
           <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
         </header>
 
-        <!-- Опыт собран только из реальных источников: собственные репозитории (даты по истории
-             коммитов на GitHub) и резюме. Метрики и достижения не придумывались. Тексты — в
-             assets/js/i18n.js (ключи ai.exp*). -->
+        <!-- Опыт — по данным пользователя (LinkedIn) и его репозиториям; метрики взяты из этих данных.
+             Тексты — в assets/js/i18n.js (ключи ai.exp*). -->
         <ol class="timeline">
           <li class="timeline-item reveal">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="ai.exp1.role">Независимые AI-проекты</h3>
+                <h3 class="timeline-role" data-i18n="ai.exp1.role">Независимый Android и On-Device AI инженер (R&amp;D)</h3>
                 <span class="timeline-period" data-i18n="ai.exp1.period">2026 — наст. время</span>
               </div>
-              <p class="timeline-company" data-i18n="ai.exp1.org">Собственные проекты · GitHub</p>
+              <p class="timeline-company" data-i18n="ai.exp1.org">Самозанятость · Загреб, Хорватия · Удалённо</p>
               <ul class="timeline-points">
-                <li data-i18n="ai.exp1.b1">Голосовые пайплайны на устройстве для Android и Android Automotive: Silero VAD, whisper.cpp и Vosk — полностью офлайн, без облака.</li>
-                <li data-i18n="ai.exp1.b2">Классификация намерений квантизованной моделью BERT-Tiny (INT8, ONNX Runtime) в MedVoice и Hermi.</li>
-                <li data-i18n="ai.exp1.b3">Приватные офлайн-ассистенты и локальный edge-инференс: Hermi, MedVoice, LocalEdgeAI, а также прототип HinnerJag для Android Automotive OS.</li>
-                <li data-i18n="ai.exp1.b4">Постоянно изучаю новые техники обучения нейронных сетей.</li>
+                <li data-i18n="ai.exp1.b1">Hermi — офлайн-голосовой ассистент для AAOS: Silero VAD → Vosk → INT8 BERT-Tiny (ONNX Runtime, 4,7 МБ); 102 команды салона, точность 97% на 7 акцентах и 5 видах шума, NLU быстрее 10 мс.</li>
+                <li data-i18n="ai.exp1.b2">MedVoice — офлайн-голосовой ассистент для клиники: распознавание речи на whisper.cpp, INT8-движок намерений на BERT для 108 клинических команд, офлайн-TTS и автоматические акустические тесты.</li>
+                <li data-i18n="ai.exp1.b3">LocalEdgeAI — набор моделей намерений по ~4,7 МБ для автомобильной, медицинской и промышленной сфер: генерация данных, обучение, квантизация и Android SDK.</li>
+                <li data-i18n="ai.exp1.b4">Локальные агентные сценарии на небольших LLM: function calling, инструменты, RAG и структурированные ответы в жёстких ограничениях устройства.</li>
               </ul>
             </div>
           </li>
@@ -123,8 +122,7 @@
                 <h3 class="timeline-role" data-i18n="ai.exp2.role">Android / ML-разработчик</h3>
                 <span class="timeline-period" data-i18n="ai.exp2.period">2014 — 2026</span>
               </div>
-              <!-- ЗАМЕНИТЕ: компания (в i18n.js: ai.exp2.org) -->
-              <p class="timeline-company" data-i18n="ai.exp2.org">Компания</p>
+              <p class="timeline-company" data-i18n="ai.exp2.org">Hyperkey · Фриланс</p>
               <ul class="timeline-points">
                 <li data-i18n="ai.exp2.b1">Нейросеть для сегментации тела человека — двухмодульная система, которая может работать в режиме видео.</li>
                 <li data-i18n="ai.exp2.b2">Распознавание блюд в ресторане на базе Google Vision API; приложение, превращающее обычную камеру в VR; AR-функции.</li>
@@ -167,10 +165,9 @@
           <article class="project-card reveal">
             <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">LocalEdgeAI</span></div>
             <div class="project-body">
-              <!-- ЗАМЕНИТЕ: уточните описание проекта (репозиторий был недоступен на момент сборки) -->
               <h3 class="project-title" data-i18n="ai.proj1.title">LocalEdgeAI</h3>
-              <p class="project-desc" data-i18n="ai.proj1.desc">Локальный инференс ИИ на устройстве (edge): запуск моделей без облака.</p>
-              <ul class="tag-chips" aria-label="Технологии"><li>AI</li><li>Edge</li><li>On-device</li></ul>
+              <p class="project-desc" data-i18n="ai.proj1.desc">Набор моделей намерений на устройстве (~4,7 МБ) для автомобильной, медицинской и промышленной сфер: генерация данных, обучение, INT8-квантизация и Android SDK.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>INT8</li><li>Intent models</li><li>Android SDK</li></ul>
               <div class="project-links">
                 <a href="https://github.com/DaedricKnight/LocalEdgeAI" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
               </div>
@@ -195,7 +192,7 @@
             <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label">Hermi</span></div>
             <div class="project-body">
               <h3 class="project-title" data-i18n="ai.proj3.title">Hermi</h3>
-              <p class="project-desc" data-i18n="ai.proj3.desc">Приватный офлайн-голосовой ассистент для Android Automotive OS, всё на устройстве.</p>
+              <p class="project-desc" data-i18n="ai.proj3.desc">Приватный офлайн-голосовой ассистент для Android Automotive OS: 102 команды салона, точность 97% на 7 акцентах, NLU быстрее 10 мс — всё на устройстве (Silero VAD, Vosk, BERT-Tiny).</p>
               <ul class="tag-chips" aria-label="Технологии"><li>ONNX</li><li>BERT-Tiny</li><li>Vosk</li></ul>
               <div class="project-links">
                 <a href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
@@ -208,7 +205,7 @@
             <div class="project-thumb thumb-d" aria-hidden="true"><span class="project-thumb-label">MedVoice</span></div>
             <div class="project-body">
               <h3 class="project-title" data-i18n="ai.proj4.title">MedVoice</h3>
-              <p class="project-desc" data-i18n="ai.proj4.desc">Офлайн-конвейер ИИ для медицинской диктовки: VAD, whisper.cpp и BERT-Tiny на устройстве.</p>
+              <p class="project-desc" data-i18n="ai.proj4.desc">Офлайн-конвейер ИИ для медицинской диктовки: Silero VAD определяет речь, whisper.cpp транскрибирует, а INT8-модель BERT классифицирует намерение среди 108 клинических команд — всё на устройстве.</p>
               <ul class="tag-chips" aria-label="Технологии"><li>whisper.cpp</li><li>ONNX</li><li>On-device</li></ul>
               <div class="project-links">
                 <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
@@ -231,12 +228,12 @@
         <!-- Навыки отражают реальные проекты и резюме. Названия технологий не переводятся. -->
         <div class="skills-grid">
           <div class="skill-group reveal">
-            <h3 class="skill-group-title" data-i18n="cat.languages">Языки</h3>
-            <ul class="tag-chips tag-chips-lg"><li>Kotlin</li><li>Java</li><li>Python</li><li>C++</li></ul>
+            <h3 class="skill-group-title" data-i18n="cat.langplat">Языки и платформы</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Kotlin</li><li>Java</li><li>Python</li><li>C++</li><li>Android</li><li>AAOS</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3 class="skill-group-title" data-i18n="cat.ondevice">ИИ на устройстве</h3>
-            <ul class="tag-chips tag-chips-lg"><li>ONNX Runtime</li><li>INT8 quantization</li><li>BERT-Tiny</li><li>Intent classification</li></ul>
+            <ul class="tag-chips tag-chips-lg"><li>ONNX Runtime</li><li>TFLite</li><li>INT8 quantization</li><li>BERT-Tiny</li><li>Intent classification</li><li>Function calling / LLM agents</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3 class="skill-group-title" data-i18n="cat.speech">Речь</h3>
@@ -329,7 +326,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=12"></script>
-  <script src="assets/js/script.js?v=12"></script>
+  <script src="assets/js/i18n.js?v=13"></script>
+  <script src="assets/js/script.js?v=13"></script>
 </body>
 </html>

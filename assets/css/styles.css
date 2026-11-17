@@ -694,6 +694,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--fg-muted);
   font-size: var(--fs-sm);
 }
+/* Компактный таймлайн для длинного карьерного пути (8+ записей) */
+.timeline-compact { gap: 1rem; }
+.timeline-compact .timeline-card { padding: 1.1rem 1.4rem; }
+.timeline-compact .timeline-company { margin-bottom: 0.6rem; }
+.timeline-compact .timeline-points { gap: 0.35rem; }
+.timeline-compact .timeline-dot { top: 4px; }
+
 .timeline-points li::before {
   content: "▹";
   position: absolute;

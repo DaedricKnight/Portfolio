@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=12" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=13" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -95,20 +95,21 @@
           <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
         </header>
 
-        <!-- ЗАМЕНИТЕ: тексты опыта — в assets/js/i18n.js (ключи web.exp*) -->
-        <ol class="timeline">
+        <!-- Карьерный путь — по данным LinkedIn пользователя (компании, годы, города, достижения).
+             Тексты — в assets/js/i18n.js (ключи web.exp*). -->
+        <ol class="timeline timeline-compact">
           <li class="timeline-item reveal">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
                 <h3 class="timeline-role" data-i18n="web.exp1.role">Senior Software-инженер</h3>
-                <span class="timeline-period" data-i18n="web.exp1.period">2023 — наст. время</span>
+                <span class="timeline-period" data-i18n="web.exp1.period">2024 — 2026</span>
               </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <p class="timeline-company" data-i18n="web.exp1.org">TLM Software Design · проект iRobot · Белград, Сербия · Удалённо</p>
               <ul class="timeline-points">
-                <li data-i18n="web.exp1.b1">Запустил SPA на React и сервис на Node.js, ускорив загрузку на 45%.</li>
-                <li data-i18n="web.exp1.b2">Внедрил дизайн-систему и покрытие тестами, снизив число багов в релизах.</li>
-                <li data-i18n="web.exp1.b3">Настроил CI/CD и мониторинг, сократив время деплоя в несколько раз.</li>
+                <li data-i18n="web.exp1.b1">С нуля спроектировал новую систему управления роботами на современном Android-стеке; вместе с UI/UX разработал модели взаимодействия для парка из 100 000+ роботов.</li>
+                <li data-i18n="web.exp1.b2">Отзывчивость приложения +25% за счёт асинхронного программирования; успешность сопряжения устройств +15%.</li>
+                <li data-i18n="web.exp1.b3">Скорость поставки фич +20% благодаря единым правилам качества кода.</li>
               </ul>
             </div>
           </li>
@@ -117,14 +118,14 @@
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="web.exp2.role">Backend-разработчик</h3>
-                <span class="timeline-period" data-i18n="web.exp2.period">2020 — 2023</span>
+                <h3 class="timeline-role" data-i18n="web.exp2.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp2.period">2023 — 2024</span>
               </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <p class="timeline-company" data-i18n="web.exp2.org">GuavaPay · Удалённо</p>
               <ul class="timeline-points">
-                <li data-i18n="web.exp2.b1">Проектировал REST- и gRPC-API для высоконагруженных сервисов.</li>
-                <li data-i18n="web.exp2.b2">Оптимизировал запросы к БД и кеширование, снизив p99-латентность на 40%.</li>
-                <li data-i18n="web.exp2.b3">Наставлял junior-разработчиков, внедрил код-ревью.</li>
+                <li data-i18n="web.exp2.b1">Разработал ключевые платёжные модули глобальной платёжной платформы с соблюдением PCI DSS.</li>
+                <li data-i18n="web.exp2.b2">Надёжность транзакций 99,9% при обработке более $50 млн в квартал.</li>
+                <li data-i18n="web.exp2.b3">Блокировки главного потока −40% (500 мс → менее 300 мс) за счёт оптимизации Kotlin Flow.</li>
               </ul>
             </div>
           </li>
@@ -133,14 +134,90 @@
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-card">
               <div class="timeline-top">
-                <h3 class="timeline-role" data-i18n="web.exp3.role">Frontend-разработчик</h3>
-                <span class="timeline-period" data-i18n="web.exp3.period">2018 — 2020</span>
+                <h3 class="timeline-role" data-i18n="web.exp3.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp3.period">2022 — 2023</span>
               </div>
-              <p class="timeline-company" data-i18n="exp.company">Название компании · Город / Удалённо</p>
+              <p class="timeline-company" data-i18n="web.exp3.org">Akvelon · проект Reddit · Удалённо</p>
               <ul class="timeline-points">
-                <li data-i18n="web.exp3.b1">Разрабатывал адаптивные интерфейсы на React.</li>
-                <li data-i18n="web.exp3.b2">Улучшил доступность и производительность, подняв оценки Lighthouse.</li>
-                <li data-i18n="web.exp3.b3">Автоматизировал сборку и релизы.</li>
+                <li data-i18n="web.exp3.b1">Функции клиента с высоким трафиком для 50 млн+ активных пользователей в день.</li>
+                <li data-i18n="web.exp3.b2">Техдолг −15%, покрытие unit-тестами с 45% до 80%.</li>
+                <li data-i18n="web.exp3.b3">CI/CD на Bitrise: задержка деплоя −10 минут, сборки на 20% быстрее.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp4.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp4.period">2020 — 2022</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp4.org">Wildberries · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp4.b1">Высоконагруженное e-commerce-приложение: 15 млн+ пользователей и 80 млн товаров; миграция с RxJava на корутины Kotlin.</li>
+                <li data-i18n="web.exp4.b2">Мобильный трафик −20% и загрузка изображений в 1,5 раза быстрее благодаря оптимизации сетевого кеша.</li>
+                <li data-i18n="web.exp4.b3">Менторство junior-разработчиков, ревью кода и архитектуры.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp5.role">Ведущий Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp5.period">2019 — 2020</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp5.org">ВТБ · ВТБ Онлайн · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp5.b1">Руководил архитектурной командой из 15+ человек для ВТБ Онлайн (5 млн+ пользователей); ввёл стандарты Clean Architecture и TDD.</li>
+                <li data-i18n="web.exp5.b2">Время запуска приложения −30% (4 с → 2,8 с).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp6.role">Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp6.period">2017 — 2019</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp6.org">Телемаркет · PayMe · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp6.b1">Приложение для эквайринга и картридер на Bluetooth LE с бесконтактной оплатой.</li>
+                <li data-i18n="web.exp6.b2">Создал SDK для Bluetooth-эквайринга на корутинах; переписал приложение на Kotlin и MVVM.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp7.role">Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp7.period">2015 — 2017</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp7.org">Hyperkey · Сан-Франциско, США</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp7.b1">Клавиатура-виджет для чатов с 300 000+ пользователей, работающая в любом мессенджере.</li>
+                <li data-i18n="web.exp7.b2">Собственное кодирование видео на FFmpeg; Java/Kotlin, TDD.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp8.role">Backend и мобильный разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp8.period">2014 — 2015</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp8.org">НПО Телеметрия · Калуга, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp8.b1">Android-приложение для отображения телеметрии автомобиля.</li>
+                <li data-i18n="web.exp8.b2">Анализ автомобильной телеметрии на Go; разработка веб-приложений.</li>
               </ul>
             </div>
           </li>
@@ -276,7 +353,7 @@
           </div>
           <div class="skill-group reveal">
             <h3 class="skill-group-title" data-i18n="cat.backend">Backend</h3>
-            <ul class="tag-chips tag-chips-lg"><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>REST / gRPC</li></ul>
+            <ul class="tag-chips tag-chips-lg"><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>Go</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3 class="skill-group-title" data-i18n="cat.mobile">Мобильные</h3>
@@ -364,7 +441,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=12"></script>
-  <script src="assets/js/script.js?v=12"></script>
+  <script src="assets/js/i18n.js?v=13"></script>
+  <script src="assets/js/script.js?v=13"></script>
 </body>
 </html>
