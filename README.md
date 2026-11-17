@@ -45,15 +45,14 @@ portfolio/
    `initials` в `i18n.js`, а также инициалы в `favicon.svg` (он статичный, язык не переключает).
 2. **Фото** — в `index.html` замените блок `photo-placeholder` на
    `<img src="assets/img/photo.jpg" alt="Artem Khateev">` (создайте папку `assets/img`).
-3. **Резюме** — положите PDF в репозиторий и укажите его в кнопке «Скачать резюме» (`cta.resume`).
-4. **Контакты** — уже указаны: email artemkhateev.ai@gmail.com, Telegram [@Artemidius](https://t.me/Artemidius),
+3. **Контакты** — уже указаны: email artemkhateev.ai@gmail.com, Telegram [@Artemidius](https://t.me/Artemidius),
    GitHub [DaedricKnight](https://github.com/DaedricKnight). LinkedIn на сайте не указан — вместо ссылки строка
    «LinkedIn — по запросу» (ключ `contact.linkedin`).
-5. **Опыт и проекты** — тексты в `i18n.js` (ключи `web.exp*`, `web.proj*`, `ai.exp*`, `ai.proj*`);
+4. **Опыт и проекты** — тексты в `i18n.js` (ключи `web.exp*`, `web.proj*`, `ai.exp*`, `ai.proj*`);
    названия технологий (чипы) — прямо в `web.html` / `ai.html`.
-6. **Опыт** — карьерный путь на `web.html` и опыт на `ai.html` заполнены по данным LinkedIn (ключи `web.exp*`,
+5. **Опыт** — карьерный путь на `web.html` и опыт на `ai.html` заполнены по данным LinkedIn (ключи `web.exp*`,
    `ai.exp*`). Осталось вписать сертификаты в блок «Сертификаты» на `ai.html` (строки помечены `ЗАМЕНИТЕ`).
-7. **Навыки** — категории переводятся (`cat.*`), а чипы-технологии правятся в HTML.
+6. **Навыки** — категории переводятся (`cat.*`), а чипы-технологии правятся в HTML.
 
 ### Как работают переводы (i18n)
 
