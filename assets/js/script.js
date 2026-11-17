@@ -184,7 +184,24 @@
   }
 
   /* ----------------------------------------------------------
-     7. ГОД В ПОДВАЛЕ
+     7. ПЕРЕХОД ПО ЯКОРЮ ПРИ ЗАГРУЗКЕ (например, web.html#contact)
+     Браузер плавно прокручивает к якорю сразу, а веб-шрифт догружается позже
+     и меняет высоту текста — цель «уезжает». Когда шрифты готовы, выравниваем
+     ещё раз, без анимации (отступ под шапку задаёт scroll-padding-top в CSS).
+  ---------------------------------------------------------- */
+  if (location.hash.length > 1) {
+    var hashTarget = null;
+    try { hashTarget = document.querySelector(decodeURIComponent(location.hash)); } catch (e) {}
+    if (hashTarget) {
+      var realign = function () { hashTarget.scrollIntoView({ behavior: "instant", block: "start" }); };
+      var afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+      afterFonts.then(function () { requestAnimationFrame(realign); });
+      window.addEventListener("load", function () { requestAnimationFrame(realign); });
+    }
+  }
+
+  /* ----------------------------------------------------------
+     8. ГОД В ПОДВАЛЕ
   ---------------------------------------------------------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

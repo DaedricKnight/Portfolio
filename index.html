@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=13" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=14" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -23,7 +23,9 @@
   <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
 
   <!-- ======================= ШАПКА ======================= -->
-  <header class="site-header" id="top">
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Artem Khateev">
         <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
@@ -153,7 +155,7 @@
     <section class="section" id="directions">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="home.k.choose">01 — Направления</span>
+          <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="home.k.choose">Направления</span></span>
           <h2 class="section-title" data-i18n="home.choose.title">Чем я занимаюсь</h2>
           <p class="section-desc" data-i18n="home.choose.desc">Два направления, в которых я работаю. Выберите, что ближе к вашей задаче.</p>
         </header>
@@ -184,7 +186,7 @@
     <section class="section section-alt" id="about">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="home.k.about">02 — О себе</span>
+          <span class="section-kicker"><span class="kicker-num">02</span><span data-i18n="home.k.about">О себе</span></span>
           <h2 class="section-title" data-i18n="about.title">Кто я и чем полезен</h2>
         </header>
 
@@ -225,7 +227,7 @@
     <section class="section" id="skills">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="home.k.skills">03 — Навыки</span>
+          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="home.k.skills">Навыки</span></span>
           <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
           <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
         </header>
@@ -256,7 +258,7 @@
     <section class="section section-alt" id="testimonials">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="home.k.testi">04 — Отзывы</span>
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="home.k.testi">Отзывы</span></span>
           <h2 class="section-title" data-i18n="testi.title">Что обо мне говорят</h2>
         </header>
 
@@ -291,7 +293,7 @@
     <section class="section" id="contact">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="home.k.contact">05 — Контакты</span>
+          <span class="section-kicker"><span class="kicker-num">05</span><span data-i18n="home.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
           <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
         </header>
@@ -354,7 +356,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=13"></script>
-  <script src="assets/js/script.js?v=13"></script>
+  <script src="assets/js/i18n.js?v=14"></script>
+  <script src="assets/js/script.js?v=14"></script>
 </body>
 </html>

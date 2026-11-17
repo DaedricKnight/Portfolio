@@ -53,7 +53,7 @@
       "stat.clients": "довольных клиентов",
 
       /* Направления (главная) */
-      "home.k.choose": "01 — Направления",
+      "home.k.choose": "Направления",
       "home.choose.title": "Чем я занимаюсь",
       "home.choose.desc": "Два направления, в которых я работаю. Выберите, что ближе к вашей задаче.",
       "card.web.title": "Сайты и приложения",
@@ -63,7 +63,7 @@
       "card.more": "Подробнее →",
 
       /* Обо мне */
-      "home.k.about": "02 — О себе",
+      "home.k.about": "О себе",
       "about.title": "Кто я и чем полезен",
       "about.p1": "Привет! Я инженер-универсал: строю веб- и мобильные приложения и внедряю решения на базе машинного обучения. Соединяю продуктовое мышление с инженерной надёжностью.",
       "about.p2": "Одинаково уверенно работаю и с фронтендом и бэкендом, и с ML-моделями — от прототипа до продакшена под нагрузкой. Пишу чистый код и оставляю понятную документацию.",
@@ -79,8 +79,8 @@
       "about.badge2": "RU · EN · SV",
 
       /* Навыки — общие заголовки */
-      "home.k.skills": "03 — Навыки",
-      "pg.k.skills": "03 — Навыки",
+      "home.k.skills": "Навыки",
+      "pg.k.skills": "Навыки",
       "skills.title": "Компетенции",
       "skills.desc": "Инструменты и технологии, с которыми работаю ежедневно.",
       "cat.languages": "Языки",
@@ -91,11 +91,11 @@
       "cat.tools": "Инструменты",
 
       /* Опыт (страницы web/ai) */
-      "pg.k.exp": "01 — Опыт",
+      "pg.k.exp": "Опыт",
       "exp.title": "Карьерный путь",
 
       /* Проекты (страницы web/ai) */
-      "pg.k.proj": "02 — Проекты",
+      "pg.k.proj": "Проекты",
       "proj.title": "Избранные работы",
       "proj.desc": "Избранные проекты и приложения, над которыми я работал.",
       "proj.store": "Google Play ↗",
@@ -103,7 +103,7 @@
       "proj.status.closed": "Проект закрыт",
 
       /* Отзывы (главная) */
-      "home.k.testi": "04 — Отзывы",
+      "home.k.testi": "Отзывы",
       "testi.title": "Что обо мне говорят",
       "testi1.quote": "«Разобрался в задаче быстрее, чем мы успели её объяснить. Результат был в проде уже через две недели.»",
       "testi1.name": "Имя клиента",
@@ -113,8 +113,8 @@
       "testi2.role": "Product Lead, Название компании",
 
       /* Контакты (общие) */
-      "home.k.contact": "05 — Контакты",
-      "pg.k.contact": "04 — Контакты",
+      "home.k.contact": "Контакты",
+      "pg.k.contact": "Контакты",
       "contact.title": "Давайте работать вместе",
       "contact.desc": "Расскажите о задаче — отвечу в течение рабочего дня.",
       "form.name.label": "Имя",
@@ -265,7 +265,7 @@
       "stat.tech": "technologies",
       "stat.clients": "happy clients",
 
-      "home.k.choose": "01 — Specializations",
+      "home.k.choose": "Specializations",
       "home.choose.title": "What I do",
       "home.choose.desc": "Two areas I work in. Pick whichever is closest to your task.",
       "card.web.title": "Websites & Apps",
@@ -274,7 +274,7 @@
       "card.ai.desc": "On-device AI: voice pipelines, intent classification, computer vision and neural networks.",
       "card.more": "Learn more →",
 
-      "home.k.about": "02 — About",
+      "home.k.about": "About",
       "about.title": "Who I am and how I help",
       "about.p1": "Hi! I'm a versatile engineer: I build web and mobile apps and ship machine-learning solutions. I combine product thinking with engineering reliability.",
       "about.p2": "I'm equally comfortable across frontend, backend, and ML models — from prototype to production under load. I write clean code and leave clear documentation.",
@@ -289,8 +289,8 @@
       "about.badge1": "Remote / worldwide",
       "about.badge2": "RU · EN · SV",
 
-      "home.k.skills": "03 — Skills",
-      "pg.k.skills": "03 — Skills",
+      "home.k.skills": "Skills",
+      "pg.k.skills": "Skills",
       "skills.title": "Skills",
       "skills.desc": "Tools and technologies I use every day.",
       "cat.languages": "Languages",
@@ -300,17 +300,17 @@
       "cat.ml": "ML / AI",
       "cat.tools": "Tools",
 
-      "pg.k.exp": "01 — Experience",
+      "pg.k.exp": "Experience",
       "exp.title": "Career path",
 
-      "pg.k.proj": "02 — Projects",
+      "pg.k.proj": "Projects",
       "proj.title": "Selected work",
       "proj.desc": "Selected projects and apps I've worked on.",
       "proj.store": "Google Play ↗",
       "proj.github": "GitHub ↗",
       "proj.status.closed": "Discontinued",
 
-      "home.k.testi": "04 — Testimonials",
+      "home.k.testi": "Testimonials",
       "testi.title": "What people say",
       "testi1.quote": "“He understood the task faster than we could explain it. The result shipped to production in two weeks.”",
       "testi1.name": "Client name",
@@ -319,8 +319,8 @@
       "testi2.name": "Client name",
       "testi2.role": "Product Lead, Company name",
 
-      "home.k.contact": "05 — Contact",
-      "pg.k.contact": "04 — Contact",
+      "home.k.contact": "Contact",
+      "pg.k.contact": "Contact",
       "contact.title": "Let's work together",
       "contact.desc": "Tell me about your task — I'll reply within a business day.",
       "form.name.label": "Name",
@@ -466,7 +466,7 @@
       "stat.tech": "teknologier",
       "stat.clients": "nöjda kunder",
 
-      "home.k.choose": "01 — Inriktningar",
+      "home.k.choose": "Inriktningar",
       "home.choose.title": "Vad jag gör",
       "home.choose.desc": "Två områden jag arbetar inom. Välj det som ligger närmast din uppgift.",
       "card.web.title": "Webbplatser & appar",
@@ -475,7 +475,7 @@
       "card.ai.desc": "AI på enheten: röstpipelines, avsiktsklassificering, datorseende och neurala nätverk.",
       "card.more": "Läs mer →",
 
-      "home.k.about": "02 — Om mig",
+      "home.k.about": "Om mig",
       "about.title": "Vem jag är och hur jag hjälper till",
       "about.p1": "Hej! Jag är en mångsidig ingenjör: jag bygger webb- och mobilappar och levererar lösningar baserade på maskininlärning. Jag kombinerar produkttänk med teknisk pålitlighet.",
       "about.p2": "Jag är lika bekväm med frontend, backend och ML-modeller — från prototyp till produktion under belastning. Jag skriver ren kod och lämnar tydlig dokumentation.",
@@ -490,8 +490,8 @@
       "about.badge1": "Distans / världen över",
       "about.badge2": "RU · EN · SV",
 
-      "home.k.skills": "03 — Färdigheter",
-      "pg.k.skills": "03 — Färdigheter",
+      "home.k.skills": "Färdigheter",
+      "pg.k.skills": "Färdigheter",
       "skills.title": "Kompetens",
       "skills.desc": "Verktyg och teknologier jag använder dagligen.",
       "cat.languages": "Språk",
@@ -501,17 +501,17 @@
       "cat.ml": "ML / AI",
       "cat.tools": "Verktyg",
 
-      "pg.k.exp": "01 — Erfarenhet",
+      "pg.k.exp": "Erfarenhet",
       "exp.title": "Karriärväg",
 
-      "pg.k.proj": "02 — Projekt",
+      "pg.k.proj": "Projekt",
       "proj.title": "Utvalda arbeten",
       "proj.desc": "Utvalda projekt och appar jag har arbetat med.",
       "proj.store": "Google Play ↗",
       "proj.github": "GitHub ↗",
       "proj.status.closed": "Avvecklad",
 
-      "home.k.testi": "04 — Omdömen",
+      "home.k.testi": "Omdömen",
       "testi.title": "Vad folk säger",
       "testi1.quote": "“Han förstod uppgiften snabbare än vi hann förklara den. Resultatet var i produktion på två veckor.”",
       "testi1.name": "Kundens namn",
@@ -520,8 +520,8 @@
       "testi2.name": "Kundens namn",
       "testi2.role": "Product Lead, Företagsnamn",
 
-      "home.k.contact": "05 — Kontakt",
-      "pg.k.contact": "04 — Kontakt",
+      "home.k.contact": "Kontakt",
+      "pg.k.contact": "Kontakt",
       "contact.title": "Låt oss jobba ihop",
       "contact.desc": "Berätta om din uppgift — jag svarar inom en arbetsdag.",
       "form.name.label": "Namn",

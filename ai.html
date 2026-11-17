@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=13" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=14" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -22,7 +22,9 @@
   <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
 
   <!-- ======================= ШАПКА ======================= -->
-  <header class="site-header" id="top">
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="Artem Khateev">
         <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
@@ -91,7 +93,7 @@
     <section class="section" id="experience">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="pg.k.exp">01 — Опыт</span>
+          <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="pg.k.exp">Опыт</span></span>
           <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
         </header>
 
@@ -153,7 +155,7 @@
     <section class="section section-alt" id="projects">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="pg.k.proj">02 — Проекты</span>
+          <span class="section-kicker"><span class="kicker-num">02</span><span data-i18n="pg.k.proj">Проекты</span></span>
           <h2 class="section-title" data-i18n="proj.title">Избранные работы</h2>
           <p class="section-desc" data-i18n="proj.desc">Избранные проекты и приложения, над которыми я работал.</p>
         </header>
@@ -220,7 +222,7 @@
     <section class="section" id="skills">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="pg.k.skills">03 — Навыки</span>
+          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="pg.k.skills">Навыки</span></span>
           <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
           <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
         </header>
@@ -267,7 +269,7 @@
     <section class="section section-alt" id="contact">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker" data-i18n="pg.k.contact">04 — Контакты</span>
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
           <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
         </header>
@@ -326,7 +328,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=13"></script>
-  <script src="assets/js/script.js?v=13"></script>
+  <script src="assets/js/i18n.js?v=14"></script>
+  <script src="assets/js/script.js?v=14"></script>
 </body>
 </html>
