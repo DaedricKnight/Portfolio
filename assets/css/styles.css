@@ -357,8 +357,10 @@ ul { margin: 0; padding: 0; list-style: none; }
    те же токены переопределены только внутри .hero, остальная страница их не видит.
    Отличия от прежнего — только ради читаемости:
    · кнопка «Обсудить проект»: те же оттенки, но глубже — белый текст ≥ 4.5:1;
-   · светлая тема: циан в градиенте имени и цифр чуть темнее — ≥ 3:1 (крупный текст). */
-.hero {
+   · светлая тема: циан в градиенте имени и цифр чуть темнее — ≥ 3:1 (крупный текст).
+   Те же токены используют шапки страниц (.page-hero) на web.html и ai.html. */
+.hero,
+.page-hero {
   --bg:            #0b0d17;
   --surface:       #161a2b;
   --surface-2:     #1d2236;
@@ -376,8 +378,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   --hero-btn-glow-hover: rgba(124, 108, 255, 0.5);
   --blob-opacity:   0.55;
   --blob-3-opacity: 0.4;
+  --hero-link:      #7c6cff;   /* ссылка «← Главная»: 5.0:1 */
 }
-[data-theme="light"] .hero {
+[data-theme="light"] .hero,
+[data-theme="light"] .page-hero {
   --bg:            #f7f8fc;
   --surface:       #ffffff;
   --surface-2:     #f3f4fb;
@@ -394,6 +398,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   --hero-btn-glow-hover: rgba(106, 91, 255, 0.4);
   --blob-opacity:   0.3;
   --blob-3-opacity: 0.3;
+  --hero-link:      #5f50f0;   /* чуть глубже #6a5bff: 5.0:1 вместо 4.3:1 */
 }
 .hero .btn-primary,
 .hero .btn-primary:hover {
@@ -570,14 +575,32 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 800;
   letter-spacing: -0.02em;
   margin: 0.6rem 0 1rem;
+  color: var(--accent); /* запасной цвет, если градиентный текст не поддерживается */
+}
+/* Градиент — как у имени на главной. Анимация появления висит на обёртке (.reveal),
+   а не на самом h1: так background-clip:text корректно рисуется в Safari. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .page-hero h1 {
+    background: var(--grad);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: grad-shift 8s ease infinite;
+  }
 }
 .page-hero-lead { color: var(--fg-muted); font-size: var(--fs-lg); max-width: 56ch; }
+/* Свечения в невысокой шапке: индиго слева, фиолетовое справа, циан снизу по центру */
+.page-hero .blob-1 { width: 38vw; height: 38vw; top: -75%; left: -8%; }
+.page-hero .blob-2 { width: 34vw; height: 34vw; top: -55%; right: -8%; }
+.page-hero .blob-3 { width: 28vw; height: 28vw; top: auto; bottom: -110%; left: 34%; }
 .page-hero-back {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   font-size: var(--fs-sm);
-  color: var(--accent);
+  color: var(--hero-link);
   margin-bottom: 0.4rem;
 }
 
