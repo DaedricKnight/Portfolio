@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=18" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=19" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -36,6 +36,7 @@
         <ul class="nav-list" id="nav-list">
           <li><a href="index.html" aria-current="page" data-i18n="nav.home">Главная</a></li>
           <li><a href="web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="android.html" data-i18n="nav.android">Android</a></li>
           <li><a href="ai.html" data-i18n="nav.ai">AI/ML</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
         </ul>
@@ -150,7 +151,7 @@
         <header class="section-head reveal">
           <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="home.k.choose">Направления</span></span>
           <h2 class="section-title" data-i18n="home.choose.title">Чем я занимаюсь</h2>
-          <p class="section-desc" data-i18n="home.choose.desc">Два направления, в которых я работаю. Выберите, что ближе к вашей задаче.</p>
+          <p class="section-desc" data-i18n="home.choose.desc">Три направления, в которых я работаю. Выберите, что ближе к вашей задаче.</p>
         </header>
 
         <div class="spec-grid">
@@ -160,6 +161,15 @@
             </span>
             <h3 class="spec-card-title" data-i18n="card.web.title">Сайты и приложения</h3>
             <p class="spec-card-desc" data-i18n="card.web.desc">Frontend, backend и мобильная разработка — быстрые и надёжные продукты.</p>
+            <span class="spec-more" data-i18n="card.more">Подробнее →</span>
+          </a>
+
+          <a class="spec-card reveal" href="android.html">
+            <span class="spec-ico" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="spec-card-title" data-i18n="card.android.title">Android-разработка</h3>
+            <p class="spec-card-desc" data-i18n="card.android.desc">Senior Android с 2014 года: архитектура, производительность, Android Automotive и ИИ на устройстве.</p>
             <span class="spec-more" data-i18n="card.more">Подробнее →</span>
           </a>
 
@@ -441,7 +451,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=18"></script>
-  <script src="assets/js/script.js?v=18"></script>
+  <script src="assets/js/i18n.js?v=19"></script>
+  <script src="assets/js/script.js?v=19"></script>
 </body>
 </html>

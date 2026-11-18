@@ -285,15 +285,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.02em;
   box-shadow: var(--shadow-accent);
 }
-.brand-text { font-size: var(--fs-base); }
+.brand-text { font-size: var(--fs-base); white-space: nowrap; }
 
 .nav-list {
   display: flex;
-  gap: 0.35rem;
+  gap: 0.2rem;
 }
 .nav-list a {
   display: inline-block;
-  padding: 0.5rem 0.9rem;
+  padding: 0.5rem 0.65rem;
+  white-space: nowrap;
   border-radius: var(--radius-pill);
   color: var(--fg-muted);
   font-size: var(--fs-sm);
@@ -837,6 +838,38 @@ ul { margin: 0; padding: 0; list-style: none; }
   max-width: 70ch;
 }
 
+/* --- Android: 3 колонки возможностей, факты в шапке страницы --- */
+.services-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.page-hero-stats { position: relative; z-index: 1; margin-top: 2rem; }
+.hero-stats.stats-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* --- Open source: список репозиториев --- */
+.oss-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.oss-list > li[hidden] { display: none; }
+.oss-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  height: 100%;
+  padding: 1.1rem 1.3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color var(--t-fast), transform var(--t-fast);
+}
+.oss-item:hover { border-color: var(--accent); transform: translateY(-3px); }
+.oss-name { font-family: var(--font-mono, monospace); font-weight: 600; color: var(--accent); font-size: var(--fs-sm); }
+.oss-desc { color: var(--fg-muted); font-size: var(--fs-sm); }
+
 /* --- Опыт / Timeline --- */
 .timeline { position: relative; display: grid; gap: 1.5rem; margin: 0 0 0 10px; padding: 0; list-style: none; } /* маркеры — точки, не номера */
 .timeline::before {
@@ -1184,6 +1217,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 ============================================================ */
 @media (max-width: 900px) {
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-stats.stats-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { position: static; }
   .photo-ring { max-width: 200px; }
@@ -1191,11 +1226,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 720px) {
-  .services-grid, .services-extra, .steps { grid-template-columns: 1fr; }
-  /* Мобильное меню */
+/* Меню-«гамбургер»: шесть пунктов навигации + языки + тема + кнопка помещаются
+   в одну строку только от ~1180px, поэтому мобильное меню включается раньше планшетной вёрстки. */
+@media (max-width: 1180px) {
   .menu-toggle { display: inline-flex; }
-  .cta-header { display: none; }
 
   .nav-list {
     position: fixed;
@@ -1206,11 +1240,17 @@ ul { margin: 0; padding: 0; list-style: none; }
     border-bottom: 1px solid var(--border);
     padding: 1rem max(20px, env(safe-area-inset-left, 0px)) 1.5rem;
     transform: translateY(-120%);
-    transition: transform var(--t);
+    visibility: hidden; /* закрытое меню не видно и не попадает в порядок Tab */
+    transition: transform var(--t), visibility 0s linear var(--t);
     box-shadow: var(--shadow);
   }
-  .nav-list.open { transform: translateY(0); }
+  .nav-list.open { transform: translateY(0); visibility: visible; transition: transform var(--t), visibility 0s; }
   .nav-list a { display: block; padding: 0.85rem 1rem; font-size: var(--fs-base); }
+}
+
+@media (max-width: 720px) {
+  .services-grid, .services-grid-3, .services-extra, .steps { grid-template-columns: 1fr; }
+  .cta-header { display: none; }
 }
 
 /* Узкие телефоны: шапка (имя + языки + тема + меню) должна помещаться в ширину */
@@ -1218,7 +1258,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-inner { gap: 0.5rem; }
   .nav-actions { gap: 0.4rem; }
   .brand { min-width: 0; gap: 0.5rem; }
-  .brand-text { font-size: var(--fs-sm); }
+  .brand-text { font-size: var(--fs-sm); white-space: normal; }
   .lang-switch button { padding: 0.35rem 0.45rem; }
 }
 

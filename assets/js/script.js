@@ -123,7 +123,8 @@
     requestAnimationFrame(step);
   }
 
-  var counters = document.querySelectorAll(".stat-num");
+  // Только числа с data-count (например, «99,9%» показывается как есть)
+  var counters = document.querySelectorAll(".stat-num[data-count]");
   var bars = document.querySelectorAll(".bar-fill");
 
   if (!("IntersectionObserver" in window)) {

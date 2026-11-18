@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=18" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=19" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -35,6 +35,7 @@
         <ul class="nav-list" id="nav-list">
           <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
           <li><a href="web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="android.html" data-i18n="nav.android">Android</a></li>
           <li><a href="ai.html" aria-current="page" data-i18n="nav.ai">AI/ML</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
         </ul>
@@ -269,11 +270,34 @@
       </div>
     </section>
 
-    <!-- ======================= КОНТАКТЫ ======================= -->
-    <section class="section section-alt" id="contact">
+    <!-- ======================= OPEN SOURCE ======================= -->
+    <section class="section section-alt" id="open-source">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.contact">Контакты</span></span>
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.oss">Open source</span></span>
+          <h2 class="section-title" data-i18n="oss.title">Код на GitHub</h2>
+          <p class="section-desc" data-i18n="oss.desc">Проекты с открытым кодом: архитектуру и реализацию можно посмотреть самому.</p>
+        </header>
+
+        <ul class="oss-list reveal">
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener"><span class="oss-name">Hermi ↗</span><span class="oss-desc" data-i18n="oss.hermi">Офлайн-голосовой ассистент для AAOS</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener"><span class="oss-name">MedVoice ↗</span><span class="oss-desc" data-i18n="oss.medvoice">Голосовые медкарты на планшете, офлайн</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/CarDiagnostics" target="_blank" rel="noopener"><span class="oss-name">CarDiagnostics ↗</span><span class="oss-desc" data-i18n="oss.cardiag">Диагностика автомобиля через VHAL</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/HinnerJag" target="_blank" rel="noopener"><span class="oss-name">HinnerJag ↗</span><span class="oss-desc" data-i18n="oss.hinnerjag">Прототип для AAOS: успею ли я на паром</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/CopilotMoneyAndroid" target="_blank" rel="noopener"><span class="oss-name">CopilotMoneyAndroid ↗</span><span class="oss-desc" data-i18n="oss.copilot">Личные финансы на Kotlin и Compose</span></a></li>
+          <!-- ЗАМЕНИТЕ: скрытые пункты — SDK в Maven Central и демо-APK. Когда они будут опубликованы,
+               впишите реальные ссылки в href и удалите атрибут hidden у нужного <li> (см. README, «Open source»). -->
+          <li hidden data-oss-slot="sdk"><a class="oss-item" href="#" target="_blank" rel="noopener"><span class="oss-name">LocalEdgeAI SDK (Maven Central) ↗</span><span class="oss-desc" data-i18n="oss.sdk">SDK для Android с моделями намерений LocalEdgeAI</span></a></li>
+          <li hidden data-oss-slot="apk"><a class="oss-item" href="#" target="_blank" rel="noopener"><span class="oss-name" data-i18n="oss.apk">Демо-APK</span><span class="oss-desc" data-i18n="oss.apk.desc">Установите и попробуйте на своём устройстве</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">05</span><span data-i18n="pg.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
           <!-- ЗАМЕНИТЕ: «отвечу в течение рабочего дня» — подтвердите срок ответа (ключ contact.desc). -->
           <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
@@ -333,7 +357,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=18"></script>
-  <script src="assets/js/script.js?v=18"></script>
+  <script src="assets/js/i18n.js?v=19"></script>
+  <script src="assets/js/script.js?v=19"></script>
 </body>
 </html>
