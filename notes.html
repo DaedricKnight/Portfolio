@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Заметки — Артём Хатеев</title>
+  <meta name="description" content="Технические заметки об офлайн-голосовых ассистентах и ИИ на устройстве: Hermi, MedVoice." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=20" />
+  <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="notes" data-title-key="title.notes" data-desc-key="desc.notes">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="android.html" data-i18n="nav.android">Android</a></li>
+          <li><a href="ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="notes.html" aria-current="page" data-i18n="nav.notes">Заметки</a></li>
+          <li><a href="index.html#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="index.html#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ХЕДЕР СТРАНИЦЫ =================== -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="index.html">← <span data-i18n="nav.home">Главная</span></a>
+        <div class="reveal">
+          <h1 data-i18n="notes.title">Заметки</h1>
+        </div>
+        <p class="page-hero-lead" data-i18n="notes.lead">Короткие технические разборы моих проектов: архитектура, решения и цифры из README.</p>
+      </div>
+    </section>
+
+    <!-- ======================= СТАТЬИ ======================= -->
+    <!-- Новая заметка: скопируйте файл из notes/, поменяйте текст в блоках data-lang-content,
+         добавьте ключи noteN.title / noteN.excerpt / title.noteN в assets/js/i18n.js и карточку сюда (см. README). -->
+    <section class="section" id="articles">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="pg.k.articles">Статьи</span></span>
+          <h2 class="section-title" data-i18n="notes.list.title">Последние заметки</h2>
+        </header>
+        <div class="notes-list">
+          <article class="note-card reveal">
+            <p class="note-meta"><time datetime="2026-11-18" data-i18n="note.date">18 ноября 2026</time><span aria-hidden="true">·</span><span data-i18n="note.read3">3 мин чтения</span></p>
+            <h3 class="note-card-title"><a href="notes/hermi-offline-voice-assistant.html" data-i18n="note1.title">Hermi: офлайн-голосовой ассистент для Android Automotive — что сработало</a></h3>
+            <p class="note-card-excerpt" data-i18n="note1.excerpt">Silero VAD, Vosk и BERT-Tiny INT8 на устройстве: почему маленькая модель распознавания выиграла у большой и зачем ассистенту класс отказа.</p>
+            <a class="note-card-more" href="notes/hermi-offline-voice-assistant.html" aria-hidden="true" tabindex="-1" data-i18n="note.more">Читать →</a>
+          </article>
+          <article class="note-card reveal">
+            <p class="note-meta"><time datetime="2026-11-18" data-i18n="note.date">18 ноября 2026</time><span aria-hidden="true">·</span><span data-i18n="note.read3">3 мин чтения</span></p>
+            <h3 class="note-card-title"><a href="notes/medvoice-offline-clinical-dictation.html" data-i18n="note2.title">MedVoice: офлайн-диктовка для медкарт — конвейер и цифры</a></h3>
+            <p class="note-card-excerpt" data-i18n="note2.excerpt">whisper.cpp, BERT-Tiny INT8 и правила безопасности: подтверждение критичных действий, проверка диапазонов и где на самом деле уходит время.</p>
+            <a class="note-card-more" href="notes/medvoice-offline-clinical-dictation.html" aria-hidden="true" tabindex="-1" data-i18n="note.more">Читать →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js?v=20"></script>
+  <script src="assets/js/script.js?v=20"></script>
+</body>
+</html>

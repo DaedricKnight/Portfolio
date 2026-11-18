@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Hermi: офлайн-голосовой ассистент для Android Automotive — что сработало — Артём Хатеев</title>
+  <meta name="description" content="Silero VAD, Vosk и BERT-Tiny INT8 на устройстве: почему маленькая модель распознавания выиграла у большой и зачем ассистенту класс отказа." />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20" />
+  <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="note" data-title-key="title.note1" data-desc-key="note1.excerpt">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="../web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="../android.html" data-i18n="nav.android">Android</a></li>
+          <li><a href="../ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="../notes.html" aria-current="page" data-i18n="nav.notes">Заметки</a></li>
+          <li><a href="../index.html#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="../index.html#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ЗАГОЛОВОК СТАТЬИ =================== -->
+    <section class="page-hero page-hero-article">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="../notes.html">← <span data-i18n="note.back">Все заметки</span></a>
+        <div class="reveal">
+          <h1 data-i18n="note1.title">Hermi: офлайн-голосовой ассистент для Android Automotive — что сработало</h1>
+        </div>
+        <p class="note-meta"><time datetime="2026-11-18" data-i18n="note.date">18 ноября 2026</time><span aria-hidden="true">·</span><span data-i18n="note.read3">3 мин чтения</span></p>
+      </div>
+    </section>
+
+    <!-- ======================= ТЕКСТ ======================= -->
+    <!-- Текст статьи — прямо здесь, по блоку на язык (data-lang-content="ru|en|sv").
+         i18n.js показывает блок выбранного языка; без JS виден русский. Все цифры — из README Hermi. -->
+    <article class="section article-body">
+      <div class="container container-narrow">
+        <div class="prose" lang="ru" data-lang-content="ru">
+          <p>Hermi — голосовой ассистент для салона автомобиля на Android Automotive OS, который работает полностью на устройстве: ни один запрос не уходит в облако. Ниже — как устроен конвейер и какие решения оказались важнее, чем казалось в начале. Все цифры взяты из README проекта.</p>
+          <h2>Конвейер из трёх моделей</h2>
+          <ul>
+            <li>Silero VAD v5 (ONNX, 2,3 МБ) слушает поток 16 кГц и завершает фразу после 1000 мс тишины.</li>
+            <li>Vosk с маленькой английской моделью (vosk-model-small-en-us-0.15, 40 МБ) распознаёт речь — не свободно, а по ограниченной грамматике из списка допустимых фраз.</li>
+            <li>BERT-Tiny, квантованный в INT8 (ONNX, 4,7 МБ), определяет намерение: 110 меток сводятся к 102 командам салона и отдельному классу none для всего постороннего.</li>
+          </ul>
+          <p>Команда выполняется, только если уверенность классификатора не ниже 0,95. Всё, что ниже, ассистент считает непонятым и ничего не делает.</p>
+          <h2>Маленькая модель распознавания выиграла</h2>
+          <p>Казалось бы, большая модель Vosk на 204 МБ должна распознавать лучше. На деле с ограниченной грамматикой маленькая модель оказалась точнее: 97% против 93% на командах, 86% против 75% на голосах пожилых людей и 89% против 77% при белом шуме. Грамматика сужает пространство гипотез, и маленькой модели просто не из чего «выдумывать» лишние слова. Бонус — в пять раз меньше места на устройстве.</p>
+          <h2>Формулировки подбираются под распознаватель</h2>
+          <p>Пример из README: фразу «turn up the volume» распознаватель слышал как «turn off the volume» — то есть как противоположное действие. Поэтому в грамматике используется «increase the volume». Акустически близкие команды с разным смыслом нужно разводить ещё на этапе выбора формулировок, а не надеяться на модель.</p>
+          <h2>Класс none — это безопасность</h2>
+          <p>Ассистент в машине должен уметь промолчать. Без примеров отказа в обучающих данных доля правильно отклонённых посторонних фраз падает со 100% до 39%. После доработки класс none отклоняет 25 из 25 тестовых фраз; в первой версии было 16 из 25.</p>
+          <h2>Как проверялось</h2>
+          <p>Отдельный стенд прогоняет 22 фразы через 7 акцентов и 5 акустических условий. Результат: 645 из 665 команд (97%) распознаны верно, 105 из 105 посторонних фраз отклонены, при дорожном шуме точность 99%, при белом шуме — 89%. Слабое место тоже видно: на чистых синтезированных записях сквозная точность — 80%, а при белом шуме с SNR 10 дБ — всего 38%. Работа с шумом остаётся главным направлением.</p>
+          <h2>Инженерные детали</h2>
+          <p>Каталог из 102 команд генерируется скриптом: добавить команду — значит перегенерировать каталог, а не переписывать код. Проект разделён на модули shared, automotive и mobile, использует Hilt и Coroutines/Flow. Тестовый APK со всеми ABI весил около 490 МБ, поэтому сборку для тестов ограничили arm64. Само управление климатом и другими системами ждёт записи в VHAL: модуль core_vhal пока только читает свойства автомобиля.</p>
+          <h2>Итог</h2>
+          <p>Три урока: ограниченная грамматика важнее размера модели, класс отказа — обязательная часть дизайна, а тестировать нужно на акцентах и шуме, а не только на чистых записях.</p>
+        </div>
+        <div class="prose" lang="en" data-lang-content="en" hidden>
+          <p>Hermi is an in-car voice assistant for Android Automotive OS that runs entirely on the device: not a single request goes to the cloud. Below is how the pipeline works and which decisions turned out to matter more than expected. Every number comes from the project README.</p>
+          <h2>A pipeline of three models</h2>
+          <ul>
+            <li>Silero VAD v5 (ONNX, 2.3 MB) listens to a 16 kHz stream and ends an utterance after 1000 ms of silence.</li>
+            <li>Vosk with the small English model (vosk-model-small-en-us-0.15, 40 MB) recognises speech — not freely, but against a constrained grammar built from the list of allowed phrases.</li>
+            <li>An INT8-quantised BERT-Tiny (ONNX, 4.7 MB) picks the intent: 110 labels collapse into 102 cabin commands plus a separate none class for everything off-topic.</li>
+          </ul>
+          <p>A command runs only if the classifier&#x27;s confidence is at least 0.95. Anything below that is treated as not understood, and the assistant does nothing.</p>
+          <h2>The smaller recogniser won</h2>
+          <p>You would expect the large 204 MB Vosk model to recognise better. In practice, with a constrained grammar the small model was more accurate: 97% vs 93% on commands, 86% vs 75% on older voices and 89% vs 77% in white noise. The grammar narrows the hypothesis space, so the small model has nothing to invent extra words from. As a bonus it takes five times less space on the device.</p>
+          <h2>Phrasing is chosen for the recogniser</h2>
+          <p>An example from the README: the recogniser heard &quot;turn up the volume&quot; as &quot;turn off the volume&quot; — the opposite action. That is why the grammar uses &quot;increase the volume&quot; instead. Commands that sound alike but mean different things have to be separated when the phrasing is chosen, not left to the model.</p>
+          <h2>The none class is a safety feature</h2>
+          <p>An in-car assistant has to know when to stay quiet. Without reject examples in the training data, the share of correctly refused off-topic phrases drops from 100% to 39%. After rework the none class rejects 25 of 25 test phrases; the first version managed 16 of 25.</p>
+          <h2>How it was tested</h2>
+          <p>A dedicated test rig runs 22 phrases through 7 accents and 5 acoustic conditions. The result: 645 of 665 commands (97%) recognised correctly, 105 of 105 off-topic phrases refused, 99% accuracy in road noise and 89% in white noise. The weak spot is visible too: on clean synthesised recordings end-to-end accuracy is 80%, and in white noise at 10 dB SNR it is only 38%. Noise remains the main thing to work on.</p>
+          <h2>Engineering details</h2>
+          <p>The catalogue of 102 commands is generated by a script: adding a command means regenerating the catalogue, not rewriting code. The project is split into shared, automotive and mobile modules and uses Hilt and Coroutines/Flow. A test APK with every ABI weighed about 490 MB, so test builds were limited to arm64. Actually controlling climate and other systems waits on a VHAL writer: the core_vhal module only reads vehicle properties for now.</p>
+          <h2>Takeaways</h2>
+          <p>Three lessons: a constrained grammar matters more than model size, a reject class is a required part of the design, and you have to test with accents and noise, not just clean recordings.</p>
+        </div>
+        <div class="prose" lang="sv" data-lang-content="sv" hidden>
+          <p>Hermi är en röstassistent för bilkupén på Android Automotive OS som körs helt på enheten: inte en enda förfrågan går till molnet. Här beskriver jag hur pipelinen fungerar och vilka beslut som visade sig vara viktigare än väntat. Alla siffror kommer från projektets README.</p>
+          <h2>En pipeline med tre modeller</h2>
+          <ul>
+            <li>Silero VAD v5 (ONNX, 2,3 MB) lyssnar på en ljudström i 16 kHz och avslutar en fras efter 1000 ms tystnad.</li>
+            <li>Vosk med den lilla engelska modellen (vosk-model-small-en-us-0.15, 40 MB) känner igen tal — inte fritt, utan mot en begränsad grammatik byggd av listan med tillåtna fraser.</li>
+            <li>En INT8-kvantiserad BERT-Tiny (ONNX, 4,7 MB) väljer avsikten: 110 etiketter slås ihop till 102 kommandon för kupén plus en separat none-klass för allt som ligger utanför.</li>
+          </ul>
+          <p>Ett kommando utförs bara om klassificerarens konfidens är minst 0,95. Allt under det räknas som ej förstått, och assistenten gör ingenting.</p>
+          <h2>Den mindre igenkänningsmodellen vann</h2>
+          <p>Man kunde tro att den stora Vosk-modellen på 204 MB skulle känna igen bättre. I praktiken var den lilla modellen träffsäkrare med begränsad grammatik: 97 % mot 93 % på kommandon, 86 % mot 75 % på äldre röster och 89 % mot 77 % i vitt brus. Grammatiken krymper hypotesrummet, så den lilla modellen har inget att hitta på extra ord ur. Som bonus tar den fem gånger mindre plats på enheten.</p>
+          <h2>Formuleringarna väljs efter igenkännaren</h2>
+          <p>Ett exempel från README: igenkännaren hörde ”turn up the volume” som ”turn off the volume” — den motsatta åtgärden. Därför använder grammatiken ”increase the volume” i stället. Kommandon som låter lika men betyder olika saker måste skiljas åt redan när formuleringarna väljs, inte överlåtas åt modellen.</p>
+          <h2>None-klassen är en säkerhetsfunktion</h2>
+          <p>En assistent i bilen måste veta när den ska vara tyst. Utan avvisningsexempel i träningsdatan sjunker andelen korrekt avvisade fraser utanför domänen från 100 % till 39 %. Efter omarbetningen avvisar none-klassen 25 av 25 testfraser; första versionen klarade 16 av 25.</p>
+          <h2>Så testades det</h2>
+          <p>En separat testrigg kör 22 fraser genom 7 accenter och 5 akustiska förhållanden. Resultatet: 645 av 665 kommandon (97 %) rätt igenkända, 105 av 105 fraser utanför domänen avvisade, 99 % träffsäkerhet i vägbrus och 89 % i vitt brus. Den svaga punkten syns också: på rena syntetiska inspelningar är träffsäkerheten från början till slut 80 %, och i vitt brus vid 10 dB SNR bara 38 %. Brus är fortfarande det viktigaste att arbeta vidare med.</p>
+          <h2>Tekniska detaljer</h2>
+          <p>Katalogen med 102 kommandon genereras av ett skript: att lägga till ett kommando innebär att generera om katalogen, inte att skriva om kod. Projektet är uppdelat i modulerna shared, automotive och mobile och använder Hilt och Coroutines/Flow. En test-APK med alla ABI:er vägde runt 490 MB, så testbyggen begränsades till arm64. Själva styrningen av klimat och andra system väntar på skrivning till VHAL: modulen core_vhal läser än så länge bara fordonets egenskaper.</p>
+          <h2>Slutsatser</h2>
+          <p>Tre lärdomar: en begränsad grammatik betyder mer än modellens storlek, en avvisningsklass är en obligatorisk del av designen, och man måste testa med accenter och brus, inte bara med rena inspelningar.</p>
+        </div>
+
+        <!-- ЗАМЕНИТЕ: демо-видео. Удалите атрибут hidden у <figure> и вставьте одно из двух:
+             • YouTube: <iframe src="https://www.youtube-nocookie.com/embed/ID_ВИДЕО" title="Hermi demo" loading="lazy"
+                         allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+             • свой файл: <video controls preload="metadata" src="../assets/video/hermi-offline-voice-assistant.mp4"></video>
+             Подробнее — README, раздел «Демо-видео». -->
+        <figure class="video-slot" hidden>
+          <div class="video-frame"></div>
+          <figcaption data-i18n="note.video">Демо-видео</figcaption>
+        </figure>
+
+        <p class="note-source"><span data-i18n="note.source">Исходный код и полные результаты тестов — в README репозитория:</span>
+          <a href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener">github.com/DaedricKnight/Hermi ↗</a></p>
+
+        <aside class="note-cta">
+          <h2 data-i18n="note.cta.title">Нужно что-то похожее?</h2>
+          <p data-i18n="note.cta.text">Расскажите о задаче — обсудим, как решить её на устройстве.</p>
+          <a class="btn btn-primary" href="../index.html#contact" data-i18n="cta.discuss">Обсудить проект</a>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js?v=20"></script>
+  <script src="../assets/js/script.js?v=20"></script>
+</body>
+</html>

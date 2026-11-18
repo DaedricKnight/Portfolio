@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>MedVoice: офлайн-диктовка для медкарт — конвейер и цифры — Артём Хатеев</title>
+  <meta name="description" content="whisper.cpp, BERT-Tiny INT8 и правила безопасности: подтверждение критичных действий, проверка диапазонов и где на самом деле уходит время." />
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20" />
+  <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="note" data-title-key="title.note2" data-desc-key="note2.excerpt">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="../web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="../android.html" data-i18n="nav.android">Android</a></li>
+          <li><a href="../ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="../notes.html" aria-current="page" data-i18n="nav.notes">Заметки</a></li>
+          <li><a href="../index.html#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="../index.html#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ЗАГОЛОВОК СТАТЬИ =================== -->
+    <section class="page-hero page-hero-article">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="../notes.html">← <span data-i18n="note.back">Все заметки</span></a>
+        <div class="reveal">
+          <h1 data-i18n="note2.title">MedVoice: офлайн-диктовка для медкарт — конвейер и цифры</h1>
+        </div>
+        <p class="note-meta"><time datetime="2026-11-18" data-i18n="note.date">18 ноября 2026</time><span aria-hidden="true">·</span><span data-i18n="note.read3">3 мин чтения</span></p>
+      </div>
+    </section>
+
+    <!-- ======================= ТЕКСТ ======================= -->
+    <!-- Текст статьи — прямо здесь, по блоку на язык (data-lang-content="ru|en|sv").
+         i18n.js показывает блок выбранного языка; без JS виден русский. Все цифры — из README MedVoice. -->
+    <article class="section article-body">
+      <div class="container container-narrow">
+        <div class="prose" lang="ru" data-lang-content="ru">
+          <p>MedVoice — прототип Android-планшета, на котором врач ведёт медкарту голосом, не касаясь экрана. Всё работает офлайн: аудио и данные пациента не покидают устройство. Задача прототипа — показать, что голосовое ведение медкарты возможно без сети и без отправки чувствительных данных на сервер. Ниже — устройство конвейера, правила безопасности и честные цифры из README проекта.</p>
+          <h2>Конвейер</h2>
+          <ul>
+            <li>AudioRecord пишет звук 16 кГц, а Silero VAD (~2 МБ) проверяет его фрагментами по 32 мс.</li>
+            <li>Сегментатор фраз добавляет ~320 мс «предзаписи», завершает фразу после ~800 мс тишины и ограничивает её 12 секундами.</li>
+            <li>whisper.cpp с моделью base.en-q5_1 (57 МБ, через JNI) транскрибирует речь; начальная подсказка с медицинской лексикой помогает с терминами.</li>
+            <li>Числа нормализуются, и классификатор BERT-Tiny INT8 (~4,5 МБ) выбирает одно из более чем 100 клинических намерений.</li>
+          </ul>
+          <h2>Уверенность и подтверждение</h2>
+          <p>Если уверенность классификатора ниже 0,85, приложение переспрашивает; на проверочной выборке порог проходят 99,18% примеров. Критичные действия — назначения, выписка, переводы, разблокировка двери и «код синий» — всегда требуют подтверждения. Голосом можно подтвердить, отменить или откатить последнее действие. А просьбу «make me a sandwich» классификатор отклоняет: уверенность 68%, ниже порога.</p>
+          <h2>Витальные показатели и пациенты</h2>
+          <p>Показатели извлекаются регулярными выражениями с проверкой диапазонов: давление 60–260 / 30–160, SpO₂ 50–100%, температура 30–45 °C. Значение вне диапазона не попадёт в карту — даже если распознаватель ошибся в цифре. Пациента приложение находит по имени с допуском в одну опечатку (расстояние Левенштейна 1). Данные хранятся в Room, каждое действие пишется в журнал аудита. Ответы озвучиваются системным синтезом речи офлайн, а микрофон на это время ставится на паузу, чтобы ассистент не слышал сам себя.</p>
+          <h2>Где уходит время</h2>
+          <p>Профилирование показало, что whisper.cpp занимает 92–98% времени обработки фразы. Классификатор INT8 укладывается в 0,9–3,6 мс, VAD — в 8–67 мс, а приложение использует 164–241 МБ памяти. Важная оговорка из README: абсолютные значения задержки в бенчмарке завышены примерно в 2,16 раза самим тестовым стендом, поэтому смотреть стоит на пропорции, а не на миллисекунды. Режим повышенной точности с моделью small.en (181 МБ) работает примерно в 2,55 раза медленнее.</p>
+          <h2>Акценты</h2>
+          <p>Акустические тесты автоматизированы: одни и те же фразы прогоняются через разные голоса и условия, и результат сравнивается между версиями. На тесте с разными акцентами модель base.en распознала 96,1% фраз — достаточно для прототипа, но именно здесь в первую очередь нужны данные реальных клиник.</p>
+          <h2>Итог</h2>
+          <p>Оптимизировать нужно распознавание речи — остальной конвейер почти ничего не стоит по времени. А безопасность медицинского интерфейса держится не только на модели, но и на правилах вокруг неё: порог уверенности, подтверждение критичных действий, проверка диапазонов и журнал аудита.</p>
+        </div>
+        <div class="prose" lang="en" data-lang-content="en" hidden>
+          <p>MedVoice is an Android tablet prototype that lets a clinician update a patient chart by voice without touching the screen. Everything runs offline: audio and patient data never leave the device. The goal of the prototype is to show that voice charting is possible without a network and without sending sensitive data to a server. Below is how the pipeline works, the safety rules around it and the honest numbers from the project README.</p>
+          <h2>The pipeline</h2>
+          <ul>
+            <li>AudioRecord captures 16 kHz audio, and Silero VAD (~2 MB) checks it in 32 ms chunks.</li>
+            <li>An utterance segmenter adds ~320 ms of pre-roll, ends an utterance after ~800 ms of silence and caps it at 12 seconds.</li>
+            <li>whisper.cpp with the base.en-q5_1 model (57 MB, via JNI) transcribes the speech; an initial prompt with medical vocabulary helps with terminology.</li>
+            <li>Numbers are normalised, and an INT8 BERT-Tiny classifier (~4.5 MB) picks one of more than 100 clinical intents.</li>
+          </ul>
+          <h2>Confidence and confirmation</h2>
+          <p>If the classifier&#x27;s confidence is below 0.85, the app asks again; on the validation set 99.18% of examples clear that threshold. Critical actions — prescriptions, discharge, transfers, unlocking a door and code blue — always require confirmation. By voice you can confirm, cancel or undo the last action. And &quot;make me a sandwich&quot; is rejected: 68% confidence, below the threshold.</p>
+          <h2>Vitals and patients</h2>
+          <p>Vitals are extracted with regular expressions and range checks: blood pressure 60–260 / 30–160, SpO₂ 50–100%, temperature 30–45 °C. A value outside the range never reaches the chart — even if the recogniser got a digit wrong. Patients are found by name with a tolerance of one typo (Levenshtein distance 1). Data lives in Room, and every action is written to an audit log. Replies are spoken by the offline system text-to-speech, and the microphone pauses meanwhile so the assistant does not hear itself.</p>
+          <h2>Where the time goes</h2>
+          <p>Profiling showed that whisper.cpp takes 92–98% of the time spent on an utterance. The INT8 classifier needs 0.9–3.6 ms, VAD 8–67 ms, and the app uses 164–241 MB of memory. An important caveat from the README: the absolute latency numbers in the benchmark are inflated by about 2.16× by the test harness itself, so look at the proportions rather than the milliseconds. The accuracy mode with the small.en model (181 MB) is roughly 2.55× slower.</p>
+          <h2>Accents</h2>
+          <p>Acoustic tests are automated: the same phrases are run through different voices and conditions, and results are compared between versions. On an accent test the base.en model recognised 96.1% of phrases — enough for a prototype, but this is exactly where data from real clinics is needed first.</p>
+          <h2>Takeaways</h2>
+          <p>Speech recognition is what needs optimising — the rest of the pipeline costs almost nothing in time. And safety in a medical interface rests not only on the model but on the rules around it: a confidence threshold, confirmation of critical actions, range checks and an audit log.</p>
+        </div>
+        <div class="prose" lang="sv" data-lang-content="sv" hidden>
+          <p>MedVoice är en prototyp för Android-surfplatta där en kliniker uppdaterar patientjournalen med rösten utan att röra skärmen. Allt körs offline: ljud och patientdata lämnar aldrig enheten. Prototypens syfte är att visa att röstbaserad journalföring är möjlig utan nätverk och utan att känsliga data skickas till en server. Här beskriver jag pipelinen, säkerhetsreglerna runt den och de ärliga siffrorna från projektets README.</p>
+          <h2>Pipelinen</h2>
+          <ul>
+            <li>AudioRecord spelar in ljud i 16 kHz, och Silero VAD (~2 MB) kontrollerar det i bitar om 32 ms.</li>
+            <li>En frassegmenterare lägger till ~320 ms förinspelning, avslutar en fras efter ~800 ms tystnad och begränsar den till 12 sekunder.</li>
+            <li>whisper.cpp med modellen base.en-q5_1 (57 MB, via JNI) transkriberar talet; en inledande prompt med medicinskt ordförråd hjälper med facktermerna.</li>
+            <li>Siffror normaliseras, och en BERT-Tiny-klassificerare i INT8 (~4,5 MB) väljer en av över 100 kliniska avsikter.</li>
+          </ul>
+          <h2>Konfidens och bekräftelse</h2>
+          <p>Om klassificerarens konfidens är under 0,85 frågar appen igen; i valideringsdatan klarar 99,18 % av exemplen den gränsen. Kritiska åtgärder — ordinationer, utskrivning, överflyttningar, att låsa upp en dörr och larmkod blå — kräver alltid bekräftelse. Med rösten kan man bekräfta, avbryta eller ångra den senaste åtgärden. Och ”make me a sandwich” avvisas: 68 % konfidens, under gränsen.</p>
+          <h2>Vitalparametrar och patienter</h2>
+          <p>Vitalparametrar plockas ut med reguljära uttryck och intervallkontroller: blodtryck 60–260 / 30–160, SpO₂ 50–100 %, temperatur 30–45 °C. Ett värde utanför intervallet hamnar aldrig i journalen — även om igenkännaren tog fel på en siffra. Patienter hittas på namn med tolerans för ett stavfel (Levenshtein-avstånd 1). Data lagras i Room, och varje åtgärd skrivs till en granskningslogg. Svaren läses upp med systemets offline-talsyntes, och mikrofonen pausas under tiden så att assistenten inte hör sig själv.</p>
+          <h2>Var tiden går åt</h2>
+          <p>Profileringen visade att whisper.cpp står för 92–98 % av tiden per fras. INT8-klassificeraren behöver 0,9–3,6 ms, VAD 8–67 ms, och appen använder 164–241 MB minne. En viktig reservation från README: de absoluta latenssiffrorna i benchmarken är uppblåsta ungefär 2,16 gånger av själva testriggen, så titta på proportionerna snarare än millisekunderna. Precisionsläget med modellen small.en (181 MB) är ungefär 2,55 gånger långsammare.</p>
+          <h2>Accenter</h2>
+          <p>De akustiska testerna är automatiserade: samma fraser körs genom olika röster och förhållanden, och resultaten jämförs mellan versioner. I ett accenttest kände base.en-modellen igen 96,1 % av fraserna — tillräckligt för en prototyp, men det är just här som data från riktiga kliniker behövs först.</p>
+          <h2>Slutsatser</h2>
+          <p>Det är taligenkänningen som behöver optimeras — resten av pipelinen kostar nästan ingen tid. Och säkerheten i ett medicinskt gränssnitt vilar inte bara på modellen utan på reglerna runt den: en konfidensgräns, bekräftelse av kritiska åtgärder, intervallkontroller och en granskningslogg.</p>
+        </div>
+
+        <!-- ЗАМЕНИТЕ: демо-видео. Удалите атрибут hidden у <figure> и вставьте одно из двух:
+             • YouTube: <iframe src="https://www.youtube-nocookie.com/embed/ID_ВИДЕО" title="MedVoice demo" loading="lazy"
+                         allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+             • свой файл: <video controls preload="metadata" src="../assets/video/medvoice-offline-clinical-dictation.mp4"></video>
+             Подробнее — README, раздел «Демо-видео». -->
+        <figure class="video-slot" hidden>
+          <div class="video-frame"></div>
+          <figcaption data-i18n="note.video">Демо-видео</figcaption>
+        </figure>
+
+        <p class="note-source"><span data-i18n="note.source">Исходный код и полные результаты тестов — в README репозитория:</span>
+          <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener">github.com/DaedricKnight/MedVoice ↗</a></p>
+
+        <aside class="note-cta">
+          <h2 data-i18n="note.cta.title">Нужно что-то похожее?</h2>
+          <p data-i18n="note.cta.text">Расскажите о задаче — обсудим, как решить её на устройстве.</p>
+          <a class="btn btn-primary" href="../index.html#contact" data-i18n="cta.discuss">Обсудить проект</a>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js?v=20"></script>
+  <script src="../assets/js/script.js?v=20"></script>
+</body>
+</html>

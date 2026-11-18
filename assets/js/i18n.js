@@ -301,6 +301,28 @@
       "oss.sdk": "SDK для Android с моделями намерений LocalEdgeAI",
       "oss.apk": "Демо-APK",
       "oss.apk.desc": "Установите и попробуйте на своём устройстве",
+      "nav.notes": "Заметки",
+      "title.notes": "Заметки — Артём Хатеев",
+      "desc.notes": "Технические заметки об офлайн-голосовых ассистентах и ИИ на устройстве: Hermi, MedVoice.",
+      "notes.title": "Заметки",
+      "notes.lead": "Короткие технические разборы моих проектов: архитектура, решения и цифры из README.",
+      "pg.k.articles": "Статьи",
+      "notes.list.title": "Последние заметки",
+      "note.date": "18 ноября 2026",
+      "note.read3": "3 мин чтения",
+      "note.more": "Читать →",
+      "note.back": "Все заметки",
+      "note.source": "Исходный код и полные результаты тестов — в README репозитория:",
+      "note.cta.title": "Нужно что-то похожее?",
+      "note.cta.text": "Расскажите о задаче — обсудим, как решить её на устройстве.",
+      "note.video": "Демо-видео",
+      "note.meta.aria": "Сведения о публикации",
+      "note1.title": "Hermi: офлайн-голосовой ассистент для Android Automotive — что сработало",
+      "note1.excerpt": "Silero VAD, Vosk и BERT-Tiny INT8 на устройстве: почему маленькая модель распознавания выиграла у большой и зачем ассистенту класс отказа.",
+      "title.note1": "Hermi: офлайн-голосовой ассистент для AAOS — Артём Хатеев",
+      "note2.title": "MedVoice: офлайн-диктовка для медкарт — конвейер и цифры",
+      "note2.excerpt": "whisper.cpp, BERT-Tiny INT8 и правила безопасности: подтверждение критичных действий, проверка диапазонов и где на самом деле уходит время.",
+      "title.note2": "MedVoice: офлайн-диктовка для медкарт — Артём Хатеев",
     },
 
     /* --------------------- ENGLISH --------------------- */
@@ -572,6 +594,28 @@
       "oss.sdk": "Android SDK with the LocalEdgeAI intent models",
       "oss.apk": "Demo APK",
       "oss.apk.desc": "Install it and try it on your own device",
+      "nav.notes": "Notes",
+      "title.notes": "Notes — Artem Khateev",
+      "desc.notes": "Technical notes on offline voice assistants and on-device AI: Hermi, MedVoice.",
+      "notes.title": "Notes",
+      "notes.lead": "Short technical write-ups of my projects: architecture, decisions and numbers from the READMEs.",
+      "pg.k.articles": "Articles",
+      "notes.list.title": "Latest notes",
+      "note.date": "18 November 2026",
+      "note.read3": "3 min read",
+      "note.more": "Read →",
+      "note.back": "All notes",
+      "note.source": "Source code and full test results are in the repository README:",
+      "note.cta.title": "Need something similar?",
+      "note.cta.text": "Tell me about your task — let's discuss how to solve it on the device.",
+      "note.video": "Demo video",
+      "note.meta.aria": "Publication details",
+      "note1.title": "Hermi: an offline voice assistant for Android Automotive — what worked",
+      "note1.excerpt": "Silero VAD, Vosk and INT8 BERT-Tiny on the device: why the small recogniser beat the large one and why an assistant needs a reject class.",
+      "title.note1": "Hermi: an offline voice assistant for AAOS — Artem Khateev",
+      "note2.title": "MedVoice: offline dictation for patient charts — the pipeline and the numbers",
+      "note2.excerpt": "whisper.cpp, INT8 BERT-Tiny and safety rules: confirming critical actions, range checks and where the time actually goes.",
+      "title.note2": "MedVoice: offline dictation for patient charts — Artem Khateev",
     },
 
     /* --------------------- SVENSKA --------------------- */
@@ -843,6 +887,28 @@
       "oss.sdk": "Android-SDK med LocalEdgeAI:s avsiktsmodeller",
       "oss.apk": "Demo-APK",
       "oss.apk.desc": "Installera och prova på din egen enhet",
+      "nav.notes": "Anteckningar",
+      "title.notes": "Anteckningar — Artem Khateev",
+      "desc.notes": "Tekniska anteckningar om offline-röstassistenter och AI på enheten: Hermi, MedVoice.",
+      "notes.title": "Anteckningar",
+      "notes.lead": "Korta tekniska genomgångar av mina projekt: arkitektur, beslut och siffror från README-filerna.",
+      "pg.k.articles": "Artiklar",
+      "notes.list.title": "Senaste anteckningarna",
+      "note.date": "18 november 2026",
+      "note.read3": "3 min läsning",
+      "note.more": "Läs →",
+      "note.back": "Alla anteckningar",
+      "note.source": "Källkod och fullständiga testresultat finns i repots README:",
+      "note.cta.title": "Behöver du något liknande?",
+      "note.cta.text": "Berätta om din uppgift — så diskuterar vi hur den kan lösas på enheten.",
+      "note.video": "Demovideo",
+      "note.meta.aria": "Publiceringsinformation",
+      "note1.title": "Hermi: en offline-röstassistent för Android Automotive — vad som fungerade",
+      "note1.excerpt": "Silero VAD, Vosk och BERT-Tiny i INT8 på enheten: varför den lilla igenkänningsmodellen slog den stora och varför en assistent behöver en avvisningsklass.",
+      "title.note1": "Hermi: en offline-röstassistent för AAOS — Artem Khateev",
+      "note2.title": "MedVoice: offline-diktering för patientjournaler — pipelinen och siffrorna",
+      "note2.excerpt": "whisper.cpp, BERT-Tiny i INT8 och säkerhetsregler: bekräftelse av kritiska åtgärder, intervallkontroller och var tiden faktiskt går åt.",
+      "title.note2": "MedVoice: offline-diktering för patientjournaler — Artem Khateev",
     }
   };
 
@@ -887,6 +953,13 @@
     document.querySelectorAll("[data-i18n-attr-title]").forEach(function (el) {
       var v = val(el.getAttribute("data-i18n-attr-title"));
       if (v !== undefined) el.setAttribute("title", v);
+    });
+
+    // Длинные тексты (статьи в notes/) хранятся прямо в HTML: по блоку на язык
+    // с атрибутом data-lang-content="ru|en|sv". Показываем только блок текущего языка.
+    // (Атрибут data-lang занят кнопками переключателя языка.)
+    document.querySelectorAll("[data-lang-content]").forEach(function (el) {
+      el.hidden = el.getAttribute("data-lang-content") !== lang;
     });
 
     // <html lang>
