@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="../assets/css/styles.css?v=21" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v=22" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -66,7 +66,7 @@
         <a class="btn btn-primary btn-sm cta-header" href="../index.html#contact" data-i18n="nav.cta">Связаться</a>
 
         <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
-                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+                data-i18n-aria="aria.menu.open" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
@@ -99,6 +99,24 @@
          i18n.js показывает блок выбранного языка; без JS виден русский. Все цифры — из README MedVoice. -->
     <article class="section article-body">
       <div class="container container-narrow">
+        <!-- Демо: видео assets/media/medvoice-demo.mp4 (574×1280, вертикальное) и скриншот приложения.
+             Ширина ограничена, чтобы вертикальные кадры не занимали весь экран. -->
+        <div class="media-pair" id="demo">
+          <figure class="media-block media-portrait">
+            <video class="media-video" controls preload="metadata" playsinline
+                   poster="../assets/media/medvoice-demo-poster.jpg" width="574" height="1280"
+                   data-i18n-aria="media.medvoice.video.label" aria-label="Демо-видео MedVoice">
+              <source src="../assets/media/medvoice-demo.mp4" type="video/mp4" />
+            </video>
+            <figcaption data-i18n="media.medvoice.cap">MedVoice на Android: показатели и команды вводятся голосом, распознавание и классификация — на устройстве.</figcaption>
+          </figure>
+          <figure class="media-block media-portrait">
+            <img class="media-img" src="../assets/media/medvoice-screenshot.png" width="574" height="1180" loading="lazy" decoding="async"
+                 data-i18n-alt="media.medvoice.shot.alt" alt="Скриншот MedVoice: карточка демо-пациента John Doe с давлением 140/90 и пульсом 72, статус «Edge AI ready», журнал голосовых команд." />
+            <figcaption data-i18n="media.medvoice.shot.cap">Карточка пациента в MedVoice (демо-данные).</figcaption>
+          </figure>
+        </div>
+
         <div class="prose" lang="ru" data-lang-content="ru">
           <p>MedVoice — прототип Android-планшета, на котором врач ведёт медкарту голосом, не касаясь экрана. Всё работает офлайн: аудио и данные пациента не покидают устройство. Задача прототипа — показать, что голосовое ведение медкарты возможно без сети и без отправки чувствительных данных на сервер. Ниже — устройство конвейера, правила безопасности и честные цифры из README проекта.</p>
           <h2>Конвейер</h2>
@@ -160,16 +178,6 @@
           <p>Det är taligenkänningen som behöver optimeras — resten av pipelinen kostar nästan ingen tid. Och säkerheten i ett medicinskt gränssnitt vilar inte bara på modellen utan på reglerna runt den: en konfidensgräns, bekräftelse av kritiska åtgärder, intervallkontroller och en granskningslogg.</p>
         </div>
 
-        <!-- ЗАМЕНИТЕ: демо-видео. Удалите атрибут hidden у <figure> и вставьте одно из двух:
-             • YouTube: <iframe src="https://www.youtube-nocookie.com/embed/ID_ВИДЕО" title="MedVoice demo" loading="lazy"
-                         allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-             • свой файл: <video controls preload="metadata" src="../assets/video/medvoice-offline-clinical-dictation.mp4"></video>
-             Подробнее — README, раздел «Демо-видео». -->
-        <figure class="video-slot" hidden>
-          <div class="video-frame"></div>
-          <figcaption data-i18n="note.video">Демо-видео</figcaption>
-        </figure>
-
         <p class="note-source"><span data-i18n="note.source">Исходный код и полные результаты тестов — в README репозитория:</span>
           <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener">github.com/DaedricKnight/MedVoice ↗</a></p>
 
@@ -197,7 +205,7 @@
     </div>
   </footer>
 
-  <script src="../assets/js/i18n.js?v=21"></script>
-  <script src="../assets/js/script.js?v=21"></script>
+  <script src="../assets/js/i18n.js?v=22"></script>
+  <script src="../assets/js/script.js?v=22"></script>
 </body>
 </html>

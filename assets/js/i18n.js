@@ -107,7 +107,7 @@
       "home.k.contact": "Контакты",
       "pg.k.contact": "Контакты",
       "contact.title": "Давайте работать вместе",
-      "contact.desc": "Расскажите о задаче — отвечу в течение рабочего дня.",
+      "contact.desc": "Расскажите о задаче — отвечу в течение 1–2 рабочих дней.",
       "form.name.label": "Имя",
       "form.name.ph": "Как к вам обращаться",
       "form.email.label": "Email",
@@ -254,7 +254,7 @@
       "step1.title": "Напишите",
       "step1.text": "В Telegram или на почту: задача, сроки, ориентир по бюджету и полезные ссылки.",
       "step2.title": "Ответ",
-      "step2.text": "Отвечу в течение одного рабочего дня.",
+      "step2.text": "Отвечу в течение 1–2 рабочих дней.",
       "step3.title": "Созвон и оценка",
       "step3.text": "Короткий созвон, чтобы уточнить детали, затем оценка сроков и стоимости.",
       "step4.title": "Старт",
@@ -324,6 +324,15 @@
       "note2.excerpt": "whisper.cpp, BERT-Tiny INT8 и правила безопасности: подтверждение критичных действий, проверка диапазонов и где на самом деле уходит время.",
       "title.note2": "MedVoice: офлайн-диктовка для медкарт — Артём Хатеев",
       "cta.book": "Записаться на звонок",
+      "aria.menu.open": "Открыть меню",
+      "aria.menu.close": "Закрыть меню",
+      "media.demo": "Смотреть демо →",
+      "media.hermi.cap": "Hermi на Android Automotive OS: голосовая команда и передача навигационного намерения в приложение карт.",
+      "media.medvoice.cap": "MedVoice на Android: показатели и команды вводятся голосом, распознавание и классификация — на устройстве.",
+      "media.medvoice.shot.alt": "Скриншот MedVoice: карточка демо-пациента John Doe с давлением 140/90 и пульсом 72, статус «Edge AI ready», журнал голосовых команд.",
+      "media.medvoice.shot.cap": "Карточка пациента в MedVoice (демо-данные).",
+      "media.hermi.video.label": "Демо-видео Hermi",
+      "media.medvoice.video.label": "Демо-видео MedVoice",
     },
 
     /* --------------------- ENGLISH --------------------- */
@@ -406,7 +415,7 @@
       "home.k.contact": "Contact",
       "pg.k.contact": "Contact",
       "contact.title": "Let's work together",
-      "contact.desc": "Tell me about your task — I'll reply within a business day.",
+      "contact.desc": "Tell me about your task — I'll reply within 1–2 business days.",
       "form.name.label": "Name",
       "form.name.ph": "Your name",
       "form.email.label": "Email",
@@ -548,7 +557,7 @@
       "step1.title": "Get in touch",
       "step1.text": "On Telegram or by email: the task, timeline, a budget range and any useful links.",
       "step2.title": "Reply",
-      "step2.text": "I reply within one business day.",
+      "step2.text": "I reply within 1–2 business days.",
       "step3.title": "Call and estimate",
       "step3.text": "A short call to clarify the details, then an estimate of time and cost.",
       "step4.title": "Kick-off",
@@ -618,6 +627,15 @@
       "note2.excerpt": "whisper.cpp, INT8 BERT-Tiny and safety rules: confirming critical actions, range checks and where the time actually goes.",
       "title.note2": "MedVoice: offline dictation for patient charts — Artem Khateev",
       "cta.book": "Book a call",
+      "aria.menu.open": "Open menu",
+      "aria.menu.close": "Close menu",
+      "media.demo": "Watch the demo →",
+      "media.hermi.cap": "Hermi on Android Automotive OS: a voice command, with the navigation intent handed off to the maps app.",
+      "media.medvoice.cap": "MedVoice on Android: vitals and commands are entered by voice, with recognition and classification on the device.",
+      "media.medvoice.shot.alt": "MedVoice screenshot: the chart of demo patient John Doe with blood pressure 140/90 and heart rate 72, an “Edge AI ready” status and the voice command log.",
+      "media.medvoice.shot.cap": "A patient chart in MedVoice (demo data).",
+      "media.hermi.video.label": "Hermi demo video",
+      "media.medvoice.video.label": "MedVoice demo video",
     },
 
     /* --------------------- SVENSKA --------------------- */
@@ -700,7 +718,7 @@
       "home.k.contact": "Kontakt",
       "pg.k.contact": "Kontakt",
       "contact.title": "Låt oss jobba ihop",
-      "contact.desc": "Berätta om din uppgift — jag svarar inom en arbetsdag.",
+      "contact.desc": "Berätta om din uppgift — jag svarar inom 1–2 arbetsdagar.",
       "form.name.label": "Namn",
       "form.name.ph": "Ditt namn",
       "form.email.label": "E-post",
@@ -842,7 +860,7 @@
       "step1.title": "Hör av dig",
       "step1.text": "På Telegram eller via e-post: uppgiften, tidsram, ungefärlig budget och användbara länkar.",
       "step2.title": "Svar",
-      "step2.text": "Jag svarar inom en arbetsdag.",
+      "step2.text": "Jag svarar inom 1–2 arbetsdagar.",
       "step3.title": "Samtal och uppskattning",
       "step3.text": "Ett kort samtal för att reda ut detaljerna, sedan en uppskattning av tid och kostnad.",
       "step4.title": "Start",
@@ -912,6 +930,15 @@
       "note2.excerpt": "whisper.cpp, BERT-Tiny i INT8 och säkerhetsregler: bekräftelse av kritiska åtgärder, intervallkontroller och var tiden faktiskt går åt.",
       "title.note2": "MedVoice: offline-diktering för patientjournaler — Artem Khateev",
       "cta.book": "Boka ett samtal",
+      "aria.menu.open": "Öppna menyn",
+      "aria.menu.close": "Stäng menyn",
+      "media.demo": "Se demon →",
+      "media.hermi.cap": "Hermi på Android Automotive OS: ett röstkommando där navigeringsavsikten lämnas över till kartappen.",
+      "media.medvoice.cap": "MedVoice på Android: vitalparametrar och kommandon matas in med rösten, med igenkänning och klassificering på enheten.",
+      "media.medvoice.shot.alt": "Skärmbild från MedVoice: journalen för demopatienten John Doe med blodtryck 140/90 och puls 72, statusen ”Edge AI ready” och loggen över röstkommandon.",
+      "media.medvoice.shot.cap": "En patientjournal i MedVoice (demodata).",
+      "media.hermi.video.label": "Demovideo för Hermi",
+      "media.medvoice.video.label": "Demovideo för MedVoice",
     }
   };
 
@@ -951,6 +978,11 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       var v = val(el.getAttribute("data-i18n-aria"));
       if (v !== undefined) el.setAttribute("aria-label", v);
+    });
+    // alt у изображений
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var v = val(el.getAttribute("data-i18n-alt"));
+      if (v !== undefined) el.setAttribute("alt", v);
     });
     // title-атрибут
     document.querySelectorAll("[data-i18n-attr-title]").forEach(function (el) {

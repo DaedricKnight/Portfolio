@@ -19,6 +19,7 @@ portfolio/
 │   ├── hermi-offline-voice-assistant.html        # статья о Hermi (ru/en/sv)
 │   └── medvoice-offline-clinical-dictation.html  # статья о MedVoice (ru/en/sv)
 ├── assets/
+│   ├── media/              # демо-видео, постеры и скриншот (Hermi, MedVoice)
 │   ├── css/styles.css      # стили и токены дизайна (цвета, шрифты, отступы)
 │   └── js/
 │       ├── i18n.js          # словарь переводов (ru/en/sv) и переключатель языка
@@ -71,12 +72,8 @@ portfolio/
    100k+ (iRobot), 99,9% (GuavaPay). Счётчик анимируется только у элементов с `data-count`.
 
 ### Что осталось заполнить (все места помечены `ЗАМЕНИТЕ`)
-- [ ] **Доступность** — строка «Доступен для новых проектов» в «Услугах» (`services.available`): при желании
-      укажите месяц, с которого свободны.
-- [ ] **Срок ответа** — «Отвечу в течение рабочего дня» (`step2.text`, `contact.desc`): подтвердите или измените.
 - [ ] **«Не беру»** — список в разделе «Как начать работу» (`start.decline`): проверьте формулировку.
 - [ ] **Фото** — вместо аватара с инициалами (см. пункт 2 выше).
-- [ ] **Демо-видео** в статьях `notes/*.html` (см. «Демо-видео»).
 - [ ] **SDK в Maven Central и демо-APK** в блоке «Open source» (см. «Open source»).
 - [ ] **Ссылка для записи на звонок** — `BOOKING_URL` (см. «Запись на звонок»).
 - [ ] **Отзывы и сертификаты** — вернуть, когда появятся реальные (пункт 7).
@@ -117,14 +114,20 @@ portfolio/
   (`<time datetime>` и ключ даты) и время чтения (≈ 200 слов в минуту), добавьте ключи `noteN.*` / `title.noteN`
   в `i18n.js` и карточку `<article class="note-card">` в `notes.html`. Ссылки из `notes/` начинаются с `../`.
 
-### Демо-видео
-В каждой статье есть скрытый блок `<figure class="video-slot" hidden>` (помечен `ЗАМЕНИТЕ`). Чтобы показать
-видео, удалите `hidden` и замените `<div class="video-frame"></div>` на одно из:
-- **YouTube:** `<iframe src="https://www.youtube-nocookie.com/embed/ID_ВИДЕО" title="Hermi demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
-  (ID — часть ссылки после `watch?v=`);
-- **свой MP4:** положите файл в `assets/video/` и вставьте `<video controls preload="metadata" src="../assets/video/имя.mp4"></video>`
-  (держите файл небольшим — до ~10–20 МБ, H.264).
-Рамка 16:9 и подпись уже свёрстаны.
+### Демо-видео и скриншоты
+Медиафайлы лежат в `assets/media/`:
+- `hermi-demo.mp4` (1272×720) + `hermi-demo-poster.jpg` — в начале статьи о Hermi (`#demo`) и превью карточки Hermi;
+- `medvoice-demo.mp4` (574×1280, вертикальное) + `medvoice-demo-poster.jpg` и `medvoice-screenshot.png` —
+  в начале статьи о MedVoice (`#demo`, рядом, не шире 300px; на телефоне друг под другом, до 360px)
+  и превью карточки MedVoice.
+Ссылки «Смотреть демо →» в карточках ведут на `notes/…html#demo`. Подписи и alt-тексты — ключи `media.*` в `i18n.js`
+(для `alt` используется атрибут `data-i18n-alt`).
+
+Заменить видео: положите новый файл под тем же именем (H.264/AAC MP4, до 720p по высоте для горизонтальных
+видео, `-movflags +faststart`, желательно до ~15 МБ) и обновите постер, например:
+`ffmpeg -i in.mp4 -vf "scale=-2:720" -c:v libx264 -crf 26 -preset slow -c:a aac -b:a 96k -movflags +faststart out.mp4`
+и `ffmpeg -ss 3 -i out.mp4 -frames:v 1 -q:v 4 poster.jpg`. Видео с YouTube можно вставить вместо `<video>`:
+`<iframe src="https://www.youtube-nocookie.com/embed/ID_ВИДЕО" title="…" loading="lazy" allowfullscreen></iframe>`.
 
 ### Open source
 Блок «Open source» на `android.html` и `ai.html` ссылается на репозитории Hermi, MedVoice, CarDiagnostics,

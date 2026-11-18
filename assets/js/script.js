@@ -53,18 +53,27 @@
   var menuToggle = document.getElementById("menu-toggle");
   var navList = document.getElementById("nav-list");
 
+  // Подпись кнопки зависит от состояния и языка: ключ кладём в data-i18n-aria,
+  // чтобы i18n.js обновлял её и при смене языка.
+  function setMenuLabel(open) {
+    var key = open ? "aria.menu.close" : "aria.menu.open";
+    menuToggle.setAttribute("data-i18n-aria", key);
+    var label = window.I18N && window.I18N.t ? window.I18N.t(key) : "";
+    if (label) menuToggle.setAttribute("aria-label", label);
+  }
+
   function closeMenu() {
     if (!navList) return;
     navList.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Открыть меню");
+    setMenuLabel(false);
   }
 
   if (menuToggle && navList) {
     menuToggle.addEventListener("click", function () {
       var open = navList.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
+      setMenuLabel(open);
     });
     // Закрываем меню при клике по ссылке
     navList.addEventListener("click", function (e) {

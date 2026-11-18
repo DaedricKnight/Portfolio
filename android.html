@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=21" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=22" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -66,7 +66,7 @@
         <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
 
         <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
-                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+                data-i18n-aria="aria.menu.open" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
@@ -256,25 +256,27 @@
           </article>
           <!-- GitHub: MedVoice -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-f" aria-hidden="true"><span class="project-thumb-label">MedVoice</span></div>
+            <div class="project-thumb thumb-f project-thumb-device" aria-hidden="true"><img src="assets/media/medvoice-screenshot.png" alt="" width="574" height="1180" loading="lazy" decoding="async"></div>
             <div class="project-body">
               <h3 class="project-title" data-i18n="web.proj6.title">MedVoice</h3>
               <p class="project-desc" data-i18n="web.proj6.desc">Прототип Android-планшета для ведения медкарт голосом, офлайн.</p>
               <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>whisper.cpp</li><li>Room</li></ul>
               <div class="project-links">
                 <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+                <a href="notes/medvoice-offline-clinical-dictation.html#demo" data-i18n="media.demo">Смотреть демо →</a>
               </div>
             </div>
           </article>
           <!-- GitHub: Hermi -->
           <article class="project-card reveal">
-            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">Hermi</span></div>
+            <div class="project-thumb thumb-a project-thumb-cover" aria-hidden="true"><img src="assets/media/hermi-demo-poster.jpg" alt="" width="1272" height="720" loading="lazy" decoding="async"></div>
             <div class="project-body">
               <h3 class="project-title" data-i18n="ai.proj3.title">Hermi</h3>
               <p class="project-desc" data-i18n="ai.proj3.desc">Офлайн-голосовой ассистент для Android Automotive OS.</p>
               <ul class="tag-chips" aria-label="Технологии"><li>AAOS</li><li>Vosk</li><li>ONNX Runtime</li></ul>
               <div class="project-links">
                 <a href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+                <a href="notes/hermi-offline-voice-assistant.html#demo" data-i18n="media.demo">Смотреть демо →</a>
               </div>
             </div>
           </article>
@@ -311,8 +313,7 @@
         <header class="section-head reveal">
           <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
-          <!-- ЗАМЕНИТЕ: «отвечу в течение рабочего дня» — подтвердите срок ответа (ключ contact.desc). -->
-          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение 1–2 рабочих дней.</p>
         </header>
 
         <div class="contact-grid">
@@ -371,7 +372,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=21"></script>
-  <script src="assets/js/script.js?v=21"></script>
+  <script src="assets/js/i18n.js?v=22"></script>
+  <script src="assets/js/script.js?v=22"></script>
 </body>
 </html>

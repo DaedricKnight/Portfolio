@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=21" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=22" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -69,7 +69,7 @@
         <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
 
         <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
-                data-i18n-aria="aria.menu" aria-label="Меню" aria-expanded="false" aria-controls="nav-list">
+                data-i18n-aria="aria.menu.open" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
@@ -274,8 +274,6 @@
               <li data-i18n="fmt.team">Долгосрочное участие в команде</li>
             </ul>
             <p class="services-rate" data-i18n="services.rate">Ставка — по запросу</p>
-            <!-- ЗАМЕНИТЕ: доступность. Можно указать месяц, например «Доступен с марта 2027»
-                 (ключ services.available в assets/js/i18n.js для ru/en/sv). -->
             <p class="services-available"><span class="status-dot" aria-hidden="true"></span><span data-i18n="services.available">Доступен для новых проектов</span></p>
           </div>
         </div>
@@ -329,10 +327,9 @@
             <p class="step-text" data-i18n="step1.text">В Telegram или на почту: задача, сроки, ориентир по бюджету и полезные ссылки.</p>
           </li>
           <li class="step reveal">
-            <!-- ЗАМЕНИТЕ: подтвердите срок ответа (ключ step2.text) — это обещание клиенту. -->
             <span class="step-num" aria-hidden="true">02</span>
             <h3 class="step-title" data-i18n="step2.title">Ответ</h3>
-            <p class="step-text" data-i18n="step2.text">Отвечу в течение одного рабочего дня.</p>
+            <p class="step-text" data-i18n="step2.text">Отвечу в течение 1–2 рабочих дней.</p>
           </li>
           <li class="step reveal">
             <span class="step-num" aria-hidden="true">03</span>
@@ -395,8 +392,7 @@
         <header class="section-head reveal">
           <span class="section-kicker"><span class="kicker-num">06</span><span data-i18n="home.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
-          <!-- ЗАМЕНИТЕ: «отвечу в течение рабочего дня» — подтвердите срок ответа (ключ contact.desc). -->
-          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение 1–2 рабочих дней.</p>
         </header>
 
         <div class="contact-grid">
@@ -456,7 +452,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=21"></script>
-  <script src="assets/js/script.js?v=21"></script>
+  <script src="assets/js/i18n.js?v=22"></script>
+  <script src="assets/js/script.js?v=22"></script>
 </body>
 </html>
