@@ -43,8 +43,10 @@ portfolio/
 Что заменить в первую очередь:
 1. **Имя** — уже подставлено (Артём Хатеев / Artem Khateev). Чтобы сменить: ключи `name` и
    `initials` в `i18n.js`, а также инициалы в `favicon.svg` (он статичный, язык не переключает).
-2. **Фото** — в `index.html` замените блок `photo-placeholder` на
-   `<img src="assets/img/photo.jpg" alt="Artem Khateev">` (создайте папку `assets/img`).
+2. **Фото** — пока на месте фото аватар с инициалами (АХ/AK). Чтобы поставить фото: положите файл
+   в `assets/img/photo.jpg` (квадрат, от 600×600) и в `index.html` замените блок
+   `<div class="photo-avatar">…</div>` на `<img class="photo-img" src="assets/img/photo.jpg" alt="Artem Khateev">`
+   (место помечено `ЗАМЕНИТЕ`). Стоковые фото не используйте.
 3. **Контакты** — уже указаны: email artemkhateev.ai@gmail.com, Telegram [@Artemidius](https://t.me/Artemidius),
    GitHub [DaedricKnight](https://github.com/DaedricKnight). LinkedIn на сайте не указан — вместо ссылки строка
    «LinkedIn — по запросу» (ключ `contact.linkedin`).

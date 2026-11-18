@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=17" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=18" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -185,42 +185,95 @@
 
         <div class="about-grid">
           <div class="about-photo reveal">
-            <!-- ЗАМЕНИТЕ: ваше фото. Замените блок photo-placeholder на
-                 <img src="assets/img/photo.jpg" alt="Artem Khateev"> -->
+            <!-- ЗАМЕНИТЕ: фото. Положите файл в assets/img/photo.jpg и замените блок
+                 <div class="photo-avatar">…</div> на <img class="photo-img" src="assets/img/photo.jpg" alt="Artem Khateev">
+                 (подробнее — README, «Фото»). Пока здесь аватар с инициалами. -->
             <div class="photo-ring">
-              <div class="photo-placeholder" role="img" aria-label="Фото профиля — замените на своё">
-                <span data-i18n="about.photo">Ваше фото</span>
+              <div class="photo-avatar" role="img" data-i18n-aria="name" aria-label="Артём Хатеев">
+                <span data-i18n="initials" aria-hidden="true">АХ</span>
               </div>
             </div>
             <ul class="about-badges" aria-label="Статус">
-              <li data-i18n="about.badge1">Удалённо / по всему миру</li>
-              <li data-i18n="about.badge2">RU · EN · SV</li>
+              <li data-i18n="about.badge1">Загреб, Хорватия · CET</li>
+              <li data-i18n="about.badge2">Удалённо · открыт к релокации</li>
             </ul>
           </div>
 
           <div class="about-text reveal">
-            <p data-i18n="about.p1">Привет! Я инженер-универсал: строю веб- и мобильные приложения и внедряю решения на базе машинного обучения. Соединяю продуктовое мышление с инженерной надёжностью.</p>
-            <p data-i18n="about.p2">Одинаково уверенно работаю и с фронтендом и бэкендом, и с ML-моделями — от прототипа до продакшена под нагрузкой. Пишу чистый код и оставляю понятную документацию.</p>
-            <p data-i18n="about.p3">Сейчас открыт для freelance- и контрактных проектов. Готов подключиться как на короткую консультацию, так и на полный цикл разработки.</p>
+            <p data-i18n="about.p1">Я начал в 2014 году в Калуге, в НПО Телеметрия: писал Android-приложение для отображения телеметрии автомобиля и анализировал данные на Go. Потом был Hyperkey — клавиатура-виджет для чатов с 300 000+ пользователей, где я работал с камерой и машинным обучением. В Москве — эквайринг и Bluetooth LE в PayMe, руководство архитектурной командой из 15+ человек в ВТБ Онлайн и Wildberries с 15 млн+ пользователей. Дальше — удалённо: Reddit через Akvelon, GuavaPay и iRobot (TLM Software Design) из Белграда.</p>
+            <p data-i18n="about.p2">Сейчас я живу в Загребе (Хорватия) и создаю офлайн-ИИ для Android и Android Automotive, где данные не покидают устройство: Hermi, MedVoice, LocalEdgeAI. Круг замкнулся — начинал с телеметрии автомобиля, а теперь делаю ИИ внутри машины. Работаю удалённо с командами из ЕС и США, часовой пояс — CET (UTC+1, летом UTC+2). Открыт к релокации.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h3 class="about-offer-title" data-i18n="about.offer.title">Чем могу помочь</h3>
+    <!-- ======================= УСЛУГИ ======================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="home.k.services">Услуги</span></span>
+          <h2 class="section-title" data-i18n="services.title">С чем я помогаю</h2>
+          <p class="section-desc" data-i18n="services.desc">Четыре услуги — у каждой понятный результат для вашей команды.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M8.5 12.5l2.5 2.5L16 10"/></svg></span>
+            <h3 class="service-title" data-i18n="svc1.title">Аудит Android-приложения</h3>
+            <p class="service-desc" data-i18n="svc1.desc">Проверю производительность, архитектуру, стабильность и техдолг. Вы получите письменный отчёт с приоритизированным списком исправлений.</p>
+            <p class="service-fit" data-i18n="svc1.fit">Подходит, если приложение тормозит, падает или его всё сложнее развивать.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"/></svg></span>
+            <h3 class="service-title" data-i18n="svc2.title">Голосовой ассистент на устройстве под ключ</h3>
+            <p class="service-desc" data-i18n="svc2.desc">Офлайн-пайплайн VAD → распознавание речи → NLU для Android и Android Automotive: без облака, данные остаются на устройстве. Уже сделано в Hermi и MedVoice.</p>
+            <p class="service-fit" data-i18n="svc2.fit">Подходит, если голосовое управление должно работать без интернета или данные нельзя отправлять в облако.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0111 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2A4.5 4.5 0 0120.5 19"/></svg></span>
+            <h3 class="service-title" data-i18n="svc3.title">Senior Android в вашу команду</h3>
+            <p class="service-desc" data-i18n="svc3.desc">Подключусь к продуктовой команде удалённо и надолго: фичи, архитектура, код-ревью и менторство — как в проектах Reddit, Wildberries и iRobot.</p>
+            <p class="service-fit" data-i18n="svc3.fit">Подходит, если команде нужен опытный Android-инженер без долгого найма.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
+            <h3 class="service-title" data-i18n="svc4.title">Прототип on-device AI</h3>
+            <p class="service-desc" data-i18n="svc4.desc">От идеи до работающего прототипа на устройстве: квантизованные модели, ONNX Runtime или TFLite и Android SDK для интеграции.</p>
+            <p class="service-fit" data-i18n="svc4.fit">Подходит, если хотите проверить ИИ-функцию на реальном железе до больших вложений.</p>
+          </article>
+        </div>
+
+        <div class="services-extra reveal">
+          <div class="services-also">
+            <h3 class="services-subtitle" data-i18n="services.also">Также</h3>
             <ul class="offer-list">
               <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.1">Сайты и веб-приложения: от идеи до продакшена</span></li>
-              <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.android">Мобильные приложения для Android: Kotlin, Jetpack Compose</span></li>
               <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.ios">Мобильные приложения для iOS: нативные приложения для iPhone и iPad</span></li>
               <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.2">Внедрение AI/ML: LLM, RAG, дообучение, инференс</span></li>
               <li><span class="offer-ico" aria-hidden="true">◆</span><span data-i18n="offer.4">MLOps: CI/CD, мониторинг и инфраструктура для моделей</span></li>
             </ul>
+          </div>
+          <div class="services-formats">
+            <h3 class="services-subtitle" data-i18n="services.formats">Форматы работы</h3>
+            <ul class="format-chips">
+              <li data-i18n="fmt.hourly">Почасовая оплата</li>
+              <li data-i18n="fmt.fixed">Фиксированная цена за этап</li>
+              <li data-i18n="fmt.team">Долгосрочное участие в команде</li>
+            </ul>
+            <p class="services-rate" data-i18n="services.rate">Ставка — по запросу</p>
+            <!-- ЗАМЕНИТЕ: доступность. Можно указать месяц, например «Доступен с марта 2027»
+                 (ключ services.available в assets/js/i18n.js для ru/en/sv). -->
+            <p class="services-available"><span class="status-dot" aria-hidden="true"></span><span data-i18n="services.available">Доступен для новых проектов</span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================= НАВЫКИ (кратко) ======================= -->
-    <section class="section" id="skills">
+    <section class="section section-alt" id="skills">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="home.k.skills">Навыки</span></span>
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="home.k.skills">Навыки</span></span>
           <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
           <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
         </header>
@@ -244,6 +297,44 @@
             <ul class="tag-chips tag-chips-lg"><li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>Git</li><li>TPU / GPU</li></ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ======================= КАК НАЧАТЬ РАБОТУ ======================= -->
+    <section class="section" id="start">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">05</span><span data-i18n="home.k.start">Как начать</span></span>
+          <h2 class="section-title" data-i18n="start.title">Как начать работу</h2>
+          <p class="section-desc" data-i18n="start.desc">От первого сообщения до старта — четыре шага.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 class="step-title" data-i18n="step1.title">Напишите</h3>
+            <p class="step-text" data-i18n="step1.text">В Telegram или на почту: задача, сроки, ориентир по бюджету и полезные ссылки.</p>
+          </li>
+          <li class="step reveal">
+            <!-- ЗАМЕНИТЕ: подтвердите срок ответа (ключ step2.text) — это обещание клиенту. -->
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 class="step-title" data-i18n="step2.title">Ответ</h3>
+            <p class="step-text" data-i18n="step2.text">Отвечу в течение одного рабочего дня.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 class="step-title" data-i18n="step3.title">Созвон и оценка</h3>
+            <p class="step-text" data-i18n="step3.text">Короткий созвон, чтобы уточнить детали, затем оценка сроков и стоимости.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3 class="step-title" data-i18n="step4.title">Старт</h3>
+            <p class="step-text" data-i18n="step4.text">Начинаем с первого этапа.</p>
+          </li>
+        </ol>
+
+        <!-- ЗАМЕНИТЕ: проверьте список «Не беру» (ключ start.decline) — это значения по умолчанию, подтвердите или измените. -->
+        <p class="start-decline reveal" data-i18n="start.decline">Не беру: азартные игры, сбор персональных данных без согласия, проекты без возможности обсудить задачу.</p>
       </div>
     </section>
 
@@ -286,11 +377,12 @@
     -->
 
     <!-- ======================= КОНТАКТЫ ======================= -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="home.k.contact">Контакты</span></span>
+          <span class="section-kicker"><span class="kicker-num">06</span><span data-i18n="home.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
+          <!-- ЗАМЕНИТЕ: «отвечу в течение рабочего дня» — подтвердите срок ответа (ключ contact.desc). -->
           <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
         </header>
 
@@ -349,7 +441,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=17"></script>
-  <script src="assets/js/script.js?v=17"></script>
+  <script src="assets/js/i18n.js?v=18"></script>
+  <script src="assets/js/script.js?v=18"></script>
 </body>
 </html>
