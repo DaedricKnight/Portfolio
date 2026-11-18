@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=20" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=21" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -351,6 +351,8 @@
               <span class="status-dot" aria-hidden="true"></span>
               <span data-i18n="contact.available">Сейчас беру новые проекты</span>
             </div>
+            <!-- Появляется, только если в assets/js/script.js задан BOOKING_URL -->
+            <a class="btn btn-secondary btn-block contact-booking" href="#" target="_blank" rel="noopener" data-booking hidden data-i18n="cta.book">Записаться на звонок</a>
           </aside>
         </div>
       </div>
@@ -369,7 +371,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=20"></script>
-  <script src="assets/js/script.js?v=20"></script>
+  <script src="assets/js/i18n.js?v=21"></script>
+  <script src="assets/js/script.js?v=21"></script>
 </body>
 </html>

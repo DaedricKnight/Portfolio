@@ -323,6 +323,7 @@
       "note2.title": "MedVoice: офлайн-диктовка для медкарт — конвейер и цифры",
       "note2.excerpt": "whisper.cpp, BERT-Tiny INT8 и правила безопасности: подтверждение критичных действий, проверка диапазонов и где на самом деле уходит время.",
       "title.note2": "MedVoice: офлайн-диктовка для медкарт — Артём Хатеев",
+      "cta.book": "Записаться на звонок",
     },
 
     /* --------------------- ENGLISH --------------------- */
@@ -616,6 +617,7 @@
       "note2.title": "MedVoice: offline dictation for patient charts — the pipeline and the numbers",
       "note2.excerpt": "whisper.cpp, INT8 BERT-Tiny and safety rules: confirming critical actions, range checks and where the time actually goes.",
       "title.note2": "MedVoice: offline dictation for patient charts — Artem Khateev",
+      "cta.book": "Book a call",
     },
 
     /* --------------------- SVENSKA --------------------- */
@@ -909,6 +911,7 @@
       "note2.title": "MedVoice: offline-diktering för patientjournaler — pipelinen och siffrorna",
       "note2.excerpt": "whisper.cpp, BERT-Tiny i INT8 och säkerhetsregler: bekräftelse av kritiska åtgärder, intervallkontroller och var tiden faktiskt går åt.",
       "title.note2": "MedVoice: offline-diktering för patientjournaler — Artem Khateev",
+      "cta.book": "Boka ett samtal",
     }
   };
 

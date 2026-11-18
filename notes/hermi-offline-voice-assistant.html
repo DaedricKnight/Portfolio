@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20" />
+  <link rel="stylesheet" href="../assets/css/styles.css?v=21" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -182,7 +182,10 @@
         <aside class="note-cta">
           <h2 data-i18n="note.cta.title">Нужно что-то похожее?</h2>
           <p data-i18n="note.cta.text">Расскажите о задаче — обсудим, как решить её на устройстве.</p>
-          <a class="btn btn-primary" href="../index.html#contact" data-i18n="cta.discuss">Обсудить проект</a>
+          <div class="note-cta-actions">
+            <a class="btn btn-primary" href="../index.html#contact" data-i18n="cta.discuss">Обсудить проект</a>
+            <a class="btn btn-secondary" href="#" target="_blank" rel="noopener" data-booking hidden data-i18n="cta.book">Записаться на звонок</a>
+          </div>
         </aside>
       </div>
     </article>
@@ -200,7 +203,7 @@
     </div>
   </footer>
 
-  <script src="../assets/js/i18n.js?v=20"></script>
-  <script src="../assets/js/script.js?v=20"></script>
+  <script src="../assets/js/i18n.js?v=21"></script>
+  <script src="../assets/js/script.js?v=21"></script>
 </body>
 </html>
