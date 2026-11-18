@@ -160,11 +160,13 @@
   }, { passive: true });
 
   /* ----------------------------------------------------------
-     6. ДЕМО-ОБРАБОТЧИК ФОРМЫ
-     Удалите этот блок, когда подключите Formspree / backend,
-     чтобы форма отправлялась по-настоящему (см. комментарий в HTML).
-     Тексты статусов берутся из словаря i18n (ключи form.invalid / form.sent).
+     6. ФОРМА БЕЗ БЭКЕНДА (mailto)
+     Проверяет поля и открывает почтовый клиент посетителя с готовым письмом:
+     тема «Проект: <имя>» (на языке сайта), в тексте — сообщение и контакты.
+     Чтобы принимать заявки на сервер (Formspree и т. п.), удалите этот блок
+     и укажите action формы — см. README, «Подключение формы».
   ---------------------------------------------------------- */
+  var CONTACT_EMAIL = "artemkhateev.ai@gmail.com";
   var tr = function (key, fallback) {
     return (window.I18N && window.I18N.t) ? window.I18N.t(key) : fallback;
   };
@@ -178,8 +180,18 @@
         form.reportValidity();
         return;
       }
-      status.textContent = tr("form.sent", "Спасибо! Это демо-форма — подключите backend, чтобы получать сообщения.");
-      form.reset();
+      var name = form.elements.name.value.trim();
+      var email = form.elements.email.value.trim();
+      var message = form.elements.message.value.trim();
+      var subject = tr("form.subject", "Проект: {name}").replace("{name}", name);
+      var body = message + "\n\n— " + name + " <" + email + ">";
+      var url = "mailto:" + CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+      status.textContent = tr("form.sent", "Открываю почтовый клиент…");
+      // window.portfolioOpenMailto можно переопределить (например, в тестах), иначе — обычный переход.
+      var open = window.portfolioOpenMailto || function (u) { window.location.href = u; };
+      open(url);
     });
   }
 

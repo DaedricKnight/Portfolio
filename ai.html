@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=16" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=17" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -139,19 +139,19 @@
           </li>
         </ol>
 
-        <!-- Сертификаты. LinkedIn был недоступен при сборке — названия не выдуманы.
-             ЗАМЕНИТЕ: впишите реальные сертификаты (название, организация, год). -->
+        <!-- ======== СЕРТИФИКАТЫ (скрыто) ========
+             ЗАМЕНИТЕ: блок скрыт, пока нет реальных сертификатов. Чтобы вернуть:
+             впишите название, организацию и год (ключи cert.* в assets/js/i18n.js или прямо
+             в разметку) и раскомментируйте блок ниже.
         <div class="cert-block reveal">
           <h3 class="cert-title" data-i18n="cert.title">Сертификаты</h3>
           <ul class="cert-list">
-            <!-- ЗАМЕНИТЕ: сертификат -->
             <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
-            <!-- ЗАМЕНИТЕ: сертификат -->
             <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
-            <!-- ЗАМЕНИТЕ: сертификат -->
             <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
           </ul>
         </div>
+        -->
       </div>
     </section>
 
@@ -279,8 +279,10 @@
         </header>
 
         <div class="contact-grid">
-          <!-- Подключение формы — см. комментарий в index.html -->
-          <form class="contact-form reveal" id="contact-form" action="#" method="POST" novalidate>
+          <!-- Форма без бэкенда: script.js собирает письмо и открывает почтовый клиент (mailto).
+               Без JS сработает action="mailto:…". Чтобы принимать сообщения на сервер — см. README
+               («Подключение формы»): Formspree или свой backend. -->
+          <form class="contact-form reveal" id="contact-form" action="mailto:artemkhateev.ai@gmail.com" method="post" enctype="text/plain" novalidate>
             <div class="field">
               <label for="name" data-i18n="form.name.label">Имя</label>
               <input type="text" id="name" name="name" autocomplete="name"
@@ -296,10 +298,8 @@
               <textarea id="message" name="message" rows="5"
                         data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Отправить сообщение</button>
-            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">
-              Форма демонстрационная — подключите Formspree или свой backend (см. комментарий в HTML).
-            </p>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Составить письмо</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">Откроется ваш почтовый клиент с готовым письмом.</p>
           </form>
 
           <aside class="contact-direct reveal" aria-label="Прямые контакты">
@@ -332,7 +332,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=16"></script>
-  <script src="assets/js/script.js?v=16"></script>
+  <script src="assets/js/i18n.js?v=17"></script>
+  <script src="assets/js/script.js?v=17"></script>
 </body>
 </html>

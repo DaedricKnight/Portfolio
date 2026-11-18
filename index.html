@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
   <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=16" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=17" />
   <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -122,23 +122,23 @@
           </a></li>
         </ul>
 
-        <!-- ЗАМЕНИТЕ: ваши цифры -->
+        <!-- Цифры — только проверяемые факты из опыта (см. web.html). Счётчик анимируется до data-count. -->
         <dl class="hero-stats reveal" aria-label="Ключевые показатели">
           <div class="stat">
             <dt class="stat-num" data-count="12" data-suffix="">12</dt>
             <dd class="stat-label" data-i18n="stat.years">лет опыта</dd>
           </div>
           <div class="stat">
-            <dt class="stat-num" data-count="25" data-suffix="+">25+</dt>
-            <dd class="stat-label" data-i18n="stat.projects">проектов</dd>
+            <dt class="stat-num" data-count="50" data-suffix="M+">50M+</dt>
+            <dd class="stat-label" data-i18n="stat.dau">пользователей в день в моих проектах</dd>
           </div>
           <div class="stat">
-            <dt class="stat-num" data-count="15" data-suffix="+">15+</dt>
-            <dd class="stat-label" data-i18n="stat.tech">технологий</dd>
+            <dt class="stat-num" data-count="8" data-suffix="">8</dt>
+            <dd class="stat-label" data-i18n="stat.companies">компаний за карьеру</dd>
           </div>
           <div class="stat">
-            <dt class="stat-num" data-count="10" data-suffix="+">10+</dt>
-            <dd class="stat-label" data-i18n="stat.clients">довольных клиентов</dd>
+            <dt class="stat-num" data-count="100" data-suffix="k+">100k+</dt>
+            <dd class="stat-label" data-i18n="stat.robots">роботов iRobot под управлением приложения</dd>
           </div>
         </dl>
       </div>
@@ -247,7 +247,10 @@
       </div>
     </section>
 
-    <!-- ======================= ОТЗЫВЫ ======================= -->
+    <!-- ======================= ОТЗЫВЫ (скрыто) =======================
+         ЗАМЕНИТЕ: раздел скрыт, пока нет реальных отзывов. Чтобы вернуть его:
+         1) впишите настоящие отзывы в assets/js/i18n.js (ключи testi1.*, testi2.*) для ru/en/sv;
+         2) раскомментируйте разметку ниже и поправьте номера в подписях следующих разделов.
     <section class="section section-alt" id="testimonials">
       <div class="container">
         <header class="section-head reveal">
@@ -256,7 +259,6 @@
         </header>
 
         <div class="testimonials-grid">
-          <!-- ЗАМЕНИТЕ: реальные отзывы (тексты — в assets/js/i18n.js) -->
           <figure class="testimonial-card reveal">
             <blockquote data-i18n="testi1.quote">«Разобрался в задаче быстрее, чем мы успели её объяснить. Результат был в проде уже через две недели.»</blockquote>
             <figcaption>
@@ -281,22 +283,22 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- ======================= КОНТАКТЫ ======================= -->
     <section class="section" id="contact">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-kicker"><span class="kicker-num">05</span><span data-i18n="home.k.contact">Контакты</span></span>
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="home.k.contact">Контакты</span></span>
           <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
           <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение рабочего дня.</p>
         </header>
 
         <div class="contact-grid">
-          <!-- Форма. Статический сайт не отправляет письма сам.
-               Подключите Formspree (https://formspree.io):
-               замените action="#" на "https://formspree.io/f/ВАШ_ID" и удалите
-               JS-обработчик демо-отправки в assets/js/script.js. -->
-          <form class="contact-form reveal" id="contact-form" action="#" method="POST" novalidate>
+          <!-- Форма без бэкенда: script.js собирает письмо и открывает почтовый клиент (mailto).
+               Без JS сработает action="mailto:…". Чтобы принимать сообщения на сервер — см. README
+               («Подключение формы»): Formspree или свой backend. -->
+          <form class="contact-form reveal" id="contact-form" action="mailto:artemkhateev.ai@gmail.com" method="post" enctype="text/plain" novalidate>
             <div class="field">
               <label for="name" data-i18n="form.name.label">Имя</label>
               <input type="text" id="name" name="name" autocomplete="name"
@@ -312,10 +314,8 @@
               <textarea id="message" name="message" rows="5"
                         data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Отправить сообщение</button>
-            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">
-              Форма демонстрационная — подключите Formspree или свой backend (см. комментарий в HTML).
-            </p>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Составить письмо</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">Откроется ваш почтовый клиент с готовым письмом.</p>
           </form>
 
           <aside class="contact-direct reveal" aria-label="Прямые контакты">
@@ -349,7 +349,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=16"></script>
-  <script src="assets/js/script.js?v=16"></script>
+  <script src="assets/js/i18n.js?v=17"></script>
+  <script src="assets/js/script.js?v=17"></script>
 </body>
 </html>
