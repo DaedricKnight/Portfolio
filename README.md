@@ -19,6 +19,7 @@ portfolio/
 │   ├── hermi-offline-voice-assistant.html        # статья о Hermi (ru/en/sv)
 │   └── medvoice-offline-clinical-dictation.html  # статья о MedVoice (ru/en/sv)
 ├── assets/
+│   ├── img/                # фото для блока «О себе» (photo.webp + photo.jpg)
 │   ├── media/              # демо-видео, постеры и скриншот (Hermi, MedVoice)
 │   ├── css/styles.css      # стили и токены дизайна (цвета, шрифты, отступы)
 │   └── js/
@@ -52,10 +53,10 @@ portfolio/
 Что заменить в первую очередь:
 1. **Имя** — уже подставлено (Артём Хатеев / Artem Khateev). Чтобы сменить: ключи `name` и
    `initials` в `i18n.js`, а также инициалы в `favicon.svg` (он статичный, язык не переключает).
-2. **Фото** — пока на месте фото аватар с инициалами (АХ/AK). Чтобы поставить фото: положите файл
-   в `assets/img/photo.jpg` (квадрат, от 600×600) и в `index.html` замените блок
-   `<div class="photo-avatar">…</div>` на `<img class="photo-img" src="assets/img/photo.jpg" alt="Artem Khateev">`
-   (место помечено `ЗАМЕНИТЕ`). Стоковые фото не используйте.
+2. **Фото** — `assets/img/photo.webp` и `assets/img/photo.jpg` (640×640, квадрат, метаданные удалены) в блоке
+   «О себе» на главной (`<picture class="photo-pic">`). Чтобы заменить: подготовьте квадрат от 640×640 с лицом
+   по центру, сохраните в обоих форматах под теми же именами и увеличьте `?v=` в `src`/`srcset`.
+   Подпись `alt` — ключ `photo.alt`. Стоковые фото не используйте.
 3. **Контакты** — уже указаны: email artemkhateev.ai@gmail.com, Telegram [@Artemidius](https://t.me/Artemidius),
    GitHub [DaedricKnight](https://github.com/DaedricKnight). LinkedIn на сайте не указан — вместо ссылки строка
    «LinkedIn — по запросу» (ключ `contact.linkedin`).
@@ -73,7 +74,6 @@ portfolio/
 
 ### Что осталось заполнить (все места помечены `ЗАМЕНИТЕ`)
 - [ ] **«Не беру»** — список в разделе «Как начать работу» (`start.decline`): проверьте формулировку.
-- [ ] **Фото** — вместо аватара с инициалами (см. пункт 2 выше).
 - [ ] **SDK в Maven Central и демо-APK** в блоке «Open source» (см. «Open source»).
 - [ ] **Ссылка для записи на звонок** — `BOOKING_URL` (см. «Запись на звонок»).
 - [ ] **Отзывы и сертификаты** — вернуть, когда появятся реальные (пункт 7).

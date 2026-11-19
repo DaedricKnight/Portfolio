@@ -333,6 +333,7 @@
       "media.medvoice.shot.cap": "Карточка пациента в MedVoice (демо-данные).",
       "media.hermi.video.label": "Демо-видео Hermi",
       "media.medvoice.video.label": "Демо-видео MedVoice",
+      "photo.alt": "Артём Хатеев",
     },
 
     /* --------------------- ENGLISH --------------------- */
@@ -636,6 +637,7 @@
       "media.medvoice.shot.cap": "A patient chart in MedVoice (demo data).",
       "media.hermi.video.label": "Hermi demo video",
       "media.medvoice.video.label": "MedVoice demo video",
+      "photo.alt": "Artem Khateev",
     },
 
     /* --------------------- SVENSKA --------------------- */
@@ -939,6 +941,7 @@
       "media.medvoice.shot.cap": "En patientjournal i MedVoice (demodata).",
       "media.hermi.video.label": "Demovideo för Hermi",
       "media.medvoice.video.label": "Demovideo för MedVoice",
+      "photo.alt": "Artem Khateev",
     }
   };
 
