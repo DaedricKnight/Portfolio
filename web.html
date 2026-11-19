@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Сайты и приложения — Артём Хатеев</title>
+  <meta name="description" content="Разработка сайтов, веб- и мобильных приложений: опыт, проекты и навыки." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=23" />
+  <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="web" data-title-key="title.web" data-desc-key="desc.web">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="web.html" aria-current="page" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="android.html" data-i18n="nav.android">Android</a></li>
+          <li><a href="ai.html" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="notes.html" data-i18n="nav.notes">Заметки</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu.open" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ХЕДЕР СТРАНИЦЫ =================== -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="index.html">← <span data-i18n="nav.home">Главная</span></a>
+        <!-- Анимация появления — на обёртке, а не на h1 с градиентным текстом (Safari) -->
+        <div class="reveal">
+          <h1 data-i18n="card.web.title">Сайты и приложения</h1>
+        </div>
+        <p class="page-hero-lead" data-i18n="card.web.desc">Frontend, backend и мобильная разработка — быстрые и надёжные продукты.</p>
+      </div>
+    </section>
+
+    <!-- ======================= ОПЫТ ======================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="pg.k.exp">Опыт</span></span>
+          <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
+        </header>
+
+        <!-- Карьерный путь — по данным LinkedIn пользователя (компании, годы, города, достижения).
+             Тексты — в assets/js/i18n.js (ключи web.exp*). -->
+        <ol class="timeline timeline-compact">
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp1.role">Senior Software-инженер</h3>
+                <span class="timeline-period" data-i18n="web.exp1.period">2024 — 2026</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp1.org">TLM Software Design · проект iRobot · Белград, Сербия · Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp1.b1">С нуля спроектировал новую систему управления роботами на современном Android-стеке; вместе с UI/UX разработал модели взаимодействия для парка из 100 000+ роботов.</li>
+                <li data-i18n="web.exp1.b2">Отзывчивость приложения +25% за счёт асинхронного программирования; успешность сопряжения устройств +15%.</li>
+                <li data-i18n="web.exp1.b3">Скорость поставки фич +20% благодаря единым правилам качества кода.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp2.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp2.period">2023 — 2024</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp2.org">GuavaPay · Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp2.b1">Разработал ключевые платёжные модули глобальной платёжной платформы с соблюдением PCI DSS.</li>
+                <li data-i18n="web.exp2.b2">Надёжность транзакций 99,9% при обработке более $50 млн в квартал.</li>
+                <li data-i18n="web.exp2.b3">Блокировки главного потока −40% (500 мс → менее 300 мс) за счёт оптимизации Kotlin Flow.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp3.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp3.period">2022 — 2023</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp3.org">Akvelon · проект Reddit · Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp3.b1">Функции клиента с высоким трафиком для 50 млн+ активных пользователей в день.</li>
+                <li data-i18n="web.exp3.b2">Техдолг −15%, покрытие unit-тестами с 45% до 80%.</li>
+                <li data-i18n="web.exp3.b3">CI/CD на Bitrise: задержка деплоя −10 минут, сборки на 20% быстрее.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp4.role">Senior Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp4.period">2020 — 2022</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp4.org">Wildberries · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp4.b1">Высоконагруженное e-commerce-приложение: 15 млн+ пользователей и 80 млн товаров; миграция с RxJava на корутины Kotlin.</li>
+                <li data-i18n="web.exp4.b2">Мобильный трафик −20% и загрузка изображений в 1,5 раза быстрее благодаря оптимизации сетевого кеша.</li>
+                <li data-i18n="web.exp4.b3">Менторство junior-разработчиков, ревью кода и архитектуры.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp5.role">Ведущий Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp5.period">2019 — 2020</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp5.org">ВТБ · ВТБ Онлайн · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp5.b1">Руководил архитектурной командой из 15+ человек для ВТБ Онлайн (5 млн+ пользователей); ввёл стандарты Clean Architecture и TDD.</li>
+                <li data-i18n="web.exp5.b2">Время запуска приложения −30% (4 с → 2,8 с).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp6.role">Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp6.period">2017 — 2019</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp6.org">Телемаркет · PayMe · Москва, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp6.b1">Приложение для эквайринга и картридер на Bluetooth LE с бесконтактной оплатой.</li>
+                <li data-i18n="web.exp6.b2">Создал SDK для Bluetooth-эквайринга на корутинах; переписал приложение на Kotlin и MVVM.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp7.role">Android-разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp7.period">2015 — 2017</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp7.org">Hyperkey · Сан-Франциско, США</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp7.b1">Клавиатура-виджет для чатов с 300 000+ пользователей, работающая в любом мессенджере.</li>
+                <li data-i18n="web.exp7.b2">Собственное кодирование видео на FFmpeg; Java/Kotlin, TDD.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="web.exp8.role">Backend и мобильный разработчик</h3>
+                <span class="timeline-period" data-i18n="web.exp8.period">2014 — 2015</span>
+              </div>
+              <p class="timeline-company" data-i18n="web.exp8.org">НПО Телеметрия · Калуга, Россия</p>
+              <ul class="timeline-points">
+                <li data-i18n="web.exp8.b1">Android-приложение для отображения телеметрии автомобиля.</li>
+                <li data-i18n="web.exp8.b2">Анализ автомобильной телеметрии на Go; разработка веб-приложений.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= ПРОЕКТЫ ======================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">02</span><span data-i18n="pg.k.proj">Проекты</span></span>
+          <h2 class="section-title" data-i18n="proj.title">Избранные работы</h2>
+          <p class="section-desc" data-i18n="proj.desc">Несколько проектов, которыми я горжусь. Замените карточки на свои.</p>
+        </header>
+
+        <!-- Реальные проекты. Тексты (title/desc) — в assets/js/i18n.js (ключи web.proj*),
+             ссылки и чипы-технологии правятся здесь. Чипы — редактируемые заглушки. -->
+        <div class="projects-grid">
+          <!-- Google Play: Reddit -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">Reddit</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj1.title">Reddit</h3>
+              <p class="project-desc" data-i18n="web.proj1.desc">Мобильное приложение крупнейшей платформы сообществ и обсуждений.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>Feeds</li></ul>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Google Play: iRobot Home -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label">iRobot Home</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj2.title">iRobot Home</h3>
+              <p class="project-desc" data-i18n="web.proj2.desc">Управление роботами-пылесосами iRobot: уборка, расписание, карты.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>IoT</li></ul>
+              <div class="project-links">
+                <!-- Две версии приложения в Google Play; названия не переводятся -->
+                <a href="https://play.google.com/store/apps/details?id=com.irobot.home" target="_blank" rel="noopener" title="Google Play">iRobot Home ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.irobot.home.prime" target="_blank" rel="noopener" title="Google Play">iRobot Home Prime ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Google Play: Wildberries -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-c" aria-hidden="true"><span class="project-thumb-label">Wildberries</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj3.title">Wildberries</h3>
+              <p class="project-desc" data-i18n="web.proj3.desc">Приложение крупного маркетплейса: каталог, корзина, заказы, доставка.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>E-commerce</li></ul>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.wildberries.ru" target="_blank" rel="noopener" data-i18n="proj.store">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Guava Pay (MyGuava): сервис закрыт, поэтому ссылки нет — вместо неё статус -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-d" aria-hidden="true"><span class="project-thumb-label">Guava Pay</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj4.title">Guava Pay</h3>
+              <p class="project-desc" data-i18n="web.proj4.desc">Финтех-приложение для платежей, которое предлагало мультивалютные счета, карты, переводы и кэшбэк.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Android</li><li>Kotlin</li><li>Fintech</li></ul>
+              <div class="project-status">
+                <span class="status-badge"><span class="status-badge-dot" aria-hidden="true"></span><span data-i18n="proj.status.closed">Проект закрыт</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: CopilotMoneyAndroid -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-e" aria-hidden="true"><span class="project-thumb-label">Copilot Money</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj5.title">Copilot Money (Android)</h3>
+              <p class="project-desc" data-i18n="web.proj5.desc">Приложение личных финансов: бюджет, транзакции, цели, Firebase-синхронизация.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/CopilotMoneyAndroid" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: MedVoice -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-f project-thumb-device" aria-hidden="true"><img src="assets/media/medvoice-screenshot.png" alt="" width="574" height="1180" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj6.title">MedVoice</h3>
+              <p class="project-desc" data-i18n="web.proj6.desc">Прототип Android-планшета для ведения медкарт голосом, полностью офлайн.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Room</li><li>Offline</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+                <a href="notes/medvoice-offline-clinical-dictation.html#demo" data-i18n="media.demo">Смотреть демо →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: CarDiagnostics -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-g" aria-hidden="true"><span class="project-thumb-label">Car Diagnostics</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="web.proj7.title">Car Diagnostics</h3>
+              <p class="project-desc" data-i18n="web.proj7.desc">Диагностика для Android Automotive OS: параметры авто в реальном времени через VHAL.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Compose</li><li>Hilt</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/CarDiagnostics" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= НАВЫКИ ======================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="pg.k.skills">Навыки</span></span>
+          <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
+          <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.languages">Языки</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Kotlin</li><li>Python</li><li>PHP</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.frontend">Frontend</h3>
+            <ul class="tag-chips tag-chips-lg"><li>React</li><li>Vue</li><li>Next.js</li><li>CSS</li><li>Tailwind</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.backend">Backend</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Node.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>Go</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.mobile">Мобильные</h3>
+            <ul class="tag-chips tag-chips-lg"><li>React Native</li><li>Kotlin</li><li>Swift</li></ul>
+          </div>
+        </div>
+
+        <div class="skill-bars reveal">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar1">Frontend-разработка</span><span class="skill-bar-val">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar2">Backend-разработка</span><span class="skill-bar-val">85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="web.bar3">Мобильная разработка</span><span class="skill-bar-val">70%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="70"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.contact">Контакты</span></span>
+          <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение 1–2 рабочих дней.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Форма без бэкенда: script.js собирает письмо и открывает почтовый клиент (mailto).
+               Без JS сработает action="mailto:…". Чтобы принимать сообщения на сервер — см. README
+               («Подключение формы»): Formspree или свой backend. -->
+          <form class="contact-form reveal" id="contact-form" action="mailto:artemkhateev.ai@gmail.com" method="post" enctype="text/plain" novalidate>
+            <div class="field">
+              <label for="name" data-i18n="form.name.label">Имя</label>
+              <input type="text" id="name" name="name" autocomplete="name"
+                     data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться" required />
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="form.email.label">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email"
+                     data-i18n-ph="form.email.ph" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="form.message.label">Сообщение</label>
+              <textarea id="message" name="message" rows="5"
+                        data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Составить письмо</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">Откроется ваш почтовый клиент с готовым письмом.</p>
+          </form>
+
+          <aside class="contact-direct reveal" aria-label="Прямые контакты">
+            <h3 data-i18n="contact.direct.title">Или напишите напрямую</h3>
+            <ul class="contact-links">
+              <li><span class="c-ico" aria-hidden="true">✉</span><a href="mailto:artemkhateev.ai@gmail.com">artemkhateev.ai@gmail.com</a></li>
+              <li><span class="c-ico" aria-hidden="true">✈</span><a href="https://t.me/Artemidius" target="_blank" rel="noopener">@Artemidius</a></li>
+              <li><span class="c-ico" aria-hidden="true">⌥</span><a href="https://github.com/DaedricKnight" target="_blank" rel="noopener">github.com/DaedricKnight</a></li>
+              <li class="contact-note"><span class="c-ico" aria-hidden="true">in</span><span data-i18n="contact.linkedin">LinkedIn — по запросу</span></li>
+            </ul>
+            <div class="contact-availability">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="contact.available">Сейчас беру новые проекты</span>
+            </div>
+            <!-- Появляется, только если в assets/js/script.js задан BOOKING_URL -->
+            <a class="btn btn-secondary btn-block contact-booking" href="#" target="_blank" rel="noopener" data-booking hidden data-i18n="cta.book">Записаться на звонок</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js?v=23"></script>
+  <script src="assets/js/script.js?v=23"></script>
+</body>
+</html>

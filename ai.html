@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>AI/ML — Артём Хатеев</title>
+  <meta name="description" content="AI/ML: ИИ на устройстве, распознавание речи, классификация намерений и компьютерное зрение." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- ?v= — сброс кеша браузера после обновлений; увеличивайте номер при изменениях -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=23" />
+  <!-- Помечаем, что JS работает: только тогда элементы .reveal прячутся до анимации -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="ai" data-title-key="title.ai" data-desc-key="desc.ai">
+  <a class="skip-link" href="#main" data-i18n="skip">К основному содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <!-- Ссылка «Наверх» ведёт на #top: по стандарту HTML без элемента с таким id это начало документа.
+       (Раньше id="top" стоял на sticky-шапке — переход к «прилипшему» элементу не прокручивал страницу.) -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Artem Khateev">
+        <span class="brand-mark" aria-hidden="true" data-i18n="initials">АХ</span>
+        <span class="brand-text" data-i18n="name">Артём&nbsp;Хатеев</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="web.html" data-i18n="nav.web">Сайты и приложения</a></li>
+          <li><a href="android.html" data-i18n="nav.android">Android</a></li>
+          <li><a href="ai.html" aria-current="page" data-i18n="nav.ai">AI/ML</a></li>
+          <li><a href="notes.html" data-i18n="nav.notes">Заметки</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Выбрать язык">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button"
+                data-i18n-aria="aria.theme" data-i18n-attr-title="aria.theme"
+                aria-label="Переключить тему" title="Переключить тему">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 019.5 4 7 7 0 0012 18a7.9 7.9 0 008-3.5z"
+                  stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm cta-header" href="#contact" data-i18n="nav.cta">Связаться</a>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button"
+                data-i18n-aria="aria.menu.open" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-list">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================== ХЕДЕР СТРАНИЦЫ =================== -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="page-hero-back" href="index.html">← <span data-i18n="nav.home">Главная</span></a>
+        <!-- Анимация появления — на обёртке, а не на h1 с градиентным текстом (Safari) -->
+        <div class="reveal">
+          <h1 data-i18n="card.ai.title">AI/ML</h1>
+        </div>
+        <p class="page-hero-lead" data-i18n="card.ai.desc">ИИ на устройстве: голосовые пайплайны, классификация намерений, компьютерное зрение и нейросети.</p>
+      </div>
+    </section>
+
+    <!-- ======================= ОПЫТ ======================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">01</span><span data-i18n="pg.k.exp">Опыт</span></span>
+          <h2 class="section-title" data-i18n="exp.title">Карьерный путь</h2>
+        </header>
+
+        <!-- Опыт — по данным пользователя (LinkedIn) и его репозиториям; метрики взяты из этих данных.
+             Тексты — в assets/js/i18n.js (ключи ai.exp*). -->
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="ai.exp1.role">Независимый Android и On-Device AI инженер (R&amp;D)</h3>
+                <span class="timeline-period" data-i18n="ai.exp1.period">2026 — наст. время</span>
+              </div>
+              <p class="timeline-company" data-i18n="ai.exp1.org">Самозанятость · Загреб, Хорватия · Удалённо</p>
+              <ul class="timeline-points">
+                <li data-i18n="ai.exp1.b1">Hermi — офлайн-голосовой ассистент для AAOS: Silero VAD → Vosk → INT8 BERT-Tiny (ONNX Runtime, 4,7 МБ); 102 команды салона, точность 97% на 7 акцентах и 5 видах шума, NLU быстрее 10 мс.</li>
+                <li data-i18n="ai.exp1.b2">MedVoice — офлайн-голосовой ассистент для клиники: распознавание речи на whisper.cpp, INT8-движок намерений на BERT для 108 клинических команд, офлайн-TTS и автоматические акустические тесты.</li>
+                <li data-i18n="ai.exp1.b3">LocalEdgeAI — набор моделей намерений по ~4,7 МБ для автомобильной, медицинской и промышленной сфер: генерация данных, обучение, квантизация и Android SDK.</li>
+                <li data-i18n="ai.exp1.b4">Локальные агентные сценарии на небольших LLM: function calling, инструменты, RAG и структурированные ответы в жёстких ограничениях устройства.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role" data-i18n="ai.exp2.role">Android / ML-разработчик</h3>
+                <span class="timeline-period" data-i18n="ai.exp2.period">2014 — 2026</span>
+              </div>
+              <p class="timeline-company" data-i18n="ai.exp2.org">Hyperkey · Фриланс</p>
+              <ul class="timeline-points">
+                <li data-i18n="ai.exp2.b1">Нейросеть для сегментации тела человека — двухмодульная система, которая может работать в режиме видео.</li>
+                <li data-i18n="ai.exp2.b2">Распознавание блюд в ресторане на базе Google Vision API; приложение, превращающее обычную камеру в VR; AR-функции.</li>
+                <li data-i18n="ai.exp2.b3">GPU-вычисления на шейдерах и OpenCL; собственная система кодирования видео на FFmpeg.</li>
+                <li data-i18n="ai.exp2.b4">Android-приложения с нуля на Java и Kotlin, в том числе Hyperkey — клавиатура-виджет для чатов с 300 000+ пользователей — и видео-селфи-приложение Emoji Challenge Camera.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <!-- ======== СЕРТИФИКАТЫ (скрыто) ========
+             ЗАМЕНИТЕ: блок скрыт, пока нет реальных сертификатов. Чтобы вернуть:
+             впишите название, организацию и год (ключи cert.* в assets/js/i18n.js или прямо
+             в разметку) и раскомментируйте блок ниже.
+        <div class="cert-block reveal">
+          <h3 class="cert-title" data-i18n="cert.title">Сертификаты</h3>
+          <ul class="cert-list">
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+            <li class="cert-item"><span class="cert-name" data-i18n="cert.name">Название сертификата</span><span class="cert-meta" data-i18n="cert.meta">Организация · Год</span></li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- ======================= ПРОЕКТЫ ======================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">02</span><span data-i18n="pg.k.proj">Проекты</span></span>
+          <h2 class="section-title" data-i18n="proj.title">Избранные работы</h2>
+          <p class="section-desc" data-i18n="proj.desc">Избранные проекты и приложения, над которыми я работал.</p>
+        </header>
+
+        <!-- Реальные проекты. Тексты (title/desc) — в assets/js/i18n.js (ключи ai.proj*),
+             ссылки и чипы-технологии правятся здесь. Чипы — редактируемые заглушки. -->
+        <div class="projects-grid">
+          <!-- GitHub: LocalEdgeAI -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-a" aria-hidden="true"><span class="project-thumb-label">LocalEdgeAI</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="ai.proj1.title">LocalEdgeAI</h3>
+              <p class="project-desc" data-i18n="ai.proj1.desc">Набор моделей намерений на устройстве (~4,7 МБ) для автомобильной, медицинской и промышленной сфер: генерация данных, обучение, INT8-квантизация и Android SDK.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>INT8</li><li>Intent models</li><li>Android SDK</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/LocalEdgeAI" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: HinnerJag -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-b" aria-hidden="true"><span class="project-thumb-label">HinnerJag</span></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="ai.proj2.title">HinnerJag</h3>
+              <p class="project-desc" data-i18n="ai.proj2.desc">Прототип для Android Automotive OS: успею ли я на паром — оценка времени в пути.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>Kotlin</li><li>Car App</li><li>Västtrafik API</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/HinnerJag" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: Hermi -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-c project-thumb-cover" aria-hidden="true"><img src="assets/media/hermi-demo-poster.jpg" alt="" width="1272" height="720" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="ai.proj3.title">Hermi</h3>
+              <p class="project-desc" data-i18n="ai.proj3.desc">Приватный офлайн-голосовой ассистент для Android Automotive OS: 102 команды салона, точность 97% на 7 акцентах, NLU быстрее 10 мс — всё на устройстве (Silero VAD, Vosk, BERT-Tiny).</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>ONNX</li><li>BERT-Tiny</li><li>Vosk</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+                <a href="notes/hermi-offline-voice-assistant.html#demo" data-i18n="media.demo">Смотреть демо →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GitHub: MedVoice (AI/ML-ракурс) -->
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-d project-thumb-device" aria-hidden="true"><img src="assets/media/medvoice-screenshot.png" alt="" width="574" height="1180" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <h3 class="project-title" data-i18n="ai.proj4.title">MedVoice</h3>
+              <p class="project-desc" data-i18n="ai.proj4.desc">Офлайн-конвейер ИИ для медицинской диктовки: Silero VAD определяет речь, whisper.cpp транскрибирует, а INT8-модель BERT классифицирует намерение среди 108 клинических команд — всё на устройстве.</p>
+              <ul class="tag-chips" aria-label="Технологии"><li>whisper.cpp</li><li>ONNX</li><li>On-device</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener" data-i18n="proj.github">GitHub ↗</a>
+                <a href="notes/medvoice-offline-clinical-dictation.html#demo" data-i18n="media.demo">Смотреть демо →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= НАВЫКИ ======================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">03</span><span data-i18n="pg.k.skills">Навыки</span></span>
+          <h2 class="section-title" data-i18n="skills.title">Компетенции</h2>
+          <p class="section-desc" data-i18n="skills.desc">Инструменты и технологии, с которыми работаю ежедневно.</p>
+        </header>
+
+        <!-- Навыки отражают реальные проекты и резюме. Названия технологий не переводятся. -->
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.langplat">Языки и платформы</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Kotlin</li><li>Java</li><li>Python</li><li>C++</li><li>Android</li><li>AAOS</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.ondevice">ИИ на устройстве</h3>
+            <ul class="tag-chips tag-chips-lg"><li>ONNX Runtime</li><li>TFLite</li><li>INT8 quantization</li><li>BERT-Tiny</li><li>Intent classification</li><li>Function calling / LLM agents</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.speech">Речь</h3>
+            <ul class="tag-chips tag-chips-lg"><li>whisper.cpp</li><li>Vosk</li><li>Silero VAD</li><li>TTS</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title" data-i18n="cat.cv">Компьютерное зрение</h3>
+            <ul class="tag-chips tag-chips-lg"><li>Segmentation</li><li>Google Vision API</li><li>AR / VR</li><li>OpenCL</li><li>Shaders</li></ul>
+          </div>
+        </div>
+
+        <!-- ЗАМЕНИТЕ: проценты — ваша самооценка (data-level и подпись) -->
+        <div class="skill-bars reveal">
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar1">ИИ на устройстве</span><span class="skill-bar-val">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar2">Речь и NLP</span><span class="skill-bar-val">85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-top"><span class="skill-bar-name" data-i18n="ai.bar3">Компьютерное зрение</span><span class="skill-bar-val">75%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-level="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= OPEN SOURCE ======================= -->
+    <section class="section section-alt" id="open-source">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">04</span><span data-i18n="pg.k.oss">Open source</span></span>
+          <h2 class="section-title" data-i18n="oss.title">Код на GitHub</h2>
+          <p class="section-desc" data-i18n="oss.desc">Проекты с открытым кодом: архитектуру и реализацию можно посмотреть самому.</p>
+        </header>
+
+        <ul class="oss-list reveal">
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/Hermi" target="_blank" rel="noopener"><span class="oss-name">Hermi ↗</span><span class="oss-desc" data-i18n="oss.hermi">Офлайн-голосовой ассистент для AAOS</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/MedVoice" target="_blank" rel="noopener"><span class="oss-name">MedVoice ↗</span><span class="oss-desc" data-i18n="oss.medvoice">Голосовые медкарты на планшете, офлайн</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/CarDiagnostics" target="_blank" rel="noopener"><span class="oss-name">CarDiagnostics ↗</span><span class="oss-desc" data-i18n="oss.cardiag">Диагностика автомобиля через VHAL</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/HinnerJag" target="_blank" rel="noopener"><span class="oss-name">HinnerJag ↗</span><span class="oss-desc" data-i18n="oss.hinnerjag">Прототип для AAOS: успею ли я на паром</span></a></li>
+          <li><a class="oss-item" href="https://github.com/DaedricKnight/CopilotMoneyAndroid" target="_blank" rel="noopener"><span class="oss-name">CopilotMoneyAndroid ↗</span><span class="oss-desc" data-i18n="oss.copilot">Личные финансы на Kotlin и Compose</span></a></li>
+          <!-- ЗАМЕНИТЕ: скрытые пункты — SDK в Maven Central и демо-APK. Когда они будут опубликованы,
+               впишите реальные ссылки в href и удалите атрибут hidden у нужного <li> (см. README, «Open source»). -->
+          <li hidden data-oss-slot="sdk"><a class="oss-item" href="#" target="_blank" rel="noopener"><span class="oss-name">LocalEdgeAI SDK (Maven Central) ↗</span><span class="oss-desc" data-i18n="oss.sdk">SDK для Android с моделями намерений LocalEdgeAI</span></a></li>
+          <li hidden data-oss-slot="apk"><a class="oss-item" href="#" target="_blank" rel="noopener"><span class="oss-name" data-i18n="oss.apk">Демо-APK</span><span class="oss-desc" data-i18n="oss.apk.desc">Установите и попробуйте на своём устройстве</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker"><span class="kicker-num">05</span><span data-i18n="pg.k.contact">Контакты</span></span>
+          <h2 class="section-title" data-i18n="contact.title">Давайте работать вместе</h2>
+          <p class="section-desc" data-i18n="contact.desc">Расскажите о задаче — отвечу в течение 1–2 рабочих дней.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Форма без бэкенда: script.js собирает письмо и открывает почтовый клиент (mailto).
+               Без JS сработает action="mailto:…". Чтобы принимать сообщения на сервер — см. README
+               («Подключение формы»): Formspree или свой backend. -->
+          <form class="contact-form reveal" id="contact-form" action="mailto:artemkhateev.ai@gmail.com" method="post" enctype="text/plain" novalidate>
+            <div class="field">
+              <label for="name" data-i18n="form.name.label">Имя</label>
+              <input type="text" id="name" name="name" autocomplete="name"
+                     data-i18n-ph="form.name.ph" placeholder="Как к вам обращаться" required />
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="form.email.label">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email"
+                     data-i18n-ph="form.email.ph" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="form.message.label">Сообщение</label>
+              <textarea id="message" name="message" rows="5"
+                        data-i18n-ph="form.message.ph" placeholder="Опишите задачу, сроки и бюджет" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Составить письмо</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite" data-i18n="form.note">Откроется ваш почтовый клиент с готовым письмом.</p>
+          </form>
+
+          <aside class="contact-direct reveal" aria-label="Прямые контакты">
+            <h3 data-i18n="contact.direct.title">Или напишите напрямую</h3>
+            <ul class="contact-links">
+              <li><span class="c-ico" aria-hidden="true">✉</span><a href="mailto:artemkhateev.ai@gmail.com">artemkhateev.ai@gmail.com</a></li>
+              <li><span class="c-ico" aria-hidden="true">✈</span><a href="https://t.me/Artemidius" target="_blank" rel="noopener">@Artemidius</a></li>
+              <li><span class="c-ico" aria-hidden="true">⌥</span><a href="https://github.com/DaedricKnight" target="_blank" rel="noopener">github.com/DaedricKnight</a></li>
+              <li class="contact-note"><span class="c-ico" aria-hidden="true">in</span><span data-i18n="contact.linkedin">LinkedIn — по запросу</span></li>
+            </ul>
+            <div class="contact-availability">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="contact.available">Сейчас беру новые проекты</span>
+            </div>
+            <!-- Появляется, только если в assets/js/script.js задан BOOKING_URL -->
+            <a class="btn btn-secondary btn-block contact-booking" href="#" target="_blank" rel="noopener" data-booking hidden data-i18n="cta.book">Записаться на звонок</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="name">Артём Хатеев</span>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <a class="back-to-top" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js?v=23"></script>
+  <script src="assets/js/script.js?v=23"></script>
+</body>
+</html>
